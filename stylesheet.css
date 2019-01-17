@@ -1,0 +1,31 @@
+body{
+	background-image: linear-gradient(to bottom, CornflowerBlue, DarkSlateBlue);
+	padding:10%;
+	color:white;
+}
+
+h1{
+	font-family: 'Charm', cursive;
+	font-size: 4em;
+	margin-bottom: -36px;
+	text-align:center;
+}
+
+h2{
+	font-family: 'Cousine', monospace;
+	text-align:center;
+	font-size: 2em;
+}
+
+p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.5em
+}
+
+#intertidal{
+	color: #e6e600;	
+}
+
+.link{
+	color: white
+}
