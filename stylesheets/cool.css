@@ -2,7 +2,7 @@
 /* font is above, everything else below */
 :root{
     /* used in /projects and /index */
-    --progress: 50%;
+    --progress: 7.69%;
 }
 /* tag rules */
 body{
@@ -28,12 +28,6 @@ h2{
 h3{
     font-size:0.8rem;
 }
-img{
-    width: 55%;
-    height: 25%;
-    min-width: 480px;
-    opacity: .8;
-}
 /* below are header/footer rules [warning: mess] */
 header{
     margin-left: -8%;
@@ -44,26 +38,31 @@ header{
     font-weight: 300;
     z-index: 1337;
 }
-header div a+a{
-    margin-left: 3em;
-}
 footer{
     margin: -9.5%;
     text-align: center;
 }
 /* animation keyframes? */
 @keyframes hover {
-    from {background-color: inherit;}
-    to {background-color: rgba(163, 81, 140, 0.7);}
+    from {
+        background-color: inherit;
+    }
+    to {
+        background-color: rgba(163, 81, 140, 0.7);
+    }
 }
+
 /* when stuff happens */
-a:hover{
+.hoveranim:hover{
     animation: hover 0.5s ease-out forwards;
 }
 
 /* class rules */
 .shad{
     box-shadow: 0px 3px 12px rgba(0,0,0,0.5);
+}
+.text-shad{
+    text-shadow:0px 2px 6px rgba(0, 0, 0, 0.85);
 }
 .container{
     position: relative;
@@ -73,6 +72,15 @@ a:hover{
     position:absolute;
     background-color: rgba(163, 81, 134, 0.9);
     color:white;
+}
+.headlink{
+    margin-left: 3em;
+}
+.postimage{
+    width: 55%;
+    height: 25%;
+    min-width: 480px;
+    opacity: .8;
 }
 /* id rules */
 #selected{
