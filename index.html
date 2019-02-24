@@ -1,24 +1,83 @@
 <!DOCTYPE html>
-<head>
-    <title>Website</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" rel="stylesheet">
-    <style media="screen">
-      body{
-        background: black;
-      }
-      *{
-        font-family: 'Open Sans', sans-serif;
-        color: white;
-      }
-      main{
-        padding: 24px;
-      }
-    </style>
-</head>
-<!-- I see that you're looking through this, trying to find something on this page. Sadly, however, there is nothing of interest. This page is actually still being created. Check back later. Maybe in a few years or so. -->
-<body>
-  <main>
-    <h1>Under construction</h1>
-    <p>Check back later.</p>
-  </main>
-</body>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>home - andythepie.github.io</title>
+        <link rel="stylesheet" href="stylesheets/cool.css">
+        <style media="screen">
+            :root{
+                /* why is this here? because i am *not* going through that background line. (line 29 or so) */
+                --header-image: url("other files/placeholder.jpg");
+            }
+        </style>
+    </head>
+    <!-- this is where the header starts. -->
+    <header class="shad">
+        <div id="selected" style="display:inline-block; margin-right:3em">
+            <a href="javascript:;">andythepie.github.io</a>
+        </div>
+        <div style="display:inline-block;">
+            <a href="blog.html">/blog</a>
+            <a href="projects.html">/projects</a>
+            <a href="about.html">/about</a>
+        </div>
+    </header>
+    <!-- that's the end of the header. -->
+
+    <body>
+    <!-- i guess you'd call this a sub-header? main element? idk -->
+        <div id="firstmain" class="shad" style="max-height:100%; background: linear-gradient(to right, rgb(67, 112, 87) 0%, rgb(67, 112, 87) 45%, rgba(67, 112, 87, 0) 90%), var(--header-image) no-repeat; background-position: right;)">
+            <h1 style="font-size:3rem;">my name is <span style="font-weight:600;">andy chan</span></h1>
+            <h2 style="margin-top:-1em; font-size:1.5rem">aspiring digital stuff maker</h2> <br>
+
+        <!-- currently working on: stuff -->
+
+            <div style="text-align:right; text-shadow:0px 4px 12px rgba(0, 0, 0, 0.8); margin-bottom: 24px;">
+                <h2>current project</h2>
+                <a href="javascript:;">
+                    <h1 style="margin:-16px 0px 6px; font-weight:600;">none currently in progress</h1>
+                </a>
+                <div id="progbar" style="float:right; width:35%;">
+                    <h2 style="margin:0px; font-size:1em;">n/a complete</h2>
+                </div>
+            </div>
+        </div>
+
+    <!-- latest blog post -->
+
+        <div>
+            <h1>latest blog post</h1>
+            <div class="container">
+                <a href="javascript:;">
+                    <img class="shad" src="other files/placeholder.jpg" alt="blog post image">
+                    <div class="posttext shad" style="bottom: 16px; left: 16px;">
+                        <a>no blog posts... yet <span style="font-size:.8rem;">n/a</span> </a>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    <!-- previous project -->
+
+        <div style="text-align:right;">
+            <h1>previous project</h1>
+            <div class="container">
+                <a href="javascript:;">
+                    <img class="shad" src="https://www.dropbox.com/s/gngdf3dugu4r45y/Buildia%201.0-5120.jpg?dl=1" alt="blog post image">
+                    <div class="posttext shad" style="bottom: 16px; right: 16px;">
+                        <a>blog post name <span style="font-size:.8rem;">23 feb 2019</span> </a>
+                    </div>
+                </a>
+            </div>
+            <br>
+        </div>
+    </body>
+
+<!-- well, that's the end of that mess. now contact info. -->
+
+    <footer style="margin-top:24px;">
+        <div style="background: linear-gradient(to bottom, #2ad4d6 0%, rgba(42, 212, 214, 0) 50%, #2ad4d6 100%), url(https://www.dropbox.com/s/gngdf3dugu4r45y/Buildia%201.0-5120.jpg?dl=1); position:block; padding:2%;">
+        <h1>some websites i have social medias on</h1>
+        </div>
+    </footer>
+</html>

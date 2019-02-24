@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+/* font is above, everything else below */
+:root{
+    /* used in /projects and /index */
+    --progress: 50%;
+}
+/* tag rules */
+body{
+    margin: 8%;
+    background-color:#7d6a6e;
+    color: white;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size:1.25em;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+h1,h2{
+    font-weight: 300;
+}
+h1{
+    font-size:2rem;
+}
+h2{
+    font-size:1.3rem;
+}
+h3{
+    font-size:0.8rem;
+}
+img{
+    width: 55%;
+    height: 25%;
+    min-width: 480px;
+    opacity: .8;
+}
+/* below are header/footer rules [warning: mess] */
+header{
+    margin-left: -8%;
+    padding: 1% 8%;
+    width: 100%;
+    position: fixed;
+    background: #51a2a3;
+    font-weight: 300;
+    z-index: 1337;
+}
+header div a+a{
+    margin-left: 3em;
+}
+footer{
+    margin: -9.5%;
+    text-align: center;
+}
+/* animation keyframes? */
+@keyframes hover {
+    from {background-color: inherit;}
+    to {background-color: rgba(163, 81, 140, 0.7);}
+}
+/* when stuff happens */
+a:hover{
+    animation: hover 0.5s ease-out forwards;
+}
+
+/* class rules */
+.shad{
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.5);
+}
+.container{
+    position: relative;
+    overflow: hidden;
+}
+.posttext{
+    position:absolute;
+    background-color: rgba(163, 81, 134, 0.9);
+    color:white;
+}
+/* id rules */
+#selected{
+    background: rgba(163, 81, 140, 0.8) !important;
+    font-weight: 600;
+}
+#firstmain{
+    margin: -9.5% -9.5% 0 -9.5%;
+    padding: 20% 10% 5%;
+}
+#progbar{
+    background-image: linear-gradient(to left, rgba(81, 162, 163, 0.85) 0%, rgba(81, 162, 163, 0.85) var(--progress), rgba(255, 255, 255, 0.4) var(--progress), rgba(255, 255, 255, 0.4) 100%);
+    text-align: right;
+    border-bottom-left-radius: 32px;
+}
