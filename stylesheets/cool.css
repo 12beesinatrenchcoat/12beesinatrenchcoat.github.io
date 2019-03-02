@@ -28,6 +28,8 @@ h2{
 h3{
     font-size:0.8rem;
 }
+
+
 /* below are header/footer rules [warning: mess] */
 header{
     margin-left: -8%;
@@ -81,6 +83,11 @@ footer{
     height: 25%;
     min-width: 480px;
     opacity: .8;
+}
+@media (max-width: 480px){
+    .postimage {
+        width: 100%;
+    }
 }
 /* id rules */
 #selected{
