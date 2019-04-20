@@ -1,0 +1,8 @@
+/* Used on .html files in the /projects directory, the project listing. Mainly just colors. */
+:root{
+--blank: rgba(0, 0, 0, 0.6); /* Black transparency */
+--scrap: rgba(255, 121, 82, 0.6); /* Progress bar color for scrapped project */
+--wip: rgba(255, 231, 98, 0.6); /* Color for projects in progress */
+--hold: rgba(117, 165, 255, 0.6); /* Color for projects on hold */
+--complete: rgb(73, 235, 151, 0.6); /* For complete projects (progress bar should be solid) */
+}
