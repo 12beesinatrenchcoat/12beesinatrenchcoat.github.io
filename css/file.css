@@ -7,8 +7,9 @@ body{
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 1.1em;
     background-color: #D9F0D7;
-    margin: 0px 10%;
+    margin: 5% 10%;
     font-weight:400;
+    line-height: 1.5;
 }
 h1{
     font-size: 3em;
@@ -29,10 +30,6 @@ p br{
 span{
     font-weight: 600; /* i don't use span for anything else anyways ¯\_(ツ)_/¯ */
 }
-header{
-    height:90vh;
-    vertical-align: middle;
-}
 footer{
     background-color:#BDA697;
     width:98.9vw;
@@ -46,6 +43,14 @@ footer{
 a{
     color:black;
     text-decoration: none;
+}
+a:hover{
+    animation: colorfade 1s both;
+}
+@keyframes colorfade {
+    to{
+        background-color: rgba(199, 194, 242, 0.45)
+    }
 }
 /* some things don't look so good on vertical displays. this is why this is here. */
 @media (orientation:portrait) {

@@ -1,9 +1,9 @@
 # AndyThePie.github.io
-A questionably thrown together website for my own experimentation/blog. It looks... meh.
+A questionably thrown together personal website with some stuff on it.
 Still currently *very* work in progress.
 
 ## Can I contribute?
-If you find anything *very* wrong, or you just have any suggestions, please open up an issue.
+If you find anything *very* wrong, or you just have any suggestions, please open up an issue. However, I would prefer to work on most of this project myself. (This is more of a personal projcet to me.)
 
 ## Can I copy this for my own website?
 You probably shouldn't, but I don't mind.
