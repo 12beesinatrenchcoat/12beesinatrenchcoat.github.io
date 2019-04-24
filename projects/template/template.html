@@ -2,34 +2,31 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>/projects - andythepie (website)</title>
-        <link rel="stylesheet" href="css/file.css">
-        <link rel="stylesheet" href="css/projects.css">
+        <title>template / projects - andythepie</title>
+        <link rel="stylesheet" href="../../css/file.css">
+        <link rel="stylesheet" href="../../css/projects.css">
     </head>
     <header style="display:flex;justify-content:space-between;font-size:2em;">
-        <a href="index.html">back to homepage</a>
-        <span>/projects</span>
+        <a href="../../projects.html">back to project listing</a>
     </header>
     <body>
         <main>
+            <!-- Replace the image URL, by the way -->
             <div style="background:var(--textgrad), url(https://www.dropbox.com/s/gcmwc3go9ralvad/webcode.jpg?dl=1) no-repeat center;background-size:cover;">
                 <div class="on-image" style="padding:10% 5%">
-                    <p>current project</p>
-                    <a href="projects/2019/1-newsite.html">
-                        <h2 style="margin-top:-.8em;">website, mk. 4</h2>
-                    </a>
+                    <p>month year</p>
+                    <h2 style="margin-top:-.8em;">project title</h2>
                 </div>
                 <div style="background:linear-gradient(to right, var(--wip) 40%, var(--non) 40%, var(--non) 100%);color:white;text-align:center;">
-                    <span>40%</span> complete
+                    <span>percent%</span> complete, [status goes here if not work in progress]
                 </div>
             </div>
         </main>
-        <p style="text-align:center;">older projects below</p>
-        <div style="display:flex;flex-direction:column-reverse;;">
-            <div style="background:darkslategrey" class="on-image">
-                <p>n/a status</p>
-                <h2>none yet!</h2>
-                <p>date missing</p>
+        <h2 style="margin-bottom:1em;"> <span>progress</span> log </h2>
+        <div style="display:flex;flex-direction:column-reverse;margin:0% 10%;">
+            <div>
+                <h3>day <span>month</span> year</h3>
+                <p>content goes here</p>
             </div>
         </div>
     </body>
