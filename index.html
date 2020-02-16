@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>andythepie.github.io</title>
+
+    <link rel="stylesheet" href="thisisastylesheet.css">
+    <script src="https://kit.fontawesome.com/04e2e57db2.js" crossorigin="anonymous"></script>
+    <style>
+        a{
+            margin-right:3em;
+        }
+        #about a{
+            text-decoration: none !important;
+            padding:0.2em;
+        }
+    </style>
+</head>
+<body>
+    <img src="XtriC.svg" title="hey look, it's my icon thing" alt="this is where my logo would go." style="margin-right:2em;">
+    <h1 style="display:inline;">
+        my name is <span class="accent">andy chan</span>
+    </h1> <br>
+    <div> <!-- buttons that open sections of my blog. woot. -->
+        <a href="#" id="about-button"> /about</a> 
+        <a href="#" id="projects-button">/projects</a> 
+        <a href="#" id="blog-button">/blog</a>  
+    </div>
+    <script> // the code that actually does the display thing. coolio.
+        document.getElementById("about-button").onclick = function() {
+            document.getElementById("about").style.display = "block";
+            document.getElementById("projects").style.display = "none";
+            document.getElementById("blog").style.display = "none";
+        }
+        document.getElementById("projects-button").onclick = function() {
+            document.getElementById("about").style.display = "none";
+            document.getElementById("projects").style.display = "block";
+            document.getElementById("blog").style.display = "none";
+        }
+        document.getElementById("blog-button").onclick = function() {
+            document.getElementById("about").style.display = "none";
+            document.getElementById("projects").style.display = "none";
+            document.getElementById("blog").style.display = "block";
+        }
+    /* that was probably a horrible way to do this, 
+    and i apologize to anyone actually taking the time to read the code.
+    if this deeply offended you, know that i deeply respect you. kthx */
+    </script>
+    <div id="about" style="display:none;">
+        <h1>/about</h1>
+        <p class="subtitle">oh hello there!</p>
+        <p>my name is andy chan, and i like making things. a lot of different things.</p>
+        <p>sometimes i make videos, sometimes i write code for programs, and sometimes other things happen. i don't know.</p>
+        <div>
+            <h2>socials</h2>
+            <p class="subtitle"> follow me in places</p>
+            <div>
+                <a href="https://twitter.com/andzcliv3">
+                    <span class="fab fa-twitter"></span> 
+                    @andzcliv3
+                </a>
+            </div>
+            <div>
+                <a href="https://youtube.com/andychanpineapples">
+                    <span class="fab fa-youtube"></span>
+                    andy chan
+                </a> 
+            </div>
+            <div>
+                <a href="https://github.com/andythepie">
+                    <span class="fab fa-github-alt"></span>
+                    andythepie
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <span class="fab fa-discord"></span>
+                    @andzcliv3#7664
+                </a>
+            </div>        
+        </div>
+
+    </div>
+    <div id="projects" style="display:none;">
+        <h1>/projects</h1>
+        <p class="subtitle">the stuff i'm working on.</p>
+        <div>
+            
+        </div>
+    </div>
+    <div id="blog" style="display:none;">
+        <h1>/blog</h1>
+        <p class="subtitle">word vomit and that's it</p>
+    </div>
+</body>
+</html>

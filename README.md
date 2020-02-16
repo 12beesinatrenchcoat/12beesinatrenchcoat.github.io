@@ -1,0 +1,15 @@
+# AndyThePie.github.io
+
+a [fourth] attempt at creating a website. yes, we're on the fourth iteration now. wow.
+
+this website contains information about me, (primarily my social networks), my projects, and some blog posts. 
+
+## can i contribute?
+
+i mean... i don't know why you would, but if you want to yell at me about how my code is bad, then do so. i'm not gonna stop you.
+
+## licensing
+
+the content of this website (images, text, and any markdown files that aren't this one) are under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/), and the code is under [The Unlicense](https://unlicense.org/). why? eh.
+
+i guess also don't pretend to be me. thanks.
