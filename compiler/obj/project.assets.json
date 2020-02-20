@@ -1,0 +1,109 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Markdig/0.18.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/Markdig.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Markdig.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Markdig/0.18.1": {
+      "sha512": "xCxTVEMi0WISjP1I7XCISCzCZ9eNzlUpK2OQdNTXx0ajstMbSPFX/KvXQVWN1irwFkm7VxsX7PekYJCbZwk8mw==",
+      "type": "package",
+      "path": "markdig/0.18.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/Markdig.dll",
+        "lib/net35/Markdig.pdb",
+        "lib/net35/Markdig.xml",
+        "lib/net40/Markdig.dll",
+        "lib/net40/Markdig.pdb",
+        "lib/net40/Markdig.xml",
+        "lib/netcoreapp2.1/Markdig.dll",
+        "lib/netcoreapp2.1/Markdig.pdb",
+        "lib/netcoreapp2.1/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.pdb",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/uap10.0/Markdig.dll",
+        "lib/uap10.0/Markdig.pdb",
+        "lib/uap10.0/Markdig.pri",
+        "lib/uap10.0/Markdig.xml",
+        "markdig.0.18.1.nupkg.sha512",
+        "markdig.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Markdig"
+    ]
+  },
+  "packageFolders": {
+    "/home/andzcliv3/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/andzcliv3/Documents/code/AndyThePie.github.io/compiler/compiler.csproj",
+      "projectName": "compiler",
+      "projectPath": "/home/andzcliv3/Documents/code/AndyThePie.github.io/compiler/compiler.csproj",
+      "packagesPath": "/home/andzcliv3/.nuget/packages/",
+      "outputPath": "/home/andzcliv3/Documents/code/AndyThePie.github.io/compiler/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/andzcliv3/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "Markdig": {
+            "target": "Package",
+            "version": "(, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
