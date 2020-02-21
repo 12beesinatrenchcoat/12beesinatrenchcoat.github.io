@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap')
 
-/* colors used as accents and especially on the /projects page. */
-$accent-main:    #B6FFB2 /* also used for completed projects */
+// colors used as accents and especially on the /projects page.
+$accent-main:    #B6FFB2 // also used for completed projects 
 $accent-wip:     #97CFE8
 $accent-planning:#DCA6FF
 $accent-onhold:  #FFF1BD
 $accent-scrapped:#FF9999
 
+// some animations because i don't know where to define these
+
+@keyframes shadowfadein
+    0%
+        box-shadow:1px 1px 4px rgba(64, 64, 64, .32)
+    100%
+        box-shadow:2px 2px 10px rgba(64, 64, 64, .64)
+
+// actual rules!
+
 *
     font-weight: 400
 
 body
-    margin: 5% 16%
+    margin: 5% 24% 5% 16%
     font-family: 'Open Sans',sans-serif
     background: lightgrey
     font-size: 1.3rem
@@ -22,6 +32,16 @@ a
 
 br
     line-height: 2em
+
+img
+    width: 75%
+    height: auto
+    box-shadow:1px 1px 4px rgba(64, 64, 64, .32)
+    &:hover
+        animation: 0.2s ease-out forwards normal shadowfadein
+
+code
+    background: rgba(69, 69, 69, 0.16) //haha funny number
 
 .accent
     background: $accent-main
