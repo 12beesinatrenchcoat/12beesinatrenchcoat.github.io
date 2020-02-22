@@ -1,0 +1,14 @@
+img {
+  width: 75%;
+  height: auto;
+  box-shadow: 1px 1px 4px rgba(64, 64, 64, 0.32);
+}
+img:hover {
+  animation: 0.2s ease-out forwards normal shadowfadein;
+}
+
+code {
+  background: rgba(69, 69, 69, 0.16);
+}
+
+/*# sourceMappingURL=special%20post%20stylesheet.css.map */
