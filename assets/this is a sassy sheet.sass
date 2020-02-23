@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap')
 
 // colors used as accents and especially on the /projects page.
-$accent-main:    #B6FFB2 // also used for completed projects 
-$accent-wip:     #97CFE8
-$accent-planning:#DCA6FF
-$accent-onhold:  #FFF1BD
-$accent-scrapped:#FF9999
+$accent-main:    rgb(182, 255, 178) // also used for completed projects 
+$accent-wip:     rgb(151, 207, 232)
+$accent-planning:rgb(220, 166, 255)
+$accent-onhold:  rgb(255, 241, 189)
+$accent-scrapped:rgb(255, 153, 153)
 
 // some animations because i don't know where to define these
 
@@ -23,9 +23,11 @@ $accent-scrapped:#FF9999
 body
     font-family: 'Open Sans',sans-serif
     background: lightgrey
-    font-size: 1.3rem    
-.body
+    font-size: 1.3rem  
+    margin: -8px
+    overflow-x: hidden
 
+.body
     margin: 5% 24% 5% 16%
 
 a
@@ -34,14 +36,6 @@ a
 
 br
     line-height: 2em
-
-header
-    color: white
-    margin: 0% -0.45% -3% !important
-    padding:5% 10%
-    div
-        margin-left: 5%
- 
 
 .accent
     background: $accent-main

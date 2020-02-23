@@ -15,6 +15,8 @@ body {
   font-family: "Open Sans", sans-serif;
   background: lightgrey;
   font-size: 1.3rem;
+  margin: -8px;
+  overflow-x: hidden;
 }
 
 .body {
@@ -30,17 +32,8 @@ br {
   line-height: 2em;
 }
 
-header {
-  color: white;
-  margin: 0% -0.45% -3% !important;
-  padding: 5% 10%;
-}
-header div {
-  margin-left: 5%;
-}
-
 .accent {
-  background: #B6FFB2;
+  background: #b6ffb2;
   font-weight: 600;
 }
 

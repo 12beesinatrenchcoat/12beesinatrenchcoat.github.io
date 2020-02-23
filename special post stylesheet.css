@@ -11,4 +11,13 @@ code {
   background: rgba(69, 69, 69, 0.16);
 }
 
+header {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5% 10%;
+}
+header div {
+  margin-left: 5%;
+}
+
 /*# sourceMappingURL=special%20post%20stylesheet.css.map */
