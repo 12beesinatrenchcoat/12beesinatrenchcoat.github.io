@@ -143,7 +143,7 @@ for(var i = 0; i < path.length; i++){
         <body>
             <br>
             <span>
-                <a href="../index.html" class="body" style="margin-right:0%;color:black;text-decoration:dotted underline;">andythepie.github.io</a>`+outputPath.slice(2)+`
+                <a href="../index.html" class="body" style="margin-right:0%;color:black;text-decoration:dotted underline;">andythepie.github.io</a>`+outputPath+`
             </span>
         <header style="background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 70%),url(`+ formattedContent.data.headerImage +`);background-size:cover;">
             <div>
@@ -246,7 +246,7 @@ for(var i = 0; i < path.length; i++){
                 <body>
                     <br>
                     <span>
-                        <a href="../index.html" class="body" style="margin-right:0%;color:black;text-decoration:dotted underline;">andythepie.github.io</a>`+outputPath.slice(2)+`
+                        <a href="../index.html" class="body" style="margin-right:0%;color:black;text-decoration:dotted underline;">andythepie.github.io</a>`+outputPath+`
                     </span>
                 <header style="background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 70%),url(`+ formattedContent.data.headerImage +`);background-size:cover;margin-bottom:-1.45em;">
                     <div>
