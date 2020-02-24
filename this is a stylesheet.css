@@ -85,6 +85,7 @@ header div {
   color: white !important;
   padding: 0.5em 1em;
   text-decoration: none;
+  margin-bottom: 1em;
 }
 .entry h2 {
   margin-top: 0;
