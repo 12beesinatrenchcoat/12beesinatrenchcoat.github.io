@@ -2,7 +2,7 @@ const matter = require('gray-matter');
 const fs   = require('fs');
 const showdown = require('showdown');
 const converter = new showdown.Converter();
-const path = ["../projects/","../blog/"] // the directories where the files generally are
+const path = ["projects/","blog/"] // the directories where the files generally are
 
 //#region (basically the index.html template.)
 const beforeCurrentProjects = `<!DOCTYPE html>
@@ -272,7 +272,7 @@ for(var i = 0; i < path.length; i++){
         console.log("converted file at " + inputPath + " to" + outputPath + "\n")
         console.log("compiling index.html...");
         var index = beforeCurrentProjects + currentProjectsIndex + beforePastProjects + previousProjectsIndex + beforeBlogPosts + blogIndex + endOfSite;
-        fs.writeFileSync("../index.html",index);
+        fs.writeFileSync("index.html",index);
         console.log("done?");
 
     });
