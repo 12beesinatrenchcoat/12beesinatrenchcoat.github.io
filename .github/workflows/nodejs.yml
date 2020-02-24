@@ -17,7 +17,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
+    - run: npm --prefix ./compiler install ./compiler # thanks coudy! https://stackoverflow.com/a/14370008/10873246
     - run: node compiler/main.js
       env:
         CI: true
