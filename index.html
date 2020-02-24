@@ -6,24 +6,15 @@
     
     <title>andythepie.github.io</title>
 
-    <link rel="stylesheet" href="thisisastylesheet.css">
+    <link rel="stylesheet" href="this is a stylesheet.css">
     <script src="https://kit.fontawesome.com/04e2e57db2.js" crossorigin="anonymous"></script>
-    <style>
-        a{
-            margin-right:3em;
-        }
-        #about a{
-            text-decoration: none !important;
-            padding:0.2em;
-        }
-    </style>
 </head>
-<body>
-    <img src="XtriC.svg" title="hey look, it's my icon thing" alt="this is where my logo would go." style="margin-right:2em;">
+<body class="body">
+    <img src="assets/XtriC.svg" title="hey look, it's my icon thing" alt="this is where my logo would go." style="margin-right:2em;width:auto;box-shadow: 0 0 0;">
     <h1 style="display:inline;">
         my name is <span class="accent">andy chan</span>
     </h1> <br>
-    <div> <!-- buttons that open sections of my blog. woot. -->
+    <div id="top-buttons"> <!-- buttons that open sections of my blog. woot. -->
         <a href="#" id="about-button"> /about</a> 
         <a href="#" id="projects-button">/projects</a> 
         <a href="#" id="blog-button">/blog</a>  
@@ -51,9 +42,12 @@
     <div id="about" style="display:none;">
         <h1>/about</h1>
         <p class="subtitle">oh hello there!</p>
-        <p>my name is andy chan, and i like making things. a lot of different things.</p>
-        <p>sometimes i make videos, sometimes i write code for programs, and sometimes other things happen. i don't know.</p>
-        <div>
+        <p>My name is Andy Chan, a self-described "wannabe stuff maker".</p>
+        <p>Sometimes I make videos, sometimes I write code for programs, and sometimes other things happen. I don't know.</p>
+        <p>On this website, you can find... some things. 
+        Some projects under <code>/projects</code>, some ramblings under <code>/blog</code>, and... that's about it.
+        If you want to torture yourself, you can also find the source code for this site<a class="coollink" href="https://github.com/AndyThePie/AndyThePie.github.io">here</a>(I am a very bad programmer).</p>
+        <div id='media-buttons'>
             <h2>socials</h2>
             <p class="subtitle"> follow me in places</p>
             <div>
@@ -85,14 +79,51 @@
     </div>
     <div id="projects" style="display:none;">
         <h1>/projects</h1>
-        <p class="subtitle">the stuff i'm working on.</p>
-        <div>
-            
-        </div>
+        <p class="subtitle">the really big things that i played a major part in. mostly personal projects.</p>
+        <h2>current projects</h2>
+        <p class="subtitle">the things i'm working on now.</p>
+        <div id="currentprojectlist">
+                <a href="../projects/02.20.2020-website_v4.html" style="margin:0">
+                    <div style="background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 70%),url(../assets/websitev4-header.jpg);color: white;">
+                        <div style="padding: 1em 2em 0em;">
+                            <p class="smol">tba</p>
+                            <h2>website v4</h2>
+                            <p class="subtitle">the fourth iteration of my website because i am very not good at this</p>
+                            <div class='tags'>
+                    <span style="margin-right: 1em;">code</span>
+                    
+                    <span style="margin-right: 1em;">design</span>
+                    </div>
+                    </div>
+                    <div style="background: linear-gradient(90deg, rgba(151, 207, 232, 0.6) 0%, rgba(151, 207, 232, 0.6) 55.6%, rgba(0,0,0,0.5) 55.6%, rgba(0,0,0,0.5) 100%);">
+                        <p style="text-align: center;">55.6% complete</p>
+                    </div></div>
+                </a>
+                </div>
+        <h2>previous projects</h2>
+        <p class="subtitle">anything i've finished or scrapped.</p>
+        <div id="pastprojectarray" style="display:flex;flex-wrap: wrap;justify-content: center;"></div>
     </div>
     <div id="blog" style="display:none;">
         <h1>/blog</h1>
         <p class="subtitle">word vomit and that's it</p>
+        <div id="bloglist">
+                <a href="../blog/02.22.2020-a_second_post.html">
+                    <div class='entry' style="background:linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 70%),url(../assets/websitev4-header.jpg)">
+                        <p class="smol">22 feb 2020</p>
+                         <h2>the second post</h2>
+                       <p class='subtitle'>this is the second post</p>
+                    </div>
+                </a>
+                
+                <a href="../blog/02.20.2020-a_first_post.html">
+                    <div class='entry' style="background:linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0) 70%),url(https://www.dropbox.com/s/5c3wkyzzfykjogt/mcimage-lolxd.jpg?dl=1)">
+                        <p class="smol">20 feb 2020</p>
+                         <h2>a first post</h2>
+                       <p class='subtitle'>i have no idea what i'm doing, and i'm just hoping this works correctly.</p>
+                    </div>
+                </a>
+                </div>
     </div>
 </body>
 </html>
