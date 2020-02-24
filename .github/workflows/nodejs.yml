@@ -18,6 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install
-    - run: npm run compiler/main.js
+    - run: cd compiler/
+    - run: node run main.js
       env:
         CI: true
