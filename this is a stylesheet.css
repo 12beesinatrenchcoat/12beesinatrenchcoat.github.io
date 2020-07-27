@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
-@keyframes shadowfadein {
-  0% {
-    box-shadow: 1px 1px 4px rgba(64, 64, 64, 0.32);
-  }
-  100% {
-    box-shadow: 2px 2px 10px rgba(64, 64, 64, 0.64);
-  }
-}
 * {
   font-weight: 400;
 }
@@ -56,10 +48,6 @@ br {
 img {
   width: 75%;
   height: auto;
-  box-shadow: 1px 1px 4px rgba(64, 64, 64, 0.32);
-}
-img:hover {
-  animation: 0.2s ease-out forwards normal shadowfadein;
 }
 
 code {
