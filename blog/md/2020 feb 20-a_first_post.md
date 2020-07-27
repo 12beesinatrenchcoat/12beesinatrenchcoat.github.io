@@ -2,7 +2,7 @@
 title:         "a first post"
 description:   "i have no idea what i'm doing, and i'm just hoping this works correctly."
 date:          "20 feb 2020"
-headerImage:   "https://www.dropbox.com/s/5c3wkyzzfykjogt/mcimage-lolxd.jpg?dl=1"
+headerImage:   "../assets/mcimage-lolxd.jpg"
 ---
 
 hello there! if you're currently reading this, that means that everything is (probably) working. or not. we'll see.

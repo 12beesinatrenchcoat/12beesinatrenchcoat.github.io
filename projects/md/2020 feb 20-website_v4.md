@@ -6,11 +6,13 @@ projectType:
   - design
 startDate: "20 feb 2020"
 endDate: "23 feb 2020"
-progress:	0.8
-status: "wip" # status can be: "complete", "wip", "planning", "onHold", or "scrapped"
+progress:	1
+status: "complete" # status can be: "complete", "wip", "planning", "onHold", or "scrapped"
 headerImage: "../assets/websitev4-header.jpg"
 ---
 In the span of three days, I wrote and actually finished the fourth iteration of my website, aptly titled... `website v4`. Even though this is *literally the first finished iteration of it*. Ignore the previous iterations from the past two years (and the fact that I lost an iteration due to a hard drive formatting).
+
+**Update [26 July 2020]:** The status of this has been marked "work in progress" for the longest time. it's not. It's been done for a while now. Even though the compiler is disgusting to look at and I really need to rewrite it.
 
 So, into the technical stuff. What does this do, how does it work, and any other things.
 
