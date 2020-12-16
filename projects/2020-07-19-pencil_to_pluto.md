@@ -6,8 +6,7 @@ projectType:
   - code
 startDate: "19 jul 2020"
 endDate: "26 jul 2020"
-progress:	0.25
-status: "onHold" # status can be: "complete", "wip", "planning", "onHold", or "scrapped"
+status: "scrapped" # status can be: "complete", "wip", "planning", "onHold", or "scrapped"
 headerImage: "../assets/images/penciltopluto/penciltopluto-scr1.png"
 ---
 
@@ -22,4 +21,6 @@ My thoughts on the game post-jam can be found in [the postmortem](../blog/2020.0
 
 
 
-I hope to write more information here as the game continues development.
+~~I hope to write more information here as the game continues development.~~ The game, in its current state, has been archived, and scrapped.
+
+I hope to rewrite it one day.

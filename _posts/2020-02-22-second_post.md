@@ -1,7 +1,6 @@
 ---
 title:         "the actual post"
 description:   "this is the second post, and it has content in it"
-date:          "23 feb 2020"
 headerImage:   "../assets/images/websitev4-header.jpg"
 ---
 

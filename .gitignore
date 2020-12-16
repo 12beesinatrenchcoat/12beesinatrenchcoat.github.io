@@ -1,5 +1,4 @@
-## For the Sass.
-*.css.map
-
-## and then node.js
-compiler/node_modules/
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
