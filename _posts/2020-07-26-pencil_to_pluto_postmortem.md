@@ -1,7 +1,6 @@
 ---
 title:         "a postmortem of an incomplete incremental game"
 description:   "examining what pencil to pluto is - and what went wrong... kind of."
-date:          "26 july 2020"
 headerImage:   "../assets/images/penciltopluto/penciltopluto-scr2.png"
 ---
 

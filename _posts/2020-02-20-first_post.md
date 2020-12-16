@@ -1,7 +1,6 @@
 ---
 title:         "a first post"
 description:   "i have no idea what i'm doing, and i'm just hoping this works correctly."
-date:          "20 feb 2020"
 headerImage:   "../assets/images/mcimage-lolxd.jpg"
 ---
 
