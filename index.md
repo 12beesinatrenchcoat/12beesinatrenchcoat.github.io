@@ -1,8 +1,8 @@
 ---
 title: about
+style: self
 ---
-# /about
-hello there! o/
+<h1 class="highlight">hello there! o/</h1>
 
 My name is Andy Chan, a self-described "wannabe stuff maker".
 

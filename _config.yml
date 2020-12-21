@@ -8,6 +8,15 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "_projects"
+      collection: "projects"
+    values:
+      layout: "project"
+
+collections:
+  projects:
+    output: true
 
 plugins:
   - jekyll-feed

@@ -20,4 +20,3 @@ that.probably("doesn't" + make);
 ```
 
 these markdown files are being written in [Typora](https://typora.io), a very good markdown editor that i would recommend because it is very good.
-
