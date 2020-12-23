@@ -12,11 +12,15 @@ this page is basically here to test to see if the scripts and all the sort work.
 
 ## this is a smaller header.
 
-```javascript
+```js
 this.is("some improper");
 code();
 that.probably("doesn't" + make);
 // sense
 ```
+
+<p class="emphasis-highlight">
+[ edit from the future (22 dec 2020): the old website didn't have any code formatting. it was just set in a monospace font with a darker grey background. fantastic, i know. ]
+</p>
 
 these markdown files are being written in [Typora](https://typora.io), a very good markdown editor that i would recommend because it is very good.
