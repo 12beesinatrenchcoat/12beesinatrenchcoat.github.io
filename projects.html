@@ -1,18 +1,43 @@
 ---
 style: projects
 ---
-<h1 class="highlight">/projects</h1>
-<p class="subtitle">Some things I worked on.</p>
+<h1 class="emphasis-highlight">/projects</h1>
+<p class="subtitle">some things i [am working / have worked] on</p>
 
-{% assign projects = site.projects %}
+{% assign projects = site.projects | sort: "startDate" | reverse %}
 
-<ul>
-    {% for page in projects %}
-    <li>
-        <h2>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h2>
-        {{ page.description }}
-    </li>
-    {% endfor %}
-</ul>
+<h2>current projects</h2>
+{% for page in projects %}
+    {% if page.status == "wip" or page.status == "on_hold" %}
+    <div class="{{page.status}}" style="background-image:url({{page.headerImage}}"> 
+        <div class="inner-content">
+            <h3>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h3>    
+            {{ page.description }} <br>
+            {% for tag in page.tags %}
+                <span class="tag">{{tag}}</span>
+            {% endfor %}
+            started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}
+
+<h2>past projects</h2>
+{% for page in projects %}
+    {% if page.status == "scrapped" or page.status == "complete" %}
+    <div class="{{page.status}}" style="background-image:url({{page.headerImage}}"> 
+        <div class="inner-content">
+            <h3>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h3>
+            {{ page.description }} <br>
+            {% for tag in page.tags %}
+                <span class="tag">{{tag}}</span>    
+            {% endfor %}
+            {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,117 @@
+---
+---
+
+// color variables
+$translucent-black: rgba(0, 0, 0, 0.5);
+
+$wip: rgba(48, 215, 242, 0.5);
+$wip-30: rgba(48, 215, 242, 0.3);
+
+$on_hold: rgba(242, 212, 48, 0.5);
+$on_hold-30: rgba(242, 212, 48, 0.3);
+
+$complete: rgba(77, 255, 129, 0.5);
+$complete-30: rgba(77, 255, 129, 0.3);
+
+$scrapped: rgba(244, 67, 54, 0.5);
+$scrapped-30: rgba(244, 67, 54, 0.3);
+
+body{
+    background: #CBD4D3;
+}
+.emphasis-highlight{
+    background: rgb(48, 215, 242); // should match $wip, but 100% alpha
+}
+// lots of things... this is a mess.
+
+div{
+    padding: 2em 1em;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    a{
+        color: white
+    }
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.inner-content{
+    padding: 0.5em;
+    position: relative;
+    display: inline-block;
+    background: $translucent-black;
+}
+
+.wip{
+    .tag{
+        background: $wip
+    }
+}
+
+.wip::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, $wip-30, $wip-30 35px, $wip 35px, $wip 70px),
+        linear-gradient($translucent-black, $translucent-black);
+}
+
+.on_hold{
+    .tag{
+        background: $on_hold
+    }
+}
+
+.on_hold::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: 
+        radial-gradient($on_hold 15%, $on_hold-30 16%),
+        radial-gradient($on_hold 15%, $on_hold-30 16%),
+        linear-gradient($translucent-black, $translucent-black);
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+}
+
+.scrapped{
+    .tag{
+        background: $scrapped
+    }
+}
+
+.scrapped::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+        linear-gradient(135deg, $scrapped 25%, $scrapped-30 25%) -50px 0,
+        linear-gradient(225deg, $scrapped 25%, $scrapped-30 25%) -50px 0,
+        linear-gradient(315deg, $scrapped 25%, $scrapped-30 25%),
+        linear-gradient(45deg, $scrapped 25%, $scrapped-30 25%),
+        linear-gradient($translucent-black, $translucent-black);
+    background-size: 100px 100px;
+}
+
+.complete{
+    .tag{
+        background: $complete
+    }
+}
+
+.complete::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background:
+        url(/assets/images/complete-tileplus.svg),
+        linear-gradient($complete-30, $complete-30),
+        linear-gradient($translucent-black, $translucent-black);
+    background-size:64px, 64px;
+}
