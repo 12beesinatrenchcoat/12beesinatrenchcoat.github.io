@@ -1,5 +1,6 @@
 ---
 ---
+<!-- for use in blog posts. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,25 @@
     {% include favicon.html %}
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/blog.css">
+    <style>
+        header{
+            background-image: linear-gradient(#F2D430c4, #F2D430c4), url({{page.headerImage}});
+        }
+    </style>
     {% feed_meta %}
 </head>
 
 {% include navigation.html %}
 
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}</p>
+<header>
+    <div>
+        <div>
+            <h1 id="title">{{ page.title }}</h1>
+            <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
+        </div>
+    </div>
+</header>
 
+<main>
 {{ content }}
+</main>

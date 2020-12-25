@@ -1,7 +1,7 @@
 ---
 title:         "a first post"
 description:   "i have no idea what i'm doing, and i'm just hoping this works correctly."
-headerImage:   "../assets/images/mcimage-lolxd.jpg"
+headerImage:   "/assets/images/mcimage-lolxd.jpg"
 ---
 
 hello there! if you're currently reading this, that means that everything is (probably) working. or not. we'll see.

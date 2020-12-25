@@ -1,7 +1,7 @@
 ---
 title:         "the actual post"
 description:   "this is the second post, and it has content in it"
-headerImage:   "../assets/images/websitev4-header.jpg"
+headerImage:   "/assets/images/websitev4-header.jpg"
 ---
 
 Welcome to the fourth iteration of my website, website v4! There's a bunch of new things here, a `/projects/` section, a `/blog/` section, with posts now written in Markdown, and compiled using `gray-matter` and `showdown`. I'm surprised it's actually working.
