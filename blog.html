@@ -5,13 +5,14 @@ style: blog
 <h1 class="emphasis-highlight">/blog</h1>
 <p class="subtitle">inane rambings about random things</p>
 
-<ul>
-    {% for post in site.posts %}
-    <li>
-        <h2>
+{% for post in site.posts %}
+<div class="post" style="background-image:linear-gradient(#F2D430C4, #F2D430C4),url({{post.headerImage}});"> 
+    <div>
+        <h3>
             <a href="{{ post.url }}">{{ post.title }}</a>
-        </h2>
-        {{ post.excerpt }}
-    </li>
-    {% endfor %}
-</ul>
+        </h3>    
+        {{ post.description }} <br>
+        published {{post.date | date_to_string | downcase}}
+    </div>
+</div>
+{% endfor %}

@@ -4,4 +4,10 @@ body{
 .emphasis-highlight{
     background: #F2D430;
 }
-
+.post{
+    margin-bottom: 1em;
+}
+div > div{
+    padding: 1em 1em;
+    backdrop-filter: blur(4px);
+}

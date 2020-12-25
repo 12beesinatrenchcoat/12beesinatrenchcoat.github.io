@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="/assets/css/{{page.style}}.css">
     {% feed_meta %}
 </head>
-<body>
-    {% include navigation.html %}
+{% include navigation.html %}
+<main>
     {{content}}
-</body>
+</main>
+{% include footer.html %}
 </html>
