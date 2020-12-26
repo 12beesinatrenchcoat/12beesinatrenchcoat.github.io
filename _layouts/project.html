@@ -9,12 +9,30 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="/assets/css/projects.css">
     {% include favicon.html %}
+    <style>
+        header{
+            background-image:url({{page.headerImage}});
+        }
+    </style>
 </head>
-<body>
     {% include navigation.html %}
-    <h1>{{page.title}}</h1>
-    {{content}}
-</body>
+
+    <header class="{{page.status}}">
+        <div>
+            <div>
+                <h1 id="title">{{ page.title }}</h1> 
+                {% for tag in page.tags %}
+                    <span class="tag">{{tag}}</span>
+                {% endfor %}
+                <p class="subtitle">{{page.description}} <br> started {{ page.startDate | date_to_string | downcase }}</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {{content}}
+    </main>
+
+    {% include footer.html %}
 </html>
 
-{% include footer.html %}

@@ -11,3 +11,7 @@ div > div{
     padding: 1em 1em;
     backdrop-filter: blur(4px);
 }
+
+header > div{
+    backdrop-filter:blur(4px);
+}

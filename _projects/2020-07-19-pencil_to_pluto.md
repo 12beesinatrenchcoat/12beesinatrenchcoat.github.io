@@ -1,6 +1,6 @@
 ---
 title: "Pencil to Pluto"
-description: "an incremental game about drawing a line to pluto... with pencils... on an infinite sheet of paper"
+description: "an incremental game about drawing a line to pluto... with pencils..."
 tags:	
   - game
   - code
