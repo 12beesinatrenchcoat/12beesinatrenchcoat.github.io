@@ -24,10 +24,6 @@ h1, h2, h3{
     margin-bottom: 0em;
 }
 
-.currentpage {
-    color: green;
-}
-
 .subtitle {
     margin-top: -0em
 }
@@ -38,11 +34,11 @@ h1, h2, h3{
 
 code {
     font-family: "JetBrains Mono", monospace;
-    background: rgba(0,0,0,0.1);
+    background: rgba(64,64,64,0.1);
     display: block
 }
 
-p, h1, h2, h3{
+p, h1, h2, h3, li{
     code{
         display: inline
     }
@@ -63,6 +59,7 @@ img{
 header{
     display:block;
     position: relative;
+    margin-top: 1em;
     > div{
         padding: 2em 0;
         position: relative;
@@ -75,12 +72,20 @@ header{
     background-size: cover;
 }
 
-footer{
+nav, footer{
     background: rgba(32, 32, 32, 0.8);
     color: white;
     padding: 0.5em;
     display: flex;
     justify-content: space-between;
+    #logo{
+        filter: invert(100%);
+    }
+}
+
+#logo{
+    height: 1em;
+    display:inline;
 }
 
 button{
@@ -92,4 +97,12 @@ button{
 
 #title{
     margin-right: 0.4rem;
+}
+
+blockquote{
+    border-left: 2px solid;
+    p{
+        margin-left: 1em;
+        font-style: italic;
+    }
 }
