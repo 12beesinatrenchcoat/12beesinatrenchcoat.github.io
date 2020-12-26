@@ -8,9 +8,15 @@ body {
 a{
     color:inherit;
 }
-
-main, nav, footer{
-    margin: 0% 20%;
+@media (min-width: 1280px){
+    main, nav, footer{
+        margin: 0% 20%;
+    }
+}
+@media (max-width: 1280px){
+    main, nav, footer{
+        margin: 0% 4em;
+    }
 }
 
 h1, h2, h3{
@@ -56,14 +62,17 @@ img{
 
 header{
     display:block;
+    position: relative;
     > div{
         padding: 2em 0;
         position: relative;
-        backdrop-filter: blur(8px);
         > div{
             margin: 0% 20%;
+
         }
     }
+    background-position: center;
+    background-size: cover;
 }
 
 footer{
@@ -79,4 +88,8 @@ button{
     color: inherit;
     background: none;
     text-decoration: underline;
+}
+
+#title{
+    margin-right: 0.4rem;
 }
