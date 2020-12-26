@@ -1,0 +1,26 @@
+---
+---
+body{
+    background: #D4D1CB;
+}
+.emphasis-highlight{
+    background: #F2D430CC;
+}
+.post{
+    margin-bottom: 1em;
+}
+div > div{
+    backdrop-filter: blur(4px);
+    & > div{
+        background: rgba(255, 255, 255, 0.4);
+        display: inline-block;
+        padding: 0.5rem 1rem;
+    }
+}
+
+header > div{
+    backdrop-filter:blur(4px);
+}
+div{
+    background-position: center;
+}

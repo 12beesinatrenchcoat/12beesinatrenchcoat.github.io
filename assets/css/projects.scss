@@ -21,7 +21,7 @@ body{
     background: #CBD4D3;
 }
 .emphasis-highlight{
-    background: rgb(48, 215, 242); // should match $wip, but 100% alpha
+    background: rgba(48, 215, 242, 0.8); // should match $wip, but 80% alpha
 }
 // lots of things... this is a mess.
 
@@ -159,7 +159,6 @@ div{
 // below is only used for projects pages - everything above is also used on project listing
 
 header {
-    background-position: center;
     & > div > div{
     display: inline-block;
     background: $translucent-black;

@@ -2,17 +2,27 @@
 title: blog 
 style: blog
 ---
+<style>
+    div > div{
+        padding: 1em;
+    }
+</style>
 <h1 class="emphasis-highlight">/blog</h1>
 <p class="subtitle">inane rambings about random things</p>
 
 {% for post in site.posts %}
-<div class="post" style="background-image:linear-gradient(#F2D430C4, #F2D430C4),url({{post.headerImage}});"> 
+<div class="post" style="background-image:linear-gradient(#f6e479C4, #f6e479C4),url({{post.headerImage}});"> 
     <div>
-        <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3>    
-        {{ post.description }} <br>
-        published {{post.date | date_to_string | downcase}}
+        <div>
+            <h3>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>    
+            <span>
+                {{ post.description }} 
+            </span><br><span>
+                published {{post.date | date_to_string | downcase}}
+            </span>
+        </div>
     </div>
 </div>
 {% endfor %}

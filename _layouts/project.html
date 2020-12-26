@@ -24,7 +24,18 @@
                 {% for tag in page.tags %}
                     <span class="tag">{{tag}}</span>
                 {% endfor %}
-                <p class="subtitle">{{page.description}} <br> started {{ page.startDate | date_to_string | downcase }}</p>
+                <p class="subtitle">
+                    {{page.description}} <br> 
+                    started {{ page.startDate | date_to_string | downcase }} 
+                    {% if page.endDate != "tba" %}
+                        {% if page.status == "complete" %}
+                        / completed
+                        {% else %}
+                        / scrapped
+                        {% endif %}
+                        {{page.endDate | date_to_string | downcase}}
+                    {% endif %}
+                </p>
             </div>
         </div>
     </header>

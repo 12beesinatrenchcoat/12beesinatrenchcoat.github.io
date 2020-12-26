@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/css/blog.css">
     <style>
         header{
-            background-image: linear-gradient(#F2D430c4, #F2D430c4), url({{page.headerImage}});
+            background-image: linear-gradient(#f6e479C4, #f6e479C4), url({{page.headerImage}});
         }
     </style>
     {% feed_meta %}
@@ -23,8 +23,10 @@
 <header>
     <div>
         <div>
-            <h1 id="title">{{ page.title }}</h1>
-            <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
+            <div>
+                <h1 id="title">{{ page.title }}</h1>
+                <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
+            </div>
         </div>
     </div>
 </header>
