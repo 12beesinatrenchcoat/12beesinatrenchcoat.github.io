@@ -8,14 +8,20 @@ body {
 a{
     color:inherit;
 }
-@media (min-width: 1280px){
-    main, nav, footer{
-        margin: 0% 20%;
+main, nav, footer{
+    margin: 0% 20%;
+
+    @media (max-width: 1280px){
+        margin: 0 10%;
     }
-}
-@media (max-width: 1280px){
-    main, nav, footer{
-        margin: 0 4em;
+    @media (max-width: 480px){
+        margin: 0 1em;
+        #mynameis{
+            display:none;
+        }
+        button{
+            display:none;
+        }
     }
 }
 
