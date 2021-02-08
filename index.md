@@ -10,7 +10,7 @@ In other words, I make things - anything creative I find intesting, from code, t
 
 I have a [blog](/blog.html) where I sometimes ramble. Sometimes I like listing [projects](/projects.html) I've worked on.
 
-I think that's all. You can follow me on [Twitter](https://twitter.com/andzcliv3) if you so please, or look at whatever nonsense I've posted on [YouTube](https://youtube.com/andychanpineapples).
+I think that's all. You can follow me on [Twitter](https://twitter.com/12bz_trenchcoat) if you so please, or look at whatever nonsense I've posted on [YouTube](https://youtube.com/andychanpineapples).
 
 This site is powered using the excellent [Jekyll](https://jekyllrb.com), and hosted with GitHub Pages. You can find the source code [here](https://github.com/andythepie/andythepie.github.io).
 
