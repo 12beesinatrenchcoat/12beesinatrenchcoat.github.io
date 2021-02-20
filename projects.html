@@ -1,4 +1,6 @@
 ---
+title: projects
+layout: listing
 style: projects
 ---
 <!-- projects listing - not to be confused with an individual project's page -->
@@ -10,16 +12,18 @@ style: projects
 <h2>current projects</h2>
 {% for page in projects %}
     {% if page.status == "wip" or page.status == "on_hold" %}
-    <div class="{{page.status}}" style="background-image:url({{page.headerImage}}"> 
+    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}}"> 
         <div class="inner-content">
+            <span class="publishdate">
+                started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
+            </span> <br>
             <h3>
                 <a href="{{ page.url }}">{{ page.title }}</a>
-            </h3>    
+            </h3><br>
             {{ page.description }} <br>
             {% for tag in page.tags %}
-                <span class="tag">{{tag}}</span>
+                <span class="tag">{{tag}}</span> 
             {% endfor %}
-            started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
         </div>
     </div>
     {% endif %}
@@ -28,16 +32,18 @@ style: projects
 <h2>past projects</h2>
 {% for page in projects %}
     {% if page.status == "scrapped" or page.status == "complete" %}
-    <div class="{{page.status}}" style="background-image:url({{page.headerImage}}"> 
+    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}})"> 
         <div class="inner-content">
+            <span class="publishdate">
+                {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
+            </span> <br>
             <h3>
                 <a href="{{ page.url }}">{{ page.title }}</a>
-            </h3>
+            </h3><br>
             {{ page.description }} <br>
             {% for tag in page.tags %}
-                <span class="tag">{{tag}}</span>    
+                <span class="tag">{{tag}}</span>     
             {% endfor %}
-            {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
         </div>
     </div>
     {% endif %}

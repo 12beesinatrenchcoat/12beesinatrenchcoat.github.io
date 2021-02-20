@@ -17,9 +17,9 @@
 </head>
     {% include navigation.html %}
 
-    <header class="{{page.status}}">
+    <header class="{{page.status}} project">
         <div>
-            <div>
+            <div class="inner-content">
                 <h1 id="title">{{ page.title }}</h1> 
                 {% for tag in page.tags %}
                     <span class="tag">{{tag}}</span>

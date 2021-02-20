@@ -1,3 +1,5 @@
+// mostly everything.
+
 @import url("https://brick.freetls.fastly.net/Open+Sans:400,600");
 
 body {
@@ -8,6 +10,7 @@ body {
 a{
     color:inherit;
 }
+
 main, nav, footer{
     margin: 0% 20%;
 
@@ -25,6 +28,10 @@ main, nav, footer{
     }
 }
 
+main{
+    text-align:justify
+}
+
 h1, h2, h3{
     display:inline-block;
     margin-bottom: 0em;
@@ -34,25 +41,16 @@ h1, h2, h3{
     margin-top: -0em
 }
 
-.mono {
-    font-family: "JetBrains Mono", monospace;
-}
-
 code {
     font-family: "JetBrains Mono", monospace;
     background: rgba(64,64,64,0.1);
-    display: block
+    display: block;
+    padding: 1em;
 }
 
-p, h1, h2, h3, li{
-    code{
-        display: inline
-    }
-}
-
-hr{
-    border-top: medium dashed;
-    border-bottom: none;
+p > code, li > code{
+    padding: 0;
+    display: inline;
 }
 
 img{
@@ -72,7 +70,10 @@ header{
         > div{
             margin: 0% 20%;
             @media (max-width: 1280px){
-                margin: 0 4em;
+                margin: 0 10%;
+            }
+            @media (max-width: 480px){
+                margin: 0 1em;
             }
 
         }
@@ -89,12 +90,10 @@ nav, footer{
     justify-content: space-between;
     #logo{
         filter: invert(100%);
+        height: 1em;
+        display: inline;
+        vertical-align: -0.12rem;
     }
-}
-
-#logo{
-    height: 1em;
-    display:inline;
 }
 
 button{
@@ -104,14 +103,15 @@ button{
     text-decoration: underline;
 }
 
-#title{
-    margin-right: 0.4rem;
-}
-
 blockquote{
     border-left: 2px solid;
     p{
         margin-left: 1em;
         font-style: italic;
     }
+}
+
+.emphasis-highlight{
+    color:black;
+    text-decoration: none;
 }

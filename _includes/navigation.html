@@ -1,11 +1,13 @@
 <nav>
     <span>
         {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="emphasis-highlight";"{% endif %}>{{ item.name }}</a>
+        <a href="{{ item.link }}" {% if page.url contains item.name %}class="emphasis-highlight";"{% endif %}>{{ item.name }}</a>
         {% endfor %}
     </span>
-    <span id=mynameis>
-        my name is <span class="emphasis-highlight">andy chan</span> &nbsp;
+    <span>
+        <span id=mynameis>
+            my name is <span class="emphasis-highlight">andy chan</span> &nbsp;
+        </span>
         <img src="/assets/logo.svg" alt="logo (x, triangle, left angle bracket)" id="logo">
     </span>
 </nav>

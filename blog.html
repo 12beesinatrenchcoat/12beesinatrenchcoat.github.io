@@ -1,5 +1,6 @@
 ---
 title: blog 
+layout: listing
 style: blog
 ---
 <style>
@@ -12,17 +13,16 @@ style: blog
 
 {% for post in site.posts %}
 <div class="post" style="background-image:linear-gradient(#f6e479C4, #f6e479C4),url({{post.headerImage}});"> 
-    <div>
-        <div>
-            <h3>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-            </h3>    
-            <span>
-                {{ post.description }} 
-            </span><br><span>
-                published {{post.date | date_to_string | downcase}}
-            </span>
-        </div>
+    <div class="inner-content">
+        <span class="publishdate">
+            {{post.date | date_to_string | downcase}}
+        </span> <br> 
+        <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3> <br>
+        <span>
+            {{ post.description }} 
+        </span>
     </div>
 </div>
 {% endfor %}

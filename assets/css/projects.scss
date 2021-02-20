@@ -1,5 +1,6 @@
 ---
 ---
+// for just project listings.
 
 // color variables
 $translucent-black: rgba(0, 0, 0, 0.4);
@@ -25,24 +26,21 @@ body{
 }
 // lots of things... this is a mess.
 
-div{
-    padding: 2em 1em;
-    background-position: center;
-    background-size: cover;
-    color: white;
-    a{
-        color: white
+.project{
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        backdrop-filter: blur(3px);
     }
-    margin-bottom: 1em;
-    position: relative;
-}
-
-.inner-content{
-    padding: 0.5em;
-    position: relative;
-    display: inline-block;
-    background: $translucent-black;
-    max-width: 80%;
+    &::after{
+        position: absolute;
+        padding: 0.2rem;
+        color:white;
+        right: 2.5%;
+        bottom: 10%;
+    }
 }
 
 .wip{
@@ -50,23 +48,14 @@ div{
         background: $wip
     }
     &::before{
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
         background-image: 
             repeating-linear-gradient(45deg, $wip-20, $wip-20 35px, $wip 35px, $wip 70px),
             linear-gradient($translucenter-black, $translucenter-black);
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(2px);
     }
     &::after{
         content: "wip";
-        position: absolute;
-        padding: 0.2rem;
         background: $wip;
-        color:white;
-        right: 2.5%;
-        bottom: 10%;
     }
 }
 
@@ -75,26 +64,17 @@ div{
         background: $on_hold
     }
     &::before{
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
+
         background-image: 
             radial-gradient($on_hold 15%, $on_hold-20 16%),
             radial-gradient($on_hold 15%, $on_hold-20 16%),
             linear-gradient($translucenter-black, $translucenter-black);
         background-size: 60px 60px;
         background-position: 0 0, 20px 20px;
-        backdrop-filter: blur(3px);
     }
     &::after{
         content: "on hold";
-        position: absolute;
-        padding: 0.2rem;
         background: $on_hold;
-        color:white;
-        right: 2.5%;
-        bottom: 10%;
     }
 }
 
@@ -103,10 +83,6 @@ div{
         background: $scrapped
     }
     &::before{
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
         background:
             linear-gradient(135deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
             linear-gradient(225deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
@@ -114,16 +90,10 @@ div{
             linear-gradient(45deg, $scrapped 25%, $scrapped-20 25%),
             linear-gradient($translucenter-black, $translucenter-black);
         background-size: 100px 100px;
-        backdrop-filter: blur(3px);
     }
     &::after{
         content: "scrapped :(";
-        position: absolute;
-        padding: 0.2rem;
         background: $scrapped;
-        color:white;
-        right: 2.5%;
-        bottom: 10%;
     }
 }
 
@@ -133,35 +103,14 @@ div{
         background: $complete
     }
     &::before{
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
         background:
             url(/assets/images/complete-tileplus.svg),
             linear-gradient($complete-20, $complete-20),
             linear-gradient($translucenter-black, $translucenter-black);
         background-size:64px, 64px;
-        backdrop-filter: blur(3px);
     }
     &::after{
         content: "complete! :D";
-        text-align:right;
-        position: absolute;
-        padding: 0.2rem;
         background: $complete;
-        color:white;
-        right: 2.5%;
-        bottom: 10%;
     }
-}
-
-// below is only used for projects pages - everything above is also used on project listing
-
-header {
-    & > div > div{
-    display: inline-block;
-    background: $translucent-black;
-    padding: 0.5rem 1rem;
-}
 }

@@ -22,11 +22,9 @@
 
 <header>
     <div>
-        <div>
-            <div>
-                <h1 id="title">{{ page.title }}</h1>
-                <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
-            </div>
+        <div class="inner-content">
+            <h1 id="title">{{ page.title }}</h1>
+            <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
         </div>
     </div>
 </header>
