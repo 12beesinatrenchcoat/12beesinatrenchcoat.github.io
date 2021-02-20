@@ -12,7 +12,7 @@ headerImage: "/assets/images/penciltopluto/penciltopluto-scr1.png"
 
 **Pencil to Pluto** is an incremental game developed by me, with some music by my friend, **AlexTheYes**. 
 
-It was created in the [Godot Engine](https://godotengine.org) for the [Summer 2020 My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020) - and as nearly all things on my website (well, all things, currently), the source code is public, and can be found [here](https://github.com/AndyThePie/pencil-to-pluto).
+It was created in the [Godot Engine](https://godotengine.org){:class="ext other"} for the [Summer 2020 My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020){:class="ext other"} - and as nearly all things on my website (well, all things, currently), the source code is public, and can be found [here](https://github.com/AndyThePie/pencil-to-pluto){:class="ext github"}.
 (Not that the source code for everything I've ever made is public and can be found at that exact repository, but... you know what I mean.)
 
 While the game jam lasted 14 days, the submission was produced in 7 - and the result was ~~sub-par~~ non-functional...

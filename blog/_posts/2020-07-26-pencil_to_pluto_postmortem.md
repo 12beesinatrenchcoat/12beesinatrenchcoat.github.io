@@ -4,7 +4,7 @@ description:   "examining what pencil to pluto is - and what went wrong... kind 
 headerImage:   "/assets/images/penciltopluto/penciltopluto-scr2.png"
 ---
 
-**Pencil to Pluto** was an incremental game developed for [the Summer 2020 edition of My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020). It was made using [Godot Engine](https://godotengine.org).
+**Pencil to Pluto** was an incremental game developed for [the Summer 2020 edition of My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020){:class="ext other"}. It was made using [Godot Engine](https://godotengine.org){:class="ext other"}.
 
 The basic idea of the game is this:
 

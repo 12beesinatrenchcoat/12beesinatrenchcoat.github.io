@@ -1,0 +1,43 @@
+// some icons for links.
+
+@font-face{
+    font-family: "Font Awesome 5 EDITED";
+    src:url("/assets/fonts/fontello.woff2");
+} 
+
+.ext::before, .ext::after{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transform: scale(0.9);
+}
+
+.ext::before{
+    margin-right: 0.2em;
+}
+
+.other::after{
+    font-family: "Font Awesome 5 EDITED"; 
+    font-weight: 900; 
+    content: "\ \f35d";
+}
+
+.twitter::before{
+    font-family: "Font Awesome 5 EDITED"; 
+    font-weight: 400; 
+    content: "\f099";
+}
+
+.youtube::before{
+    font-family: "Font Awesome 5 EDITED"; 
+    font-weight: 400; 
+    content: "\f167";
+}
+
+.github::before{
+    font-family: "Font Awesome 5 EDITED"; 
+    font-weight: 400; 
+    content:"\f113";
+}

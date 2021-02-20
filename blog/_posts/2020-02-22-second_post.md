@@ -20,7 +20,7 @@ I'm done with the list, I'm just going to write down some of my other thoughts.
 
 I really... didn't know what I was doing half this time. I wrote some stuff, I looked at reference, and the entire process (and result, but more on that later,) was a giant disorganized mess.
 
-I suppose I should thank some sites, but more specifically: the people who contribute to the [MDN Web Docs](https://developer.mozilla.org/en-US/) and [Stack Overflow](https://stackoverflow.com/) - for wannabe developers like myself, your contributions make for great reference material. Thanks!
+I suppose I should thank some sites, but more specifically: the people who contribute to the [MDN Web Docs](https://developer.mozilla.org/en-US/){:class="ext other"} and [Stack Overflow](https://stackoverflow.com/){:class="ext other"} - for wannabe developers like myself, your contributions make for great reference material. Thanks!
 
 But more on the result - it's a mess. I dread looking at the "code" again - it's an amalgamation of multi-line HTML strings, many repeated things that could probably be simplified, stored in variables, or consolidated into functions - but I didn't do that. Which may have been why this took so long. Maybe when I finish writing this, and go to compile it, there's going to be another issue somewhere, and it's going to take me another few hours to solve it. That'll be... great.
 

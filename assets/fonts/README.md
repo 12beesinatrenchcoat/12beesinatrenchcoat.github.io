@@ -1,0 +1,1 @@
+This is literally just a modified version of [Font Awesome 5](https://fontawesome.com/). It is under the [SIL OFL 1.1 License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
