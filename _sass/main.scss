@@ -28,10 +28,6 @@ main, nav, footer{
     }
 }
 
-main{
-    text-align:justify
-}
-
 h1, h2, h3{
     display:inline-block;
     margin-bottom: 0em;
@@ -114,4 +110,8 @@ blockquote{
 .emphasis-highlight{
     color:black;
     text-decoration: none;
+}
+
+.smoltext{
+    font-size: 0.85rem;
 }

@@ -14,7 +14,7 @@ style: projects
     {% if page.status == "wip" or page.status == "on_hold" %}
     <div class="{{page.status}} project" style="background-image:url({{page.headerImage}}"> 
         <div class="inner-content">
-            <span class="publishdate">
+            <span class="smoltext">
                 started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
             </span> <br>
             <h3>
@@ -34,7 +34,7 @@ style: projects
     {% if page.status == "scrapped" or page.status == "complete" %}
     <div class="{{page.status}} project" style="background-image:url({{page.headerImage}})"> 
         <div class="inner-content">
-            <span class="publishdate">
+            <span class="smoltext">
                 {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
             </span> <br>
             <h3>
