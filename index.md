@@ -2,17 +2,66 @@
 title: about
 style: self
 ---
-<h1 class="emphasis-highlight">hello there! o/</h1>
+<h1 class="emphasis-highlight">yo o/</h1>
 
-My name is Andy Chan, a self-described "wannabe stuff maker".
+i'm mmatt (he/him) :)
 
-In other words, I make things - anything creative I find intesting, from code, to art, to music, to videos, and a lot more - not that I'm necessarily good at any of it. Jack of all trades, master of none. That's me!
+## about me
+i usually stream video games (and sometimes programming) on my [twitch](https://mmatt.link/live).
 
-I have a [blog](/blog.html) where I sometimes ramble. Sometimes I like listing [projects](/projects.html) I've worked on.
+my main programming project right now is [doob](https://doobbot.com), it's kinda a passion project because i've always wanted to start learning coding, and this has been fun making a Discord bot
 
-I think that's all. You can follow me on [Twitter](https://twitter.com/12bz_trenchcoat){:class="ext twitter"} if you so please, or look at whatever nonsense I've posted on [YouTube](https://youtube.com/andychanpineapples){:class="ext youtube"}.
+i enjoy collecting vinyl records, and i enjoy listening to music, in the next section, you will see some of the artists i like to listen to!
+
+## music
+i like to listen to:
+
+* Tyler, the Creator
+* Porter Robinson // Virtual Self
+* Kanye West
+* 100 gecs
+* Food House
+* Kero Kero Bonito
+* Fraxiom + Gupi
+* Kid Cudi
+
+[and more!!!](https://last.fm/users/mmattbtw)
+
+### my vinyl record collection:
+i own:
+
+* 100 gecs - 1000 gecs (black vinyl)
+* tyler, the creator - igor (black vinyl)
+* kero kero bonito - it's bugsnax (pink(?) vinyl)
+* porter robinson - musician (black vinyl)
+* porter robinson - worlds (black vinyl)
+* tyler, the creator - flower boy (black vinyl)
+* 100 gecs - 1000 gecs and the tree of clues (black vinyl)
+* kero kero bonito - flamingo (salmon vinyl)
+* porter robinson - nurture (white/transparent vinyl [from the webstore])
+* kids see ghosts - kids see ghosts (pink vinyl)
+
+[and maybe more!!](https://www.discogs.com/user/mmattbtw)
+
+## contact
+formal contact can be done over [email](https://mmatt.link/email)
+
+other contact can be done through discord (mmatt#0001) or [twitter](https://twitter.com/mmattbtw)
+
+## socials:
+[twitter](https://mmatt.link/twt)
+
+[youtube](https://mmatt.link/yt)
+
+[twitch](https://mmatt.link/live)
+
+[github](https://github.com/mmattbtw)
+
+[music (lastfm)](https://last.fm/users/mmattbtw)
+
+[and more?](https://mmatt.link/soc)
 
 ## some other stuff about the site
-This site is powered using the excellent [Jekyll](https://jekyllrb.com){:class="ext other"}, and hosted with GitHub Pages. Its icons come from a subsetted version of [Font Awesome 5](https://fontawesome.com){:class="ext other"}. You can find the source code of the site [here](https://github.com/andythepie/andythepie.github.io){:class="ext github"} (although I wouldn't recommend it).
+This site was made by [AndyThePie](https://github.com/andythepie) on GitHub and is powered using the excellent [Jekyll](https://jekyllrb.com){:class="ext other"}, and hosted with GitHub Pages. Its icons come from a subsetted version of [Font Awesome 5](https://fontawesome.com){:class="ext other"}. You can find the source code of the site [here](https://github.com/andythepie/andythepie.github.io){:class="ext github"} (although I wouldn't recommend it).
 
 All content on this website is under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode){:class="ext other"}.
