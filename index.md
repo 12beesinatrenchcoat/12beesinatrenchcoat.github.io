@@ -25,7 +25,7 @@ i like to listen to:
 * Fraxiom + Gupi
 * Kid Cudi
 
-[and more!!!](https://last.fm/users/mmattbtw){:class="ext other"}
+[and more!!!](https://last.fm/user/mmattbtw){:class="ext other"}
 
 ### my vinyl record collection:
 i own:
@@ -57,7 +57,7 @@ other contact can be done through discord (mmatt#0001) or [twitter](https://twit
 
 [github](https://github.com/mmattbtw){:class="ext github"}
 
-[music (lastfm)](https://last.fm/users/mmattbtw){:class="ext other"}
+[music (lastfm)](https://last.fm/user/mmattbtw){:class="ext other"}
 
 [and more?](https://mmatt.link/soc){:class="ext other"}
 
