@@ -23,7 +23,7 @@ that.probably("doesn't" + make);
 [ edit from the future (22 dec 2020): the old website didn't have any code formatting. it was just set in a monospace font with a darker grey background. fantastic, i know. ]
 </p>
 
-these markdown files are being written in [Typora](https://typora.io){:class="ext other"}, a very good markdown editor that i would recommend because it is very good.
+these markdown files are being written in [Typora](https://typora.io), a very good markdown editor that i would recommend because it is very good.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Mauris vitae  ultricies leo integer malesuada nunc vel risus. Tempor orci dapibus  ultrices in iaculis nunc sed augue. Semper risus in hendrerit gravida  rutrum quisque non tellus orci. Arcu felis bibendum ut tristique. Et leo duis ut diam quam. Dui sapien eget mi proin. Pharetra pharetra massa  massa ultricies mi quis hendrerit. Aliquet sagittis id consectetur purus ut faucibus pulvinar. Pretium lectus quam id leo in vitae turpis massa  sed. Massa massa ultricies mi quis hendrerit dolor magna eget. Mauris  augue neque gravida in fermentum. Dis parturient montes nascetur  ridiculus mus mauris vitae. Massa id neque aliquam vestibulum morbi  blandit. Pellentesque dignissim enim sit amet venenatis. Justo nec  ultrices dui sapien eget mi proin sed. Dui nunc mattis enim ut tellus  elementum sagittis vitae et.
 
