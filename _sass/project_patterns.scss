@@ -77,7 +77,7 @@ $scrapped-20: rgba(244, 67, 54, 0.2);
     }
     &::before{
         background: // grid of pluses (+).
-            url(/assets/images/complete-tileplus.svg),
+            url(/assets/site-images/complete-tileplus.svg),
             linear-gradient($complete-20, $complete-20),
             linear-gradient($translucent-black, $translucent-black);
         background-size:64px, 64px;
