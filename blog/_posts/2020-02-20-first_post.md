@@ -1,6 +1,6 @@
 ---
 title:         "a first post"
-description:   "i have no idea what i'm doing, and i'm just hoping this works correctly."
+description:   "i have no idea what i'm doing, and i'm just hoping this works correctly. (the test post!)"
 headerImage:   "/assets/images/mcimage-lolxd.webp"
 ---
 
@@ -22,6 +22,13 @@ that.probably("doesn't" + make);
 <p class="emphasis-highlight">
 [ edit from the future (22 dec 2020): the old website didn't have any code formatting. it was just set in a monospace font with a darker grey background. fantastic, i know. ]
 </p>
+
+let's try a very long code block
+```
+we're strangers to love / you know the rules but i don't / no commitment's what i'm thinking of / you would get this from any other guy / i don't wanna tell you how i'm feeling / gotta make you misunderstand / gonna give you up / gonna let you down / gonna run around and desert you / gonna make you cry / gonna say goodbye / gonna tell a lie and hurt you
+```
+
+> once upon a time, the end.
 
 these markdown files are being written in [Typora](https://typora.io), a very good markdown editor that i would recommend because it is very good.
 

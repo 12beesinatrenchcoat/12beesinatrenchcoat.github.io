@@ -1,8 +1,7 @@
 // some icons for links.
 
-a 
+a
     display: inline-block
-
 
 a::before
     margin-right: 0.2em
@@ -14,21 +13,17 @@ a::before
     text-rendering: auto
     -webkit-font-smoothing: antialiased
 
-
 // why did no one tell me about these selectors ;-;
 a[href^="http"]:not(a[rel="license"])::before
     transform: scale(0.9)
     font-weight: 900 // different set
     content: "\f35d"
 
-
 a[href*="twitter.com"]::before
     content: "\f099" !important
 
-
 a[href*="youtube.com"]::before
     content: "\f167" !important
-
 
 a[href*="github.com"]::before
     content: "\f113" !important

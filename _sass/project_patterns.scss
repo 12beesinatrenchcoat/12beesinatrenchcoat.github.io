@@ -17,45 +17,44 @@ $scrapped-20: rgba(244, 67, 54, 0.2);
 
 // background patterns taken from https://projects.verou.me/css3patterns/. check them out, they're rad!
 
-.wip{
-    .tag{
-        background: $wip
+.wip {
+    .tag {
+        background: $wip;
     }
-    &::before{
+    &::before {
         background-image: // diagonal stripes (Lea Verou)
             repeating-linear-gradient(45deg, $wip-20, $wip-20 35px, $wip 35px, $wip 70px),
             linear-gradient($translucent-black, $translucent-black);
         backdrop-filter: blur(2px);
     }
-    &::after{
+    &::after {
         content: "wip";
         background: $wip;
     }
 }
 
-.on_hold{
-    .tag{
-        background: $on_hold
+.on_hold {
+    .tag {
+        background: $on_hold;
     }
-    &::before{
+    &::before {
         background-image: // polka dots (Lea Verou)
-            radial-gradient($on_hold 15%, $on_hold-20 16%),
-            radial-gradient($on_hold 15%, $on_hold-20 16%),
+            radial-gradient($on_hold 15%, $on_hold-20 16%), radial-gradient($on_hold 15%, $on_hold-20 16%),
             linear-gradient($translucent-black, $translucent-black);
         background-size: 60px 60px;
         background-position: 0 0, 30px 30px;
     }
-    &::after{
+    &::after {
         content: "on hold >_<";
         background: $on_hold;
     }
 }
 
-.scrapped{
-    .tag{
-        background: $scrapped
+.scrapped {
+    .tag {
+        background: $scrapped;
     }
-    &::before{
+    &::before {
         background: // zig-zag, (eCSSpert).
             linear-gradient(135deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
             linear-gradient(225deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
@@ -64,25 +63,23 @@ $scrapped-20: rgba(244, 67, 54, 0.2);
             linear-gradient($translucent-black, $translucent-black);
         background-size: 100px 100px;
     }
-    &::after{
+    &::after {
         content: "scrapped :(";
         background: $scrapped;
     }
 }
 
-
-.complete{
-    .tag{
-        background: $complete
+.complete {
+    .tag {
+        background: $complete;
     }
-    &::before{
+    &::before {
         background: // grid of pluses (+).
-            url(/assets/site-images/complete-tileplus.svg),
-            linear-gradient($complete-20, $complete-20),
+            url(/assets/site-images/complete-tileplus.svg), linear-gradient($complete-20, $complete-20),
             linear-gradient($translucent-black, $translucent-black);
-        background-size:64px, 64px;
+        background-size: 64px, 64px;
     }
-    &::after{
+    &::after {
         content: "complete! :D";
         background: $complete;
     }
