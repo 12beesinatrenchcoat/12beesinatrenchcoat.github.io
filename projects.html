@@ -3,7 +3,12 @@ title: projects
 layout: listing
 style: projects
 ---
-<!-- projects listing - not to be confused with an individual project's page -->
+{% comment %} 
+the projects listing. this file haunts me to this day. 
+"current projects" include those that are a work-in-progress or on hold.
+"previous projects" includes scrapped and completed projects.
+the status of the project is also applied as a class - each status has their own little pattern and color.
+{% endcomment %}
 <h1 class="emphasis-highlight">/projects</h1>
 <p class="subtitle">some things i [am working / have worked] on</p>
 
@@ -11,40 +16,43 @@ style: projects
 
 <h2>current projects</h2>
 {% for page in projects %}
-    {% if page.status == "wip" or page.status == "on_hold" %}
-    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}}"> 
-        <div class="inner-content">
-            <span class="smoltext">
-                started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
-            </span> <br>
-            <h3>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-            </h3><br>
-            {{ page.description }} <br>
-            {% for tag in page.tags %}
-                <span class="tag">{{tag}}</span> 
-            {% endfor %}
-        </div>
+{% if page.status == "wip" or page.status == "on_hold" %}
+<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
+    <div class="inner-content">
+        <span class="smoltext">
+            started {{page.startDate | date_to_string | downcase}} 
+            {% if page.status == "on_hold" %} [on hold] {% endif %}
+        </span> <br>
+        <h3>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </h3> <br>
+        {{ page.description }} <br>
+        {% for tag in page.tags %}
+        <span class="tag">{{tag}}</span>
+        {% endfor %}
     </div>
-    {% endif %}
+</div>
+{% endif %}
 {% endfor %}
 
 <h2>past projects</h2>
 {% for page in projects %}
-    {% if page.status == "scrapped" or page.status == "complete" %}
-    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}})"> 
-        <div class="inner-content">
-            <span class="smoltext">
-                {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
-            </span> <br>
-            <h3>
-                <a href="{{ page.url }}">{{ page.title }}</a>
-            </h3><br>
-            {{ page.description }} <br>
-            {% for tag in page.tags %}
-                <span class="tag">{{tag}}</span>     
-            {% endfor %}
-        </div>
+{% if page.status == "scrapped" or page.status == "complete" %}
+<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
+    <div class="inner-content">
+        <span class="smoltext">
+            {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} 
+            {{page.startDate |date_to_string | downcase}} 
+            {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
+        </span> <br>
+        <h3>
+            <a href="{{ page.url }}">{{ page.title }}</a>
+        </h3> <br>
+        {{ page.description }} <br>
+        {% for tag in page.tags %}
+        <span class="tag">{{tag}}</span>
+        {% endfor %}
     </div>
-    {% endif %}
+</div>
+{% endif %}
 {% endfor %}
