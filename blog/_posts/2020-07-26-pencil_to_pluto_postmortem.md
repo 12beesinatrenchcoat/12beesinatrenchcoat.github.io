@@ -1,10 +1,10 @@
 ---
 title:         "a postmortem of an incomplete incremental game"
 description:   "examining what pencil to pluto is - and what went wrong... kind of."
-headerImage:   "/assets/images/penciltopluto/penciltopluto-scr2.png"
+headerImage:   "/assets/images/penciltopluto-scr2.png"
 ---
 
-**Pencil to Pluto** was an incremental game developed for [the Summer 2020 edition of My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020){:class="ext other"}. It was made using [Godot Engine](https://godotengine.org){:class="ext other"}.
+**Pencil to Pluto** was an incremental game developed for the [Summer 2020 edition of My First Game Jam](https://itch.io/jam/my-first-game-jam-summer-2020), and made using [Godot Engine](https://godotengine.org).
 
 The basic idea of the game is this:
 
@@ -31,7 +31,7 @@ If I had more time, if I started work on this earlier, I would have probably pla
 
 But as it is right now, the game has very little. There's a button to get money, a bar that gives you science, and a lot of upgrades that feel like a chore to get the money for. There's still no end, there's no proper beginning, and overall, the entire thing is a mess. It's bad - really bad.
 
-![the research tab of pencil to pluto](/assets/images/penciltopluto/penciltopluto-scr1.png)
+![the research tab of pencil to pluto](/assets/images/penciltopluto-scr1.png)
 
 And yet I'm proud of it.
 
