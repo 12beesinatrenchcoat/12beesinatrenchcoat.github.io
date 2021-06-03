@@ -2,7 +2,8 @@
     <span id="links">
         {% for item in site.data.navigation %}
         {% comment %} what in tarnation {% endcomment %}
-        <a href="{{ item.link }}" {% if page.url contains item.name or item.link == "/" and page.url == "/" %}class="emphasis-highlight";"{% endif %}>{{ item.name }}</a>
+        <a href="{{ item.link }}" {% if page.url contains item.name or item.link=="/" and page.url=="/"
+            %}class="emphasis-highlight" ;"{% endif %}>{{ item.name }}</a>
         {% endfor %}
     </span>
     <span>

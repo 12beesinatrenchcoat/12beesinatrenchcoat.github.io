@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 540 540">
-<g id="Layer 1">
-<path d="M275+275L420.12+448.835L129.88+448.835L275+275Z" opacity="1" fill="#4dff81"/>
-<path stroke="#4dff81" stroke-width="36" d="M25+100L175+250M25+250L175+100" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="round"/>
-<path stroke="#4dff81" stroke-width="36" d="M525+100L375+190L525+250" fill="none" stroke-linecap="butt" opacity="1" stroke-linejoin="miter"/>
-</g>
-</svg>
+<svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 540 540"><path d="m275 275 145.12 173.835H129.88L275 275z" fill="#4dff81"/><path stroke="#4dff81" stroke-width="36" d="m25 100 150 150m-150 0 150-150" fill="none" stroke-linejoin="round"/><path stroke="#4dff81" stroke-width="36" d="m525 100-150 90 150 60" fill="none"/></svg>

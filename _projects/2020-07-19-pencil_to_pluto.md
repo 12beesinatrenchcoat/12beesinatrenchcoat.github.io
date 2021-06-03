@@ -17,7 +17,7 @@ It was created in the [Godot Engine](https://godotengine.org) for the [Summer 20
 
 While the game jam lasted 14 days, the submission was produced in 7 - and the result was ~~sub-par~~ non-functional...
 
-My thoughts on the game post-jam can be found in [the postmortem](/blog/2020/07/26/pencil_to_pluto_postmortem.html).
+My thoughts on the game post-jam can be found in [the postmortem]({% post_url /blog/2020-07-26-pencil_to_pluto_postmortem %}).
 
 
 
@@ -25,4 +25,5 @@ My thoughts on the game post-jam can be found in [the postmortem](/blog/2020/07/
 
 I hope to rewrite it one day.
 
-<span class="emphasis-highlight">**[UPDATE MAY 30]** ;)</span>
+**[UPDATE MAY 30]** ;)
+{: .emphasis-highlight}
