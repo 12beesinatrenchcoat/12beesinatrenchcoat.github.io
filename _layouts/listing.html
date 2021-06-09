@@ -1,23 +1,21 @@
 ---
 ---
-{% comment %} this layout is used for listings (/blog.html, /projects.html) {% endcomment %}
+<!-- for use on /projects.html and /blog.html -->
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ page.title }}</title>
-        {% include favicon.html %}
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <link rel="stylesheet" href="/assets/css/{{page.style}}.css">
-        <link rel="stylesheet" href="/assets/css/listing.css">
-        {% feed_meta %}
-    </head>
-    {% include navigation.html %}
-    <main>
-        {{content}}
-    </main>
-    {% include footer.html %}
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    {% include favicon.html %}
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/{{page.style}}.css">
+    <link rel="stylesheet" href="/assets/css/listing.css">
+    {% feed_meta %}
+</head>
+{% include navigation.html %}
+<main>
+    {{content}}
+</main>
+{% include footer.html %}
 </html>

@@ -1,45 +1,39 @@
 ---
 ---
-{% comment %} this layout is used for project pages (/projects/*) {% endcomment %}
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{page.title}}</title>
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <link rel="stylesheet" href="/assets/css/projects.css">
-        <link rel="stylesheet" href="/assets/css/page.css">
-        {% include favicon.html %}
-        <style>
-            header {
-                background-image:url({{page.headerImage}});
-            }
-        </style>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/projects.css">
+    {% include favicon.html %}
+    <style>
+        header{
+            background-image:url({{page.headerImage}});
+        }
+    </style>
+</head>
     {% include navigation.html %}
 
     <header class="{{page.status}} project">
         <div>
             <div class="inner-content">
-                <span class="smoltext">{{content | number_of_words}} words</span> <br>
-                <div id="head">
-                    <h1 id="title">{{ page.title }}</h1>
-                    {% for tag in page.tags %}
+                <h1 id="title">{{ page.title }}</h1> 
+                {% for tag in page.tags %}
                     <span class="tag">{{tag}}</span>
-                    {% endfor %}
-                </div>
+                {% endfor %}
                 <p class="subtitle">
-                    {{page.description}} <br>
-                    started {{ page.startDate | date_to_string | downcase }}
+                    {{page.description}} <br> 
+                    started {{ page.startDate | date_to_string | downcase }} 
                     {% if page.endDate != "tba" %}
-                    {% if page.status == "complete" %}
-                    / completed
-                    {% else %}
-                    / scrapped
-                    {% endif %}
-                    {{page.endDate | date_to_string | downcase}}
+                        {% if page.status == "complete" %}
+                        / completed
+                        {% else %}
+                        / scrapped
+                        {% endif %}
+                        {{page.endDate | date_to_string | downcase}}
                     {% endif %}
                 </p>
             </div>
@@ -51,5 +45,5 @@
     </main>
 
     {% include footer.html %}
-
 </html>
+

@@ -64,6 +64,4 @@ other contact can be done through discord (mmatt#0001) or [twitter](https://twit
 ## some other stuff about the site
 This site was made by [AndyThePie](https://github.com/andythepie){:class="ext github"} on GitHub and is powered using the excellent [Jekyll](https://jekyllrb.com){:class="ext other"}, and hosted with GitHub Pages. Its icons come from a subsetted version of [Font Awesome 5](https://fontawesome.com){:class="ext other"}. You can find the source code of the site [here](https://github.com/andythepie/andythepie.github.io){:class="ext github"} (although I wouldn't recommend it).
 
-There's also an [Atom feed](/feed.xml), for those who still use that (<3!)
-
-All content on this website is under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode) unless otherwise stated.
+All content on this website is under the [CC-BY 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode){:class="ext other"}.

@@ -20,22 +20,7 @@ collections:
 
 highlighter: rouge
 
-timezone: America/New_York
-
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    span: 
-      line_numbers: false
-    block: 
-      line_numbers: true
-
-sass:
-  style: compressed
-  sourcemap: development
-
-url: "https://andythepie.github.io"
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-last-modified-at

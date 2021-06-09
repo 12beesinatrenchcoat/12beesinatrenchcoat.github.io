@@ -1,10 +1,10 @@
 ---
-title: blog
+title: blog 
 layout: listing
 style: blog
 ---
 <style>
-    div>div {
+    div > div{
         padding: 1em;
     }
 </style>
@@ -12,16 +12,16 @@ style: blog
 <p class="subtitle">inane rambings about random things</p>
 
 {% for post in site.posts %}
-<div class="post" style="background-image:linear-gradient(#f6e479C4, #f6e479C4),url({{post.headerImage}});">
+<div class="post" style="background-image:linear-gradient(#f6e479C4, #f6e479C4),url({{post.headerImage}});"> 
     <div class="inner-content">
         <span class="smoltext">
             {{post.date | date_to_string | downcase}}
-        </span> <br>
+        </span> <br> 
         <h3>
             <a href="{{ post.url }}">{{ post.title }}</a>
         </h3> <br>
         <span>
-            {{ post.description }}
+            {{ post.description }} 
         </span>
     </div>
 </div>

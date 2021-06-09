@@ -1,0 +1,15 @@
+// for project pages and blog posts.
+
+$translucent-black: rgba(0, 0, 0, 0.5);
+
+.inner-content{
+    color:white;
+}
+
+header {
+    & > div > div{
+    display: inline-block;
+    background: $translucent-black;
+    padding: 0.5rem 1rem;
+    }
+}

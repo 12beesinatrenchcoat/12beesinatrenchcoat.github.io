@@ -3,74 +3,48 @@ title: projects
 layout: listing
 style: projects
 ---
-{% comment %}
-the projects listing. this file haunts me to this day.
-"current projects" include those that are a work-in-progress or on hold.
-"previous projects" includes scrapped and completed projects.
-the status of the project is also applied as a class - each status has their own little pattern and color.
-{% endcomment %}
+<!-- projects listing - not to be confused with an individual project's page -->
 <h1 class="emphasis-highlight">/projects</h1>
 <p class="subtitle">some things i [am working / have worked] on</p>
 
-{% assign wip = site.projects | where: "status", "wip" %}
-{% assign on_hold = site.projects | where: "status", "on_hold" %}
-{% assign completed = site.projects | where: "status", "complete" %}
-{% assign scrapped = site.projects | where: "status", "scrapped" %}
+{% assign projects = site.projects | sort: "startDate" | reverse %}
 
-{% comment %} because you can't have "where x *or* y" {% endcomment %}
-{% assign current = wip | concat: on_hold | sort: "startDate" | reverse %}
-{% assign past = completed | concat: scrapped | sort: "startDate" | reverse %}
-
-{% comment %} the more i use liquid the more i hate it {% endcomment %}
-{% assign current.size = current | size %}
-
-<span class="project-category">
-    <h2>current project{% if current.size > 1%}s{%endif%}</h2>
-    <span>({{ current.size }})</span>
-</span>
-{% for page in current %}
-{% if page.status == "wip" or page.status == "on_hold" %}
-<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
-    <div class="inner-content">
-        <span class="smoltext">
-            started {{page.startDate | date_to_string | downcase}}
-            {% if page.status == "on_hold" %} [on hold] {% endif %}
-        </span> <br>
-        <h3>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h3> <br>
-        {{ page.description }} <br>
-        {% for tag in page.tags %}
-        <span class="tag">{{tag}}</span>
-        {% endfor %}
+<h2>current projects</h2>
+{% for page in projects %}
+    {% if page.status == "wip" or page.status == "on_hold" %}
+    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}}"> 
+        <div class="inner-content">
+            <span class="smoltext">
+                started {{page.startDate | date_to_string | downcase}} {% if page.status == "on_hold" %} [on hold] {% endif %}
+            </span> <br>
+            <h3>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h3><br>
+            {{ page.description }} <br>
+            {% for tag in page.tags %}
+                <span class="tag">{{tag}}</span> 
+            {% endfor %}
+        </div>
     </div>
-</div>
-{% endif %}
+    {% endif %}
 {% endfor %}
 
-<hr style="margin: 2em -2em">
-
-<span class="project-category">
-    <h2>past projects</h2>
-    <span>({{ completed | size }} completed, {{ scrapped | size }} scrapped)</span>
-</span>
-{% for page in past %}
-{% if page.status == "scrapped" or page.status == "complete" %}
-<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
-    <div class="inner-content">
-        <span class="smoltext">
-            {% if page.status == "complete" %} completed {% else %} scrapped {% endif %}
-            {{page.startDate |date_to_string | downcase}}
-            {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
-        </span> <br>
-        <h3>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h3> <br>
-        {{ page.description }} <br>
-        {% for tag in page.tags %}
-        <span class="tag">{{tag}}</span>
-        {% endfor %}
+<h2>past projects</h2>
+{% for page in projects %}
+    {% if page.status == "scrapped" or page.status == "complete" %}
+    <div class="{{page.status}} project" style="background-image:url({{page.headerImage}})"> 
+        <div class="inner-content">
+            <span class="smoltext">
+                {% if page.status == "complete" %} completed {% else %} scrapped {% endif %} {{page.startDate | date_to_string | downcase}} {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
+            </span> <br>
+            <h3>
+                <a href="{{ page.url }}">{{ page.title }}</a>
+            </h3><br>
+            {{ page.description }} <br>
+            {% for tag in page.tags %}
+                <span class="tag">{{tag}}</span>     
+            {% endfor %}
+        </div>
     </div>
-</div>
-{% endif %}
+    {% endif %}
 {% endfor %}

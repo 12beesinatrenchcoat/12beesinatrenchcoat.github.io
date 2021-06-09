@@ -1,0 +1,28 @@
+---
+---
+// for project and blog post listing pages.
+
+$translucent-black: rgba(0, 0, 0, 0.5);
+
+div{
+    padding: 2em 1em;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin-bottom: 1em;
+    position: relative;
+    a{
+        color: white
+    }
+    > div {
+        backdrop-filter: blur(4px);
+    }
+}
+
+.inner-content{
+    padding: 0.5em;
+    position: relative;
+    display: inline-block;
+    background: $translucent-black;
+    max-width: 80%;
+}

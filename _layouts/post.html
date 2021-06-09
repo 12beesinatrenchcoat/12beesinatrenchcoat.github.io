@@ -1,42 +1,38 @@
 ---
 ---
-{% comment %} this layout is used for blog posts (/blog/*) {% endcomment %}
+<!-- for use in blog posts. -->
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    {% include favicon.html %}
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <style>
+        header{
+            background-image: linear-gradient(#f6e479C4, #f6e479C4), url({{page.headerImage}});
+        }
+    </style>
+    {% feed_meta %}
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ page.title }}</title>
-        {% include favicon.html %}
-        <link rel="stylesheet" href="/assets/css/styles.css">
-        <link rel="stylesheet" href="/assets/css/blog.css">
-        <link rel="stylesheet" href="/assets/css/page.css">
-        <style>
-            header {
-                background-image: linear-gradient(#f6e479C4, #f6e479C4),
-                url({{page.headerImage}});
-            }
-        </style>
-        {% feed_meta %}
-    </head>
+{% include navigation.html %}
 
-    {% include navigation.html %}
-
-    <header>
-        <div>
-            <div class="inner-content">
-                <span class="smoltext">{{content | number_of_words}} words</span> <br>
-                <h1 id="title">{{ page.title }}</h1>
-                <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
-            </div>
+<header>
+    <div>
+        <div class="inner-content">
+            <h1 id="title">{{ page.title }}</h1>
+            <p class="subtitle">{{page.description}} <br> published {{ page.date | date_to_string | downcase }}</p>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        {{ content }}
-    </main>
+<main>
+{{ content }}
+</main>
 
-    {% include footer.html %}
+{% include footer.html %}
 
 </html>
