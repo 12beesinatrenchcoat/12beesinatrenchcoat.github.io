@@ -6,6 +6,9 @@ style: self
 
 i'm mmatt (he/him) :)
 
+## USE CODE MATT
+#epicpartner
+
 ## about me
 i usually stream video games (and sometimes programming) on my [twitch](https://mmatt.link/live){:class="ext other"}.
 
