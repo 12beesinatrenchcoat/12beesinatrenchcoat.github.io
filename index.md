@@ -6,7 +6,7 @@ style: self
 
 i'm mmatt (he/him) :)
 
-## support these links below:
+## support these links below
 [black lives matter](https://blacklivesmatters.carrd.co)
 
 [stop aapi hate](https://anti-asianviolenceresources.carrd.co)
@@ -35,7 +35,7 @@ i like to listen to:
 
 [and more!!!](https://last.fm/user/mmattbtw){:class="ext other"}
 
-### my vinyl record collection:
+### my vinyl record collection
 i own:
 
 * 100 gecs - 1000 gecs (black vinyl)
@@ -56,7 +56,7 @@ formal contact can be done over [email](https://mmatt.link/email){:class="ext ot
 
 other contact can be done through discord (mmatt#0001) or [twitter](https://twitter.com/mmattbtw){:class="ext twitter"}
 
-## socials:
+## socials
 [twitter](https://mmatt.link/twt){:class="ext twitter"}
 
 [youtube](https://mmatt.link/yt){:class="ext youtube"}
