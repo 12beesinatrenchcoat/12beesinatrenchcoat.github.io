@@ -1,6 +1,6 @@
 - name: home
   link: /
 - name: blog
-  link: http://blog.mmatt.net
+  link: /blog.html
 - name: projects
   link: /projects.html
