@@ -243,7 +243,7 @@ In the choruses though, the song goes hard! I love the beat that Porter put on M
 
 Great song, great message, stop being hard on yourself!!!!!!
 
->Sometimes, the inner voice is encouraging, Calling for you to run those final few yards, You're nearly there, keep going, keep going, keep going, keep going, It will all be okay in the end.
+**"Sometimes, the inner voice is encouraging, Calling for you to run those final few yards, You're nearly there, keep going, keep going, keep going, keep going, It will all be okay in the end."**
 
 ### (11.) Something Comforting
 ANOTHER ONE, NURTURE SINGLE THAT IS!!!!!!
@@ -275,7 +275,7 @@ Porter says:
 > How much joy does it fill you with to imagine somebody you love and care about really happy? 
 
 OMG THE PART WHERE HE TURNS OFF THE VOICE MANIPULATION AND SAYS
-> it's just that i love you
+**"it's just that i love you"**
 
 AAAAAAAAA TEARS.
 
