@@ -8,6 +8,14 @@
 
 ---
 
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@mmattbtw" />
+<meta name="twitter:creator" content="@mmattbtw" />
+<meta property="og:url" content="https://mmatt.net/blog/2021/06/12/nurture_review.html" />
+<meta property="og:title" content="nurture - Porter Robinson | Track-by-track Review" />
+<meta property="og:description" content="A track-by-track review of the newly released sophomore album from Porter Robinson" />
+<meta property="og:image" content="https://mmatt.net/assets/images/nurture.jpg" />
+
 ## Table of Contents <!-- omit in toc -->
 - [‼️ Disclaimer ‼️](#️-disclaimer-️)
 - [What the layout of this review will look like.](#what-the-layout-of-this-review-will-look-like)
