@@ -275,6 +275,7 @@ Porter says:
 > How much joy does it fill you with to imagine somebody you love and care about really happy? 
 
 OMG THE PART WHERE HE TURNS OFF THE VOICE MANIPULATION AND SAYS
+
 **"it's just that i love you"**
 
 AAAAAAAAA TEARS.
