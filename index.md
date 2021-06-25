@@ -11,6 +11,8 @@ i'm mmatt (he/him) :)
 
 [stop aapi hate](https://anti-asianviolenceresources.carrd.co)
 
+[and more!!!](https://dotherightthing.carrd.co/)
+
 ## USE CODE MATT
 #epicpartner
 
