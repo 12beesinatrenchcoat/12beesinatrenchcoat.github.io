@@ -2,11 +2,19 @@
 ---
 // for projects pages (/projects/*).
 
+$bg: #CBD4D3
+
 body
-    background: #CBD4D3
+    background: $bg
+
+html
+    scrollbar-color: #28bbd3 transparent
+
+    &::-webkit-scrollbar-thumb
+        background: #28bbd3
 
 .emphasis-highlight
-    background: rgba(48, 215, 242, 0.8) // should match $wip, but 80% alpha
+    background: #30d7f2cc // should match $wip, but 80% alpha
 
 .project-category
     display: flex

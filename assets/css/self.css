@@ -1,5 +1,13 @@
 /* the home page. woo. */
 
+html {
+    scrollbar-color: #00c554 transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #00c554;
+}
+
 body {
     background: #d1d4cb;
 }
