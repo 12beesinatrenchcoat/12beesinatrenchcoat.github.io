@@ -1,8 +1,15 @@
-// mostly everything.
+// a bunch of rules for everything.
+
+*, *::before, *::after
+    box-sizing: border-box
 
 body
     font-family: "Open Sans", sans-serif
+    font-size: 1em
     margin: 2% 0%
+    min-height: 100vh
+    text-rendering: optimizeSpeed
+    line-height: 1.5
 
 a
     color: inherit
@@ -21,14 +28,14 @@ main, nav, footer
 
 code
     font-family: "JetBrains Mono", monospace
-    background: #ffffff96
+    background: #f6f6f696
 
 .rouge-gutter
-    background: #c4c4c4
+    background: #96969696
     padding: 0.15em 0.25em 0.25em
     margin: -0.15em
     position: absolute
-    width: 0.75em
+    width: 1em
 
 .rouge-code
     padding-left: 1.5em
@@ -62,12 +69,10 @@ nav, footer
         padding: 0 0.1em
 
 blockquote
-    border-left: 2px solid
-    margin-left: 1em
-    p
-        padding: 0.2em 0
-        margin-left: 1em
-        font-style: italic
+    padding-left: 1em
+    border-left: 4px solid
+    font-style: italic
+
 
 // fancy quotes...
 q, blockquote
@@ -89,3 +94,6 @@ a[rel="license"]
     font-family: 'Font Awesome 5 EDITED'
     text-decoration: none
     font-size: large
+
+.flow > * + *
+    margin-top: var(--flow-space, 1em)
