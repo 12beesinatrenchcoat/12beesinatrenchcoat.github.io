@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>website v5</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/projects.css">
+        <link rel="stylesheet" href="/assets/css/page.css">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.ico">
+        <style>
+            header {
+                background-image:url(/assets/images/websitev5-header.webp);
+            }
+        </style>
+    </head>
+    <nav id="nav">
+    <span id="links">
+        
+        
+        <a href="/" >home</a>
+        
+        
+        <a href="/blog.html" >blog</a>
+        
+        
+        <a href="/projects.html" class="emphasis-highlight" ;">projects</a>
+        
+    </span>
+    <span>
+        <span id=mynameis>
+            my name is <span class="emphasis-highlight">andy chan</span> &nbsp;
+        </span>
+        <img src="/assets/site-images/logo.svg" alt="logo (x, triangle, left angle bracket)">
+    </span>
+</nav>
+
+    <header class="complete project">
+        <div>
+            <div class="inner-content">
+                <span class="smoltext">632 words</span> <br>
+                <div id="head">
+                    <h1 id="title">website v5</h1>
+                    
+                    <span class="tag">code</span>
+                    
+                    <span class="tag">design</span>
+                    
+                </div>
+                <p class="subtitle">
+                    let's do the time warp again (feat. jekyll) <br>
+                    started 15 dec 2020
+                    
+                    
+                    / completed
+                    
+                    26 dec 2020
+                    
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="flow">
+        <p>whoops.
+my hand slipped.</p>
+
+<p>In the project page for <a href="/projects/2020-02-20-website_v4.html">website v4</a>, I jokingly said something along the lines of:</p>
+
+<blockquote>
+  <p>Until the inevitable re:re:rewrite,</p>
+</blockquote>
+
+<p>And offline, I’d throw around jokes about how I’d end up hating my website so much that I would never update it - that the rewrite of the website was inevitable. Well, guess what?</p>
+
+<p>Past me was correct.<img src="/assets/images/old_website-v4.webp" alt="old_website-v4" /></p>
+
+<p>The old website was… not great. At least, by my [current] standards (which, admittedly, are still very, <em>very</em> low). The code used to make it was a mess - if I were to change the site’s look in a few years time, I’d have to rewrite the thing, sorting through lines and lines of unformatted HTML in an already confusing, spaghetti JavaScript file. Oh, and it doesn’t look… great.</p>
+
+<p>However, you learn these things with retrospect - when you do something, you learn from it. You figure out what worked, what didn’t, even if you can’t put it into words (please <em>don’t</em> see the <a href="/blog/2020/07/26/pencil_to_pluto_postmortem.html">Pencil to Pluto Postmortem</a>). I learned from website v4 that <del>am an awful programmer</del> I overestimated my knowledge of JavaScript, and also that I <em>really</em> should have just used a static site generator such as Jekyll instead of trying to create my own, featureless version of it.</p>
+
+<p>So I used <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<p>I’ve been meaning to rewrite my website, with a new framework, a new design, all of that. Make it so that I’d actually want to come back and write something every now and then. I think I accomplished that. I hope.</p>
+
+<h2 id="alright-alright-so-whats-new">Alright, alright, so what’s new?</h2>
+
+<p>Well, I added some things, I removed some things, but fundamentally, the site works the same way it used to. Takes <code class="language-plaintext highlighter-rouge">.md</code> files in folders, turns them into <code class="language-plaintext highlighter-rouge">.html</code> files, adds some nice styles, headers, etc. One thing of note that I’ve removed: progress bars. I don’t like them, nor do I like constantly updating people on my work - I just like doing this stuff without worrying.</p>
+
+<p><img src="/assets/images/website v4 vs v5.webp" alt="website v4 vs v5" /></p>
+
+<p>I’ve switched to using Jekyll - no more of that clunky handwritten site generator. It’s honestly quite nice, I can just simply <del>struggle with</del> write some HTML, plug in some fields, and I have a properly functioning site. That being said, this did take a bit longer than website v4, taking a bit under two weeks instead of three days. This website is still hosted via GitHub Pages, and still with a clunky build script running after each push (see <a href="https://jekyllrb.com/docs/continuous-integration/github-actions/">Jekyll Docs</a> on building with GitHub Actions).</p>
+
+<p>Oh, and the patterns for each project. I really like them. They were a horrific mess to set up, but they’re simple enough - a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> with the <code class="language-plaintext highlighter-rouge">background-image</code> set to the project’s respective header image, followed by an absolutely positioned <code class="language-plaintext highlighter-rouge">::before</code> pseudo-element layering some patterns I stole from the <a href="https://projects.verou.me/css3patterns/">CSS3 Patterns Gallery</a>, and a slight dim, created by a <code class="language-plaintext highlighter-rouge">linear-gradient</code> that goes from a translucent black to… the same translucent black. (Status is also displayed with an <code class="language-plaintext highlighter-rouge">::after</code> pseudo-element, in the bottom-right.)</p>
+
+<p>Even while writing this, I’m still changing some minor things in the site, adding a little translucent white background to each post on the blog listing, and before I publish all of this, I plan on converting as many images as I can to the <code class="language-plaintext highlighter-rouge">.webp</code> format, hopefully lowering the likely massive load and size of this site - sorry about that!</p>
+
+<p>Anyways, I’ll stop now. You’re looking at website v5 - and I hope it doesn’t look… awful.</p>
+
+<p>As always, thanks for reading, something something something.</p>
+
+<p>Oh, and there’s an <a href="/feed.xml">RSS feed now</a>.</p>
+
+    </main>
+
+    <footer>
+    <span title="2021-09-29 00:30:27 -0400">built 29 sep 2021</span>
+    <span>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+             
+        </a>
+    </span>
+    <a href="#nav">back to top</a>
+</footer>
+
+</html>
