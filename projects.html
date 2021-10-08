@@ -25,52 +25,51 @@ the status of the project is also applied as a class - each status has their own
 {% assign current.size = current | size %}
 
 <span class="project-category">
-    <h2>current project{% if current.size > 1%}s{%endif%}</h2>
-    <span>({{ current.size }})</span>
+	<h2>current project{% if current.size > 1%}s{%endif%}</h2>
+	<span>({{ current.size }})</span>
 </span>
 {% for page in current %}
-{% if page.status == "wip" or page.status == "on_hold" %}
-<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
-    <div class="inner-content">
-        <span class="smoltext">
-            started {{page.startDate | date_to_string | downcase}}
-            {% if page.status == "on_hold" %} [on hold] {% endif %}
-        </span> <br>
-        <h3>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h3> <br>
-        {{ page.description }} <br>
-        {% for tag in page.tags %}
-        <span class="tag">{{tag}}</span>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
+	{% assign title = page.title %}
+	{% assign description = page.description %}
+	{% assign url = page.url %}
+	{% assign date = page.date %}
+	{% assign headerImage = page.headerImage %}
+	{% assign tags = page.tags %}
+	{% assign status = page.status %}
+
+	{% include block.html 
+		title=title 
+		description=description 
+		type="project"
+		url=url
+		date=date 
+		headerImage=headerImage
+		tags=tags
+		status=status
+	%}
 {% endfor %}
 
-<hr style="margin: 2em -2em">
-
 <span class="project-category">
-    <h2>past projects</h2>
-    <span>({{ completed | size }} completed, {{ scrapped | size }} scrapped)</span>
+	<h2>past projects</h2>
+	<span>({{ completed | size }} completed, {{ scrapped | size }} scrapped)</span>
 </span>
 {% for page in past %}
-{% if page.status == "scrapped" or page.status == "complete" %}
-<div class="{{page.status}} project" style="background-image:url({{page.headerImage}})">
-    <div class="inner-content">
-        <span class="smoltext">
-            {% if page.status == "complete" %} completed {% else %} scrapped {% endif %}
-            {{page.startDate |date_to_string | downcase}}
-            {% if page.status == "scrapped" %} :( {% else %} :D {% endif %}
-        </span> <br>
-        <h3>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h3> <br>
-        {{ page.description }} <br>
-        {% for tag in page.tags %}
-        <span class="tag">{{tag}}</span>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
+	{% assign title = page.title %}
+	{% assign description = page.description %}
+	{% assign url = page.url %}
+	{% assign date = page.date %}
+	{% assign headerImage = page.headerImage %}
+	{% assign tags = page.tags %}
+	{% assign status = page.status %}
+
+	{% include block.html 
+		title=title 
+		description=description 
+		type="project"
+		url=url
+		date=date 
+		headerImage=headerImage
+		tags=tags
+		status=status
+	%}
 {% endfor %}

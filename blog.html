@@ -3,26 +3,22 @@ title: blog
 layout: listing
 style: blog
 ---
-<style>
-    div>div {
-        padding: 1em;
-    }
-</style>
 <h1 class="emphasis-highlight">/blog</h1>
 <p class="subtitle">inane rambings about random things</p>
 
 {% for post in site.posts %}
-<div class="post" style="background-image:linear-gradient(#f6e479C4, #f6e479C4),url({{post.headerImage}});">
-    <div class="inner-content">
-        <span class="smoltext">
-            {{post.date | date_to_string | downcase}}
-        </span> <br>
-        <h3>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </h3> <br>
-        <span>
-            {{ post.description }}
-        </span>
-    </div>
-</div>
+	{% assign title = post.title %}
+	{% assign description = post.description %}
+	{% assign url = post.url %}
+	{% assign date = post.date %}
+	{% assign headerImage = post.headerImage %}
+
+	{% include block.html 
+		title=title 
+		description=description 
+		type="post"
+		url=url
+		date=date 
+		headerImage = headerImage
+	%}
 {% endfor %}
