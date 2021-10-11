@@ -12,9 +12,10 @@ used in listings. requires a multitude of variables.
 	{% assign date_string_prefix = "started" %}
 {% endif %}
 
-{% capture date_string %}
-{{date_string_prefix}}
-{{include.date | date_to_string | downcase}}
+{%- capture date_string -%}
+	{{date_string_prefix}}
+	{{include.date | date_to_string | downcase}}
+	{{date_string_suffix}}
 {% endcapture %}
 
 <div class="{{include.status}} {{include.type}}" style="background-image:url({{include.headerImage}})">
@@ -22,17 +23,19 @@ used in listings. requires a multitude of variables.
 		<time class="smoltext" datetime="{{include.date | date: "%Y-%m-%d"}}">
 			{{date_string}}
 		</time>
-		<h3>
-			<a href="{{include.url}}">{{include.title}}</a>
-		</h3>
-		{{ include.description }}
+		<span class="inline">
+			<h3>
+				<a href="{{include.url}}">{{include.title}}</a>
+			</h3>
+			{% if include.tags %}
+			<div class="tags">
+				{% for tag in include.tags %}
+				<span class="tag">{{tag}}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</span>
 
-		{% if include.tags %}
-		<div class="tags">
-			{% for tag in include.tags %}
-			<span class="tag">{{tag}}</span>
-			{% endfor %}
-		</div>
-		{% endif %}
+		<p class="subheader">{{ include.description }}</p>
 	</div>
 </div>
