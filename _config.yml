@@ -5,14 +5,14 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
       path: "_projects"
       collection: "projects"
     values:
-      layout: "project"
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 collections:
   projects:

@@ -1,7 +1,24 @@
 // a bunch of rules for everything.
+@use "sass:math"
 
 *, *::before, *::after
 	box-sizing: border-box
+
+:root
+	font-size: 16px
+
+$FOUR_THIRDS: math.div(4, 3)
+
+@function ms($scale) // modular scale; base 1, ratio 4/3
+	$value: 1
+	@if $scale > 0
+		@for $_ from 1 through $scale
+			$value: $value * $FOUR_THIRDS
+	@else if $scale < 0
+		@for $_ from 1 through -$scale
+			$value: math.div($value, $FOUR_THIRDS)
+
+	@return $value
 
 html
 	scrollbar-background-color: inherit transparent
@@ -13,16 +30,16 @@ html
 body
 	background: var(--background)
 	font-family: "Open Sans", sans-serif
-	font-size: 1em
+	font-size: ms(0) * 1em
 	margin: 2% 0%
 	text-rendering: optimizeSpeed
-	line-height: 1.5
+	line-height: ms(1)
 
 a
 	color: inherit
 
 // resizing based on width...
-main, nav, footer
+main, nav, footer, header > div > .header-inner
 	margin: 0% 20%
 
 	@media (max-width: 1280px)
@@ -89,13 +106,37 @@ q
 	> ::after
 		content: "”" // closing double quote
 
+.inline > *
+	display: inline
+
+h1 + .tags
+	margin-left: 0.5ch
+	vertical-align: ms(3) * 0.25em
+
+h3 + .tags
+	vertical-align: 0.1em
+
+.tags
+	> .tag
+		padding: 0.1em 0.25ch
+		+ .tag
+			margin-left: 0.5ch
+
+p.subheader  // below headers
+	margin: 0.25em 0
+	line-height: ms(1)
+	+ div
+		margin-top: ms(2) * 1em
+	+ time, p
+		margin-top: 1em
+
 .emphasis-highlight
 	color: black
 	text-decoration: none
 	background: var(--highlight)
 
 .smoltext
-	font-size: 0.85rem
+	font-size: ms(-1) * 1em
 
 a[rel="license"]
 	font-family: 'Font Awesome 5 EDITED'

@@ -16,6 +16,7 @@ $translucent-black: rgba(0, 0, 0, 0.6)
 	min-width: 70%
 	max-width: 100%
 	max-height: inherit
+	color: white
 
 	> *
 		display: block
@@ -23,5 +24,8 @@ $translucent-black: rgba(0, 0, 0, 0.6)
 	> .tag
 		display: inline-block
 
-	> h3::before
-		display: none
+	> span
+		margin-top: 1em
+
+		> h3::before
+			display: none
