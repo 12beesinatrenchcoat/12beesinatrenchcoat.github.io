@@ -33,8 +33,9 @@ kramdown:
 sass:
   style: compressed
   sourcemap: development
+  implementation: sass-embedded
 
-url: "https://andythepie.github.io"
+url: "https://12beesinatrenchcoat.github.io"
 
 plugins:
   - jekyll-feed
