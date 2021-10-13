@@ -7,12 +7,14 @@
 {% endif %}
 
 {% if page.status == "complete" %}
-	{% assign date_string_prefix = "completed" %}
-	{% assign date_string_suffix = ":D" %}
+	{% assign end_date_string_prefix = "completed" %}
+	{% assign end_date_string_suffix = ":D" %}
 {% elsif page.status == "scrapped" %}
-	{% assign date_string_prefix = "scrapped" %}
-	{% assign date_string_suffix = ":(" %}
-{% elsif page.status %}
+	{% assign end_date_string_prefix = "scrapped" %}
+	{% assign end_date_string_suffix = ":(" %}
+{% endif %}
+
+{% if page.status %}
 	{% assign date_string_prefix = "started" %}
 {% else %}
 	{% assign date_string_prefix = published %}
@@ -23,6 +25,15 @@
 	{{page.date | date_to_string | downcase}}
 	{{date_string_suffix}}
 {% endcapture %}
+
+{% if page.endDate == "tba"%}
+	
+{% endif %}
+{%- capture end_date_string -%}
+	{{end_date_string_prefix}}
+	{{page.endDate | date_to_string | downcase}}
+	{{end_date_string_suffix}}
+{%- endcapture -%}
 
 {% assign tags = page.tags %}
 
@@ -50,9 +61,19 @@
 				<p class="subheader">
 					{{page.description}}
 				</p>
-				<time datetime="{{page.date | date: "%Y-%m-%d"}}">
-					{{ date_string }}
-				</time>
+				<span class="inline"> 
+					{% if page.status %}
+						<span class="{{page.status}} status">{{page.status}}</span>
+					{% endif %}
+					<time datetime="{{page.date | date: "%Y-%m-%d"}}">
+						{{ date_string }}
+					</time>
+					{% if page.endDate %}
+						/ <time datetime="{{page.endDate | date: "%Y-%m-%d"}}">
+							{{ end_date_string }}
+						</time>
+					{% endif %}
+				</span>
 			</div>
 		</div>
 	</header>

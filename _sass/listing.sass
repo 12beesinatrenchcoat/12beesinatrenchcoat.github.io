@@ -10,16 +10,27 @@ $translucent-black: rgba(0, 0, 0, 0.6)
 	a
 		color: white
 
+.project > .inner-content
+	position: relative
+
+	&::after
+		position: absolute
+		writing-mode: vertical-lr
+
+		right: 0
+		top: 0
+		height: 100%
+
 .inner-content
 	padding: 1em
 	background: $translucent-black
-	min-width: 70%
-	max-width: 100%
+	width: 100%
 	max-height: inherit
 	color: white
 
 	> *
 		display: block
+		max-width: 90%
 
 	> .tag
 		display: inline-block
