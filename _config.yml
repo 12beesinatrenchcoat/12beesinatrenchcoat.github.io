@@ -4,11 +4,13 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      style: "blog"
   - scope:
       path: "_projects"
-      collection: "projects"
+      collection: "project"
     values:
       layout: "post"
+      style: "projects"
   - scope:
       path: ""
     values:
