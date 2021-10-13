@@ -61,6 +61,7 @@ the status of the project is also applied as a class - each status has their own
 	{% assign headerImage = page.headerImage %}
 	{% assign tags = page.tags %}
 	{% assign status = page.status %}
+	{% assign endDate = page.endDate %}
 
 	{% include block.html 
 		title=title 
@@ -71,5 +72,6 @@ the status of the project is also applied as a class - each status has their own
 		headerImage=headerImage
 		tags=tags
 		status=status
+		endDate=endDate
 	%}
 {% endfor %}

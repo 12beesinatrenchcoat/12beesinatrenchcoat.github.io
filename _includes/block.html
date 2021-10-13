@@ -2,6 +2,12 @@
 used in listings. requires a multitude of variables.
 {% endcomment %}
 
+{% if include.endDate %}
+	{% assign date = include.endDate %}
+{% else %}
+	{% assign date = include.date %}
+{% endif %}
+
 {% if include.status == "complete" %}
 	{% assign date_string_prefix = "completed" %}
 	{% assign date_string_suffix = ":D" %}
@@ -14,7 +20,7 @@ used in listings. requires a multitude of variables.
 
 {%- capture date_string -%}
 	{{date_string_prefix}}
-	{{include.date | date_to_string | downcase}}
+	{{date | date_to_string | downcase}}
 	{{date_string_suffix}}
 {% endcapture %}
 

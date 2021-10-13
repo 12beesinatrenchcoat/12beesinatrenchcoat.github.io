@@ -1,87 +1,54 @@
-// only the pretty patterns. see also: projects.sass
+// pretty patterns. colors defined in project_colors.sass.
+// in scss form because sass doesn't support multi-line declarations ;-;
+// thanks to https://projects.verou.me/css3patterns, patterns here were based on the patters there <3
 
-// color variables
-$translucent-black: rgba(0, 0, 0, 0.4);
-
-$wip: rgba(48, 215, 242, 0.5);
-$wip-20: rgba(48, 215, 242, 0.2);
-
-$on_hold: rgba(242, 212, 48, 0.5);
-$on_hold-20: rgba(242, 212, 48, 0.2);
-
-$complete: rgba(77, 255, 129, 0.5);
-$complete-20: rgba(77, 255, 129, 0.2);
-
-$scrapped: rgba(244, 67, 54, 0.5);
-$scrapped-20: rgba(244, 67, 54, 0.2);
-
-// background patterns taken from https://projects.verou.me/css3patterns/. check them out, they're rad!
+:root{
+	--wip-pattern: repeating-linear-gradient(
+				45deg, var(--wip-lo), var(--wip-lo) 1em, var(--wip) 1em, var(--wip) 2em);
+	--on_hold-pattern: repeating-linear-gradient(
+				0deg, var(--on_hold-lo), var(--on_hold-lo) 1em,	var(--on_hold) 1em, var(--on_hold) 2em);
+}
 
 .wip {
-    .tag {
-        background: $wip;
-    }
-    &::before {
-        background-image: // diagonal stripes (Lea Verou)
-            repeating-linear-gradient(45deg, $wip-20, $wip-20 35px, $wip 35px, $wip 70px),
-            linear-gradient($translucent-black, $translucent-black);
-    }
-    &::after {
-        content: "wip";
-        background: $wip;
-    }
+	.status{
+		background: var(--wip-pattern);
+	}
+
+	> .inner-content::after {
+		background: var(--wip-pattern);
+		content: "wip";
+	}
 }
 
 .on_hold {
-    .tag {
-        background: $on_hold;
-    }
-    &::before {
-        background-image: // polka dots (Lea Verou)
-            radial-gradient($on_hold 15%, $on_hold-20 16%), radial-gradient($on_hold 15%, $on_hold-20 16%),
-            linear-gradient($translucent-black, $translucent-black);
-        background-size: 60px 60px;
-        background-position: 0 0, 30px 30px;
-    }
-    &::after {
-        content: "on hold >_<";
-        background: $on_hold;
-    }
+	.status{
+		background: var(--on_hold-pattern);
+	}
+
+	> .inner-content::after {
+		background: var(--on_hold-pattern);
+		content: "on hold…";
+	}
 }
 
 .scrapped {
-    .tag {
-        background: $scrapped;
-    }
-    &::before {
-        background: // zig-zag, (eCSSpert).
-            linear-gradient(135deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
-            linear-gradient(225deg, $scrapped 25%, $scrapped-20 25%) -50px 0,
-            linear-gradient(315deg, $scrapped 25%, $scrapped-20 25%),
-            linear-gradient(45deg, $scrapped 25%, $scrapped-20 25%),
-            linear-gradient($translucent-black, $translucent-black);
-        background-size: 100px 100px;
-    }
-    &::after {
-        content: "scrapped :(";
-        background: $scrapped;
-    }
+	.status{
+		background: var(--scrapped);
+	}
+
+	> .inner-content::after {
+		background: var(--scrapped);
+		content: "scrapped :(";
+	}
 }
 
 .complete {
-    .tag {
-        background: $complete;
-    }
-    &::before {
-        background: // grid of pluses (+).
-            url(/assets/site-images/complete-tileplus.svg), linear-gradient($complete-20, $complete-20),
-            linear-gradient($translucent-black, $translucent-black);
-        background-size: 64px, 64px;
-    }
-    &::after {
-        content: "complete! :D";
-        background: $complete;
-    }
-}
+	.status{
+		background: var(--complete);
+	}
 
-// why does sass not support multi-line definitions ;-;
+	> .inner-content::after {
+		background: var(--complete);
+		content: "complete! :D";
+	}
+}
