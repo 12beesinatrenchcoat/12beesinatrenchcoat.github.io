@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://12beesinatrenchcoat.github.io/feed/projects.xml" rel="self" type="application/atom+xml" /><link href="https://12beesinatrenchcoat.github.io/" rel="alternate" type="text/html" /><updated>2021-10-13T19:06:26-04:00</updated><id>https://12beesinatrenchcoat.github.io/feed/projects.xml</id><title type="html"> | Projects</title><author><name>andy chan</name></author><entry><title type="html">website v5</title><link href="https://12beesinatrenchcoat.github.io/projects/2020-12-15-website_v5.html" rel="alternate" type="text/html" title="website v5" /><published>2020-12-15T00:00:00-05:00</published><updated>2020-12-15T00:00:00-05:00</updated><id>https://12beesinatrenchcoat.github.io/projects/website_v5</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/projects/2020-12-15-website_v5.html">&lt;p&gt;whoops.
+my hand slipped.&lt;/p&gt;
+
+&lt;p&gt;In the project page for &lt;a href=&quot;/projects/2020-02-20-website_v4.html&quot;&gt;website v4&lt;/a&gt;, I jokingly said something along the lines of:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Until the inevitable re:re:rewrite,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And offline, I’d throw around jokes about how I’d end up hating my website so much that I would never update it - that the rewrite of the website was inevitable. Well, guess what?&lt;/p&gt;
+
+&lt;p&gt;Past me was correct.&lt;img src=&quot;/assets/images/old_website-v4.webp&quot; alt=&quot;old_website-v4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The old website was… not great. At least, by my [current] standards (which, admittedly, are still very, &lt;em&gt;very&lt;/em&gt; low). The code used to make it was a mess - if I were to change the site’s look in a few years time, I’d have to rewrite the thing, sorting through lines and lines of unformatted HTML in an already confusing, spaghetti JavaScript file. Oh, and it doesn’t look… great.&lt;/p&gt;
+
+&lt;p&gt;However, you learn these things with retrospect - when you do something, you learn from it. You figure out what worked, what didn’t, even if you can’t put it into words (please &lt;em&gt;don’t&lt;/em&gt; see the &lt;a href=&quot;/blog/2020/07/26/pencil_to_pluto_postmortem.html&quot;&gt;Pencil to Pluto Postmortem&lt;/a&gt;). I learned from website v4 that &lt;del&gt;am an awful programmer&lt;/del&gt; I overestimated my knowledge of JavaScript, and also that I &lt;em&gt;really&lt;/em&gt; should have just used a static site generator such as Jekyll instead of trying to create my own, featureless version of it.&lt;/p&gt;
+
+&lt;p&gt;So I used &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I’ve been meaning to rewrite my website, with a new framework, a new design, all of that. Make it so that I’d actually want to come back and write something every now and then. I think I accomplished that. I hope.&lt;/p&gt;
+
+&lt;h2 id=&quot;alright-alright-so-whats-new&quot;&gt;Alright, alright, so what’s new?&lt;/h2&gt;
+
+&lt;p&gt;Well, I added some things, I removed some things, but fundamentally, the site works the same way it used to. Takes &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; files in folders, turns them into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.html&lt;/code&gt; files, adds some nice styles, headers, etc. One thing of note that I’ve removed: progress bars. I don’t like them, nor do I like constantly updating people on my work - I just like doing this stuff without worrying.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/website v4 vs v5.webp&quot; alt=&quot;website v4 vs v5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ve switched to using Jekyll - no more of that clunky handwritten site generator. It’s honestly quite nice, I can just simply &lt;del&gt;struggle with&lt;/del&gt; write some HTML, plug in some fields, and I have a properly functioning site. That being said, this did take a bit longer than website v4, taking a bit under two weeks instead of three days. This website is still hosted via GitHub Pages, and still with a clunky build script running after each push (see &lt;a href=&quot;https://jekyllrb.com/docs/continuous-integration/github-actions/&quot;&gt;Jekyll Docs&lt;/a&gt; on building with GitHub Actions).&lt;/p&gt;
+
+&lt;p&gt;Oh, and the patterns for each project. I really like them. They were a horrific mess to set up, but they’re simple enough - a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;background-image&lt;/code&gt; set to the project’s respective header image, followed by an absolutely positioned &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::before&lt;/code&gt; pseudo-element layering some patterns I stole from the &lt;a href=&quot;https://projects.verou.me/css3patterns/&quot;&gt;CSS3 Patterns Gallery&lt;/a&gt;, and a slight dim, created by a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linear-gradient&lt;/code&gt; that goes from a translucent black to… the same translucent black. (Status is also displayed with an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;::after&lt;/code&gt; pseudo-element, in the bottom-right.)&lt;/p&gt;
+
+&lt;p&gt;Even while writing this, I’m still changing some minor things in the site, adding a little translucent white background to each post on the blog listing, and before I publish all of this, I plan on converting as many images as I can to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.webp&lt;/code&gt; format, hopefully lowering the likely massive load and size of this site - sorry about that!&lt;/p&gt;
+
+&lt;p&gt;Anyways, I’ll stop now. You’re looking at website v5 - and I hope it doesn’t look… awful.&lt;/p&gt;
+
+&lt;p&gt;As always, thanks for reading, something something something.&lt;/p&gt;
+
+&lt;p&gt;Oh, and there’s an &lt;a href=&quot;/feed.xml&quot;&gt;RSS feed now&lt;/a&gt;.&lt;/p&gt;</content><author><name>andy chan</name></author><category term="code" /><category term="design" /><summary type="html">whoops. my hand slipped.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/websitev5-header.webp" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/websitev5-header.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Pencil to Pluto</title><link href="https://12beesinatrenchcoat.github.io/projects/2020-07-19-pencil_to_pluto.html" rel="alternate" type="text/html" title="Pencil to Pluto" /><published>2020-07-19T00:00:00-04:00</published><updated>2020-07-19T00:00:00-04:00</updated><id>https://12beesinatrenchcoat.github.io/projects/pencil_to_pluto</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/projects/2020-07-19-pencil_to_pluto.html">&lt;p&gt;&lt;strong&gt;Pencil to Pluto&lt;/strong&gt; is an incremental game developed by me, with some music by my friend, &lt;strong&gt;AlexTheYes&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It was created in the &lt;a href=&quot;https://godotengine.org&quot;&gt;Godot Engine&lt;/a&gt; for the &lt;a href=&quot;https://itch.io/jam/my-first-game-jam-summer-2020&quot;&gt;Summer 2020 My First Game Jam&lt;/a&gt; - and as nearly all things on my website (well, all things, currently), the source code is public, and can be found &lt;a href=&quot;https://github.com/AndyThePie/pencil-to-pluto&quot;&gt;here&lt;/a&gt;.
+(Not that the source code for everything I’ve ever made is public and can be found at that exact repository, but… you know what I mean.)&lt;/p&gt;
+
+&lt;p&gt;While the game jam lasted 14 days, the submission was produced in 7 - and the result was &lt;del&gt;sub-par&lt;/del&gt; non-functional…&lt;/p&gt;
+
+&lt;p&gt;My thoughts on the game post-jam can be found in &lt;a href=&quot;/blog/2020/07/26/pencil_to_pluto_postmortem.html&quot;&gt;the postmortem&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;I hope to write more information here as the game continues development.&lt;/del&gt; The game, in its current state, has been archived, and scrapped.&lt;/p&gt;
+
+&lt;p&gt;I hope to rewrite it one day.&lt;/p&gt;
+
+&lt;p class=&quot;emphasis-highlight&quot;&gt;&lt;strong&gt;[UPDATE MAY 30]&lt;/strong&gt; ;)&lt;/p&gt;</content><author><name>andy chan</name></author><category term="game" /><category term="code" /><summary type="html">Pencil to Pluto is an incremental game developed by me, with some music by my friend, AlexTheYes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr1.png" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">slabbot</title><link href="https://12beesinatrenchcoat.github.io/projects/2020-07-08-slabbot.html" rel="alternate" type="text/html" title="slabbot" /><published>2020-07-08T00:00:00-04:00</published><updated>2020-07-08T00:00:00-04:00</updated><id>https://12beesinatrenchcoat.github.io/projects/slabbot</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/projects/2020-07-08-slabbot.html">&lt;p&gt;I don’t have much to say about it - all I can say is that it is a Discord bot. The source code can be found &lt;a href=&quot;https://github.com/AndyThePie/slabbot&quot;&gt;here&lt;/a&gt;, I suppose. You can’t invite the bot to a server yet because I still don’t have any method to host it. Yet.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-facts&quot;&gt;Random Facts!&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Slabbot&lt;/em&gt; was originally going to be a fork and overhaul of &lt;em&gt;&lt;a href=&quot;https://github.com/AndyThePie/despacitoBot-semicolon&quot;&gt;despacitoBot;&lt;/a&gt;&lt;/em&gt; with more features and cool stuff, but I didn’t feel like looking at my old code, so I decided to just rewrite it from scratch.
+    &lt;ul&gt;
+      &lt;li&gt;Like &lt;em&gt;despacitoBot&lt;/em&gt;, &lt;em&gt;Slabbot&lt;/em&gt; is also written in JavaScript, utilizing Node.js and Discord.js. However, this time, I employed the help of the &lt;a href=&quot;https://discord-akairo.github.io&quot;&gt;Akairo Framework&lt;/a&gt;! Not that I’m really putting it to any good use, but…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Slabbot&lt;/em&gt; is a portmanteau of the words “slab” and “bot” - like a slab, the bot is large, thick, flat, and typically made of stone- wait, no, hold on-
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Slabbot&lt;/em&gt; is pronounced like “rabbit”, so… &lt;em&gt;“slæbət”&lt;/em&gt;? Don’t ask.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;I still don’t understand ES6.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>andy chan</name></author><category term="code" /><summary type="html">I don’t have much to say about it - all I can say is that it is a Discord bot. The source code can be found here, I suppose. You can’t invite the bot to a server yet because I still don’t have any method to host it. Yet.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/slabbot-banner.webp" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/slabbot-banner.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">website v4</title><link href="https://12beesinatrenchcoat.github.io/projects/2020-02-20-website_v4.html" rel="alternate" type="text/html" title="website v4" /><published>2020-02-20T00:00:00-05:00</published><updated>2020-02-20T00:00:00-05:00</updated><id>https://12beesinatrenchcoat.github.io/projects/website_v4</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/projects/2020-02-20-website_v4.html">&lt;p&gt;In the span of three days, I wrote and actually finished the fourth iteration of my website, aptly titled… &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;website v4&lt;/code&gt;. Even though this is &lt;em&gt;literally the first finished iteration of it&lt;/em&gt;. Ignore the previous iterations from the past two years (and the fact that I lost an iteration due to a hard drive formatting).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update [26 July 2020]:&lt;/strong&gt; The status of this has been marked “work in progress” for the longest time. it’s not. It’s been done for a while now. Even though the compiler is disgusting to look at and I really need to rewrite it.&lt;/p&gt;
+
+&lt;p&gt;So, into the technical stuff. What does this do, how does it work, and any other things.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Just a fair warning: I am not very qualified to write about this stuff. And also this is very substanceless. Cool.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;the-goal-of-it-all&quot;&gt;The Goal Of It All&lt;/h1&gt;
+
+&lt;p&gt;I wrote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;website v4&lt;/code&gt; with one main goal: to be able to write my posts and projects in Markdown (with YAML front matter serving as metadata). This was an ambitious goal, mainly because of the fact that I have nearly zero experience with JavaScript (what the “compiler” was written in) - or any other programming language, for that matter. The fact that this is still working is amazing.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-it-all-works&quot;&gt;How It All Works&lt;/h1&gt;
+
+&lt;p&gt;The compiler is written in JavaScript with Node.js, and utilizes two main libraries:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/gray-matter&quot;&gt;gray-matter&lt;/a&gt; - used for parsing the YAML into some usable information&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/showdown&quot;&gt;showdown&lt;/a&gt; - actually turning the markdown into an html site.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, how does it all work? (Or at least, how is it supposed to?)&lt;/p&gt;
+
+&lt;p&gt;First, the script (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main.js&lt;/code&gt;) is executed. It proceeds to read the contents of two preset directories, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/blog/md&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/projects/md&lt;/code&gt;, where the markdown files are stored. After that, for each file in the directory, it:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reads the file, and saves the content into a variable.&lt;/li&gt;
+  &lt;li&gt;Uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gray-matter&lt;/code&gt; to parse the file, and save the result of that into a variable.&lt;/li&gt;
+  &lt;li&gt;Uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;showdown&lt;/code&gt; to convert the markdown into HTML&lt;/li&gt;
+  &lt;li&gt;Appends some extra HTML to the result. This is where the YAML comes in handy - it plugs in variables in certain spots, such as the title, the date, progress (if the file is a project), etc.&lt;/li&gt;
+  &lt;li&gt;Saves the file to the parent directory (of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/md&lt;/code&gt; directory).&lt;/li&gt;
+  &lt;li&gt;Somewhere along the line, it would update &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; with a little entry so people can actually access it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And that’s how it should work. It’s actually a lot messier than that. (Don’t read the source code, it’s a nightmare.)&lt;/p&gt;
+
+&lt;p&gt;And that’s all! I hope. I’m not coming back to this. Ever.&lt;/p&gt;
+
+&lt;p&gt;Until the inevitable re:re:rewrite,&lt;/p&gt;
+
+&lt;p&gt;Andy Chan&lt;/p&gt;
+
+&lt;p&gt;(Follow me on &lt;a href=&quot;https://twitter.com/12bz_trenchcoat&quot;&gt;Twitter&lt;/a&gt; and look at more crimes against humanity on my &lt;a href=&quot;https://github.com/andythepie&quot;&gt;GitHub&lt;/a&gt;.)&lt;/p&gt;</content><author><name>andy chan</name></author><category term="code" /><category term="design" /><summary type="html">In the span of three days, I wrote and actually finished the fourth iteration of my website, aptly titled… website v4. Even though this is literally the first finished iteration of it. Ignore the previous iterations from the past two years (and the fact that I lost an iteration due to a hard drive formatting).</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
