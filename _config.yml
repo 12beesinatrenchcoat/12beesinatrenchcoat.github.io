@@ -14,9 +14,17 @@ defaults:
     values:
       layout: "default"
 
+author:
+  name: "andy chan"
+  twitter: "12bz_trenchcoat"
+
 collections:
   projects:
     output: true
+
+feed:
+  collections:
+    - projects
 
 highlighter: rouge
 
