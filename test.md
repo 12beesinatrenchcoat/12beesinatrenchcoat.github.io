@@ -2,7 +2,7 @@
 layout: post
 title:         "a first post"
 description:   "this is a test post."
-headerImage:   "/assets/images/mcimage-lolxd.webp"
+image:   "/assets/images/mcimage-lolxd.webp"
 ---
 
 hello there! if you're currently reading this, that means that everything is (probably) working. or not. we'll see.

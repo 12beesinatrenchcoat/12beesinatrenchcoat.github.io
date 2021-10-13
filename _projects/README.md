@@ -12,5 +12,5 @@ tags:
 startDate: # the date the project started, in format YYYY-MM-DD
 endDate: # used only for projects where status is "complete" or "scrapped"
 status: # status can be: "complete", "wip", "on_hold", or "scrapped"
-headerImage: # header image. please refer to image relative to site root.
+image: # header image. please refer to image relative to site root.
 ```

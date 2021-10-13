@@ -1,7 +1,7 @@
 ---
 title:         "the actual post"
 description:   "this is the second post, and it has content in it"
-headerImage:   "/assets/images/websitev4-header.webp"
+image:   "/assets/images/websitev4-header.webp"
 ---
 
 **A note: this is very outdated!** "Website v4" has been gone for a while now. If you want to see what it was like, you can find a release [here](https://github.com/AndyThePie/AndyThePie.github.io/releases/tag/v4). If you want to see my [initial] thoughts on the current website, please see my post on [website v5](/projects/2020-12-15-website_v5.html).

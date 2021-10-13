@@ -11,7 +11,7 @@ style: blog
 	{% assign description = post.description %}
 	{% assign url = post.url %}
 	{% assign date = post.date %}
-	{% assign headerImage = post.headerImage %}
+	{% assign image = post.image %}
 
 	{% include block.html 
 		title=title 
@@ -19,6 +19,6 @@ style: blog
 		type="post"
 		url=url
 		date=date 
-		headerImage = headerImage
+		image = image
 	%}
 {% endfor %}

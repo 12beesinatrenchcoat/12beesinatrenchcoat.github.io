@@ -7,7 +7,7 @@ The YAML front matter for the files should be something like:
 ```yaml
 title: # the title
 description: # description
-headerImage: # header image. please refer to image relative to site root.
+image: # header image. please refer to image relative to site root.
 ```
 
 Similar to the projects, huh?

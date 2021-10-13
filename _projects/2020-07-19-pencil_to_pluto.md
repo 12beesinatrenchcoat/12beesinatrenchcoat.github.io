@@ -7,7 +7,7 @@ tags:
 startDate: 2020-07-19
 endDate: 2020-07-26
 status: "scrapped" # status can be: "complete", "wip", "on_hold", or "scrapped"
-headerImage: "/assets/images/penciltopluto-scr1.png"
+image: "/assets/images/penciltopluto-scr1.png"
 ---
 
 **Pencil to Pluto** is an incremental game developed by me, with some music by my friend, **AlexTheYes**. 

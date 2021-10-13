@@ -44,7 +44,7 @@
 
 	{% include navigation.html %}
 
-	<header style="background-image: url({{page.headerImage}})">
+	<header style="background-image: url({{page.image}})">
 		<div {% if page.status %}class="{{page.status}}"{% endif %}>
 			<div class="header-inner">
 				<span class="smoltext">{{content | number_of_words}} words</span>
