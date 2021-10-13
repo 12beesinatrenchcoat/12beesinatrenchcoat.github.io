@@ -1,4 +1,4 @@
-# stolen from https://jekyllrb.com/docs/continuous-integration/github-actions/
+# originally stolen from https://jekyllrb.com/docs/continuous-integration/github-actions/
 # <3
 
 name: Build and deploy Jekyll site to GitHub Pages
@@ -12,18 +12,28 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/cache@v2
+      - name: "checking out..."
+        uses: actions/checkout@v2
+      
+      - name: "setting up ruby..."
+        uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          ruby-version: 2.7
 
-      - uses: helaili/jekyll-action@v2
+      - name: "building the site..."
+        uses: limjh16/jekyll-action-ts@v2
         with:
+          enable_cache: true
+          prettier_opts: '{ "useTabs": true }'
+          format_output: true
           token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'gh-pages'
         env:
           JEKYLL_ENV: production
+          
+      - name: "deploy!"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: 'gh-pages'
