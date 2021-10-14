@@ -26,8 +26,6 @@ jobs:
           enable_cache: true
           prettier_opts: '{ "useTabs": true }'
           format_output: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_branch: 'gh-pages'
         env:
           JEKYLL_ENV: production
           
