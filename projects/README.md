@@ -7,9 +7,8 @@ The YAML front matter for the files should be something like:
 ```yaml
 title: # the title
 description: # description
-tags:	
-  # a list of tags.
-startDate: # the date the project started, in format YYYY-MM-DD
+type: # a type.
+tags: # a list of tags.
 endDate: # used only for projects where status is "complete" or "scrapped"
 status: # status can be: "complete", "wip", "on_hold", or "scrapped"
 image: # header image. please refer to image relative to site root.
