@@ -24,6 +24,11 @@ used in listings. requires a multitude of variables.
 	{{date_string_suffix}}
 {% endcapture %}
 
+{% if include.tags %}
+	{% assign sorted_tags = include.tags | sort %}
+{% endif %}
+
+
 <div class="{{include.status}} {{include.type}}" style="background-image:url({{include.image}})">
 	<div class="inner-content">
 		<time class="smoltext" datetime="{{include.date | date: "%Y-%m-%d"}}">
@@ -33,9 +38,9 @@ used in listings. requires a multitude of variables.
 			<h3>
 				<a href="{{include.url}}">{{include.title}}</a>
 			</h3>
-			{% if include.tags %}
+			{% if sorted_tags %}
 			<div class="tags">
-				{% for tag in include.tags %}
+				{% for tag in sorted_tags %}
 				<span class="tag">{{tag}}</span>
 				{% endfor %}
 			</div>
