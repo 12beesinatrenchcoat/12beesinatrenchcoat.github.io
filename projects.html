@@ -19,8 +19,8 @@ the status of the project is also applied as a class - each status has their own
 {% assign scrapped = site.projects | where: "status", "scrapped" %}
 
 {% comment %} because you can't have "where x *or* y" {% endcomment %}
-{% assign current = wip | concat: on_hold | sort: "startDate" | reverse %}
-{% assign past = completed | concat: scrapped | sort: "startDate" | reverse %}
+{% assign current = wip | concat: on_hold | sort: "date" | reverse %}
+{% assign past = completed | concat: scrapped | sort: "endDate" | reverse %}
 
 {% comment %} the more i use liquid the more i hate it {% endcomment %}
 {% assign current.size = current | size %}
