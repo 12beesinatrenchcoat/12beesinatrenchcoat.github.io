@@ -1,18 +1,11 @@
-html {
-	scrollbar-color: #f2306a black;
-}
-
-html::-webkit-scrollbar-thumb {
-	background: #f2306a;
+:root{
+	--background: black;
+	--highlight: #f2306acc;
+	--scrollbar: #f2306a;
 }
 
 body{
-	background: black;
 	color: white;
-}
-
-.emphasis-highlight{
-	background-color: #f2306acc;
 }
 
 h1{

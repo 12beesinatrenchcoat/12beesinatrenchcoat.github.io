@@ -3,10 +3,8 @@
 // thanks to https://projects.verou.me/css3patterns, patterns here were based on the patters there <3
 
 :root{
-	--wip-pattern: repeating-linear-gradient(
-				45deg, var(--wip-lo), var(--wip-lo) 1em, var(--wip) 1em, var(--wip) 2em);
-	--on_hold-pattern: repeating-linear-gradient(
-				0deg, var(--on_hold-lo), var(--on_hold-lo) 1em,	var(--on_hold) 1em, var(--on_hold) 2em);
+	--wip-pattern: repeating-linear-gradient(45deg, var(--wip-lo), var(--wip-lo) 1em, var(--wip) 1em, var(--wip) 2em);
+	--on_hold-pattern: repeating-linear-gradient(0deg, var(--on_hold-lo), var(--on_hold-lo) 1em,	var(--on_hold) 1em, var(--on_hold) 2em);
 }
 
 .wip {

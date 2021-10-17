@@ -21,11 +21,14 @@ $FOUR_THIRDS: math.div(4, 3)
 	@return $value
 
 html
-	scrollbar-background-color: inherit transparent
+	scrollbar-color: var(--scrollbar) transparent
 
 	&::-webkit-scrollbar
 		width: 8px
 		background-color: #00000000
+
+	&::-webkit-scrollbar-thumb
+		background: var(--scrollbar)
 
 body
 	background: var(--background)
