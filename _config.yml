@@ -10,21 +10,26 @@ timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_t
 # the below are jekyll settings, changable if you want, i guess.
 defaults:
   - scope: 
-      path: ""
+      path: "blog"
       type: "posts"
     values:
       layout: "post"
       style: "blog"
+      theme_color: "#F2D430"
+
   - scope:
       path: "_projects"
       collection: "project"
     values:
       layout: "post"
       style: "projects"
+      theme_color: "#30d7f2"
+
   - scope:
       path: ""
     values:
       layout: "default"
+      theme_color: "#4dff81"
 
 collections:
   projects:
