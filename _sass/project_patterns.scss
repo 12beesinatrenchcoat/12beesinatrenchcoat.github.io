@@ -1,0 +1,52 @@
+// pretty patterns. colors defined in project_colors.sass.
+// in scss form because sass doesn't support multi-line declarations ;-;
+// thanks to https://projects.verou.me/css3patterns, patterns here were based on the patters there <3
+
+:root{
+	--wip-pattern: repeating-linear-gradient(45deg, var(--wip-lo), var(--wip-lo) 1em, var(--wip) 1em, var(--wip) 2em);
+	--on_hold-pattern: repeating-linear-gradient(0deg, var(--on_hold-lo), var(--on_hold-lo) 1em,	var(--on_hold) 1em, var(--on_hold) 2em);
+}
+
+.wip {
+	.status{
+		background: var(--wip-pattern);
+	}
+
+	> .inner-content::after {
+		background: var(--wip-pattern);
+		content: "wip";
+	}
+}
+
+.on_hold {
+	.status{
+		background: var(--on_hold-pattern);
+	}
+
+	> .inner-content::after {
+		background: var(--on_hold-pattern);
+		content: "on hold…";
+	}
+}
+
+.scrapped {
+	.status{
+		background: var(--scrapped);
+	}
+
+	> .inner-content::after {
+		background: var(--scrapped);
+		content: "scrapped :(";
+	}
+}
+
+.complete {
+	.status{
+		background: var(--complete);
+	}
+
+	> .inner-content::after {
+		background: var(--complete);
+		content: "complete! :D";
+	}
+}

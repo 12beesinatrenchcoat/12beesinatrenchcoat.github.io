@@ -1,0 +1,38 @@
+# originally stolen from https://jekyllrb.com/docs/continuous-integration/github-actions/
+# <3
+
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - content # you may want to change this to "master".
+  workflow_dispatch:
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checking out..."
+        uses: actions/checkout@v2
+      
+      - name: "setting up ruby..."
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: "building the site..."
+        uses: limjh16/jekyll-action-ts@v2
+        with:
+          enable_cache: true
+          prettier_opts: '{ "useTabs": true }'
+          format_output: true
+        env:
+          JEKYLL_ENV: production
+          
+      - name: "deploy!"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: 'gh-pages'

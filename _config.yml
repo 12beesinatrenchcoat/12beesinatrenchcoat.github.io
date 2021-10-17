@@ -1,0 +1,58 @@
+# the below are settings you *really should* change.
+site_name: "andy does things" # the name of your site. 
+author:
+  name: "andy chan" # your name.
+url: "https://12beesinatrenchcoat.github.io" # the root link of your site goes here.
+locale: "en_US" # see ogp.me
+timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# the below are jekyll settings, changable if you want, i guess.
+defaults:
+  - scope: 
+      path: "blog"
+      type: "posts"
+    values:
+      layout: "post"
+      style: "blog"
+      theme_color: "#F2D430"
+
+  - scope:
+      path: "_projects"
+      collection: "project"
+    values:
+      layout: "post"
+      style: "projects"
+      theme_color: "#30d7f2"
+
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      theme_color: "#4dff81"
+
+collections:
+  projects:
+    output: true
+
+feed:
+  collections:
+    - projects
+
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    span: 
+      line_numbers: false
+    block: 
+      line_numbers: true
+
+sass:
+  style: compressed
+  sourcemap: development
+  implementation: sass-embedded
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

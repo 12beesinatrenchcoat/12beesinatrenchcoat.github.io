@@ -1,0 +1,82 @@
+{% if page.status == "complete" %}
+	{% assign end_date_string_prefix = "completed" %}
+	{% assign end_date_string_suffix = ":D" %}
+{% elsif page.status == "scrapped" %}
+	{% assign end_date_string_prefix = "scrapped" %}
+	{% assign end_date_string_suffix = ":(" %}
+{% endif %}
+
+{% if page.status %}
+	{% assign date_string_prefix = "started" %}
+{% else %}
+	{% assign date_string_prefix = published %}
+{% endif %}
+
+{%- capture date_string -%}
+	{{date_string_prefix}}
+	{{page.date | date_to_string | downcase}}
+	{{date_string_suffix}}
+{% endcapture %}
+
+{% if page.endDate == "tba"%}
+	
+{% endif %}
+{%- capture end_date_string -%}
+	{{end_date_string_prefix}}
+	{{page.endDate | date_to_string | downcase}}
+	{{end_date_string_suffix}}
+{%- endcapture -%}
+
+{% assign tags = page.tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	{% include head.html %}
+
+	{% include navigation.html %}
+
+	<header style="background-image: url({{page.image}})">
+		<div {% if page.status %}class="{{page.status}}"{% endif %}>
+			<div class="header-inner">
+				<span class="smoltext">{{content | number_of_words}} words</span>
+				<span class="inline">
+					<h1 id="title">{{ page.title }}</h1>
+					{% if page.type %}
+						<span class="type">{{page.type}}</span>
+					{% endif %}
+					{% if tags.size > 0 %}
+						<div class="tags">
+							{% for tag in tags %}
+							<span class="tag">{{tag}}</span>
+							{% endfor %}
+						</div>
+					{% endif %}
+				</span>
+				<p class="subheader">
+					{{page.description}}
+				</p>
+				<span class="inline"> 
+					{% if page.status %}
+						<span class="{{page.status}} status">{{page.status}}</span>
+					{% endif %}
+					<time datetime="{{page.date | date: "%Y-%m-%d"}}">
+						{{ date_string }}
+					</time>
+					{% if page.endDate %}
+						/ <time datetime="{{page.endDate | date: "%Y-%m-%d"}}">
+							{{ end_date_string }}
+						</time>
+					{% endif %}
+				</span>
+			</div>
+		</div>
+	</header>
+
+	<main class="flow">
+		{{ content }}
+	</main>
+
+	{% include footer.html %}
+
+</html>

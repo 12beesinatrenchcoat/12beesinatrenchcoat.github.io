@@ -1,0 +1,36 @@
+{%- assign style = page.style | default: "self" -%}
+{% if page.description %}
+	{%- assign description = page.description -%}
+{% else %}
+	{%- capture description -%}
+		{{page.excerpt | strip_html | truncatewords: 50}}
+	{%- endcapture -%}
+{% endif %}
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }}</title>
+	{% include favicon.html %}
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="stylesheet" href="/assets/css/{{style}}.css">
+	{% feed_meta %}
+	<!-- generic meta tags -->
+	<meta property="title" content="{{page.title}}">
+	{% if description %}<meta property="description" content="{{description}}">{% endif %}
+	{% if page.author or site.author %}<meta property="author" content="{{page.author.name | default: site.author.name}}">{% endif %}
+	<!-- open graph protocol stuff. ogp.me -->
+	<meta property="og:title" content={{page.title}}>
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{site.url}}{{page.image}}">
+	<meta property="og:url" content="{{site.url}}{{page.url}}">
+	{% if description %}<meta property="og:description" content="{{description}}">{% endif %}
+	{% if site.locale %}<meta property="og:locale" content="{{site.locale}}">{% endif %}
+	{% if site.site_name %}<meta property="og:site_name" content="{{site.site_name}}">{% endif %}
+	<!-- this one's technically from twitter but discord embeds use it -->
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- other stuff -->
+	<meta name="theme-color" content="{{page.theme_color}}">
+
+</head>

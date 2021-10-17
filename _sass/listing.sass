@@ -1,0 +1,43 @@
+// for project and blog post listing pages.
+
+$translucent-black: rgba(0, 0, 0, 0.6)
+
+.post, .project
+	background-position: center
+	background-size: cover
+	max-height: 12em
+	margin-bottom: 1em
+	a
+		color: white
+
+.project > .inner-content
+	position: relative
+
+	&::after
+		position: absolute
+		writing-mode: vertical-lr
+
+		right: 0
+		top: 0
+		height: 100%
+
+.inner-content
+	padding: 1em
+	background: $translucent-black
+	width: 100%
+	max-height: inherit
+	color: white
+	display: flex
+	flex-direction: column
+
+	> *
+		display: block
+		max-width: 90%
+
+	> span
+		margin-top: 1em
+
+		> h3
+			margin: 0 0.3ch 0 0
+			&::before
+				display: none

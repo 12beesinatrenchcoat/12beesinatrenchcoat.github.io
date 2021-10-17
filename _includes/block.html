@@ -1,0 +1,57 @@
+{% comment %}
+used in listings. requires a multitude of variables.
+{% endcomment %}
+
+{% if post %}
+	{% assign page = post %}
+{% endif %}
+
+{% if page.endDate %}
+	{% assign date = page.endDate %}
+{% else %}
+	{% assign date = page.date %}
+{% endif %}
+
+{% if page.status == "complete" %}
+	{% assign date_string_prefix = "completed" %}
+	{% assign date_string_suffix = ":D" %}
+{% elsif page.status == "scrapped" %}
+	{% assign date_string_prefix = "scrapped" %}
+	{% assign date_string_suffix = ":(" %}
+{% elsif page.status %}
+	{% assign date_string_prefix = "started" %}
+{% endif %}
+
+{%- capture date_string -%}
+	{{date_string_prefix}}
+	{{date | date_to_string | downcase}}
+	{{date_string_suffix}}
+{% endcapture %}
+
+{% assign sorted_tags = page.tags | sort %}
+
+
+<div class="{{page.status}} {{include.type}}" style="background-image:url({{page.image}})">
+	<div class="inner-content">
+		<time class="smoltext" datetime="{{page.date | date: "%Y-%m-%d"}}">
+			{{date_string}}
+		</time>
+		<span class="inline">
+			<h3>
+				<a href="{{page.url}}">{{page.title}}</a>
+			</h3>
+			{% if page.type %}
+			<span class="type">{{page.type}}</span>
+			{% endif %}
+			{% if page.tags.size > 0 %}
+			<div class="tags">
+				{% for tag in sorted_tags %}
+				<span class="tag">{{tag}}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</span>
+
+		<p class="subheader">{{ page.description }}</p>
+	</div>
+</div>

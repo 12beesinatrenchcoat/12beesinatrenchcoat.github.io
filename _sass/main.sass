@@ -1,0 +1,172 @@
+// a bunch of rules for everything.
+@use "sass:math"
+
+*, *::before, *::after
+	box-sizing: border-box
+
+:root
+	font-size: 16px
+
+$FOUR_THIRDS: math.div(4, 3)
+
+@function ms($scale) // modular scale; base 1, ratio 4/3
+	$value: 1
+	@if $scale > 0
+		@for $_ from 1 through $scale
+			$value: $value * $FOUR_THIRDS
+	@else if $scale < 0
+		@for $_ from 1 through -$scale
+			$value: math.div($value, $FOUR_THIRDS)
+
+	@return $value
+
+html
+	scrollbar-color: var(--scrollbar) transparent
+
+	&::-webkit-scrollbar
+		width: 8px
+		background-color: #00000000
+
+	&::-webkit-scrollbar-thumb
+		background: var(--scrollbar)
+
+body
+	background: var(--background)
+	font-family: "Open Sans", sans-serif
+	font-size: ms(0) * 1em
+	margin: 2% 0%
+	text-rendering: optimizeSpeed
+	line-height: ms(1)
+
+a
+	color: inherit
+
+// resizing based on width...
+main, nav, footer, header > div > .header-inner
+	margin: 0% 20%
+
+	@media (max-width: 1280px)
+		margin: 0 10%
+
+	@media (max-width: 480px)
+		margin: 0 1em
+		#mynameis, a[href="#nav"] // "back to top" and "my name is andy chan"
+			display: none
+
+code
+	font-family: "JetBrains Mono", monospace
+	background: #f6f6f696
+
+.rouge-gutter
+	background: #96969696
+	padding: 0.15em 0.25em 0.25em
+	margin: -0.15em
+	position: absolute
+	width: 1em
+
+.rouge-code
+	padding-left: 1.5em
+	margin-left: -0.5em
+
+pre > code // code blocks!
+	display: block
+	font-size: 13px
+	line-height: 1.2
+	overflow-x: auto
+
+img // images.
+	max-width: 100%
+	max-height: 480px
+	display: block
+	margin: auto
+
+nav, footer
+	background: rgba(32, 32, 32, 0.8)
+	color: white
+	padding: 0.5em
+	display: flex
+	justify-content: space-between
+	align-items: center
+	img[src$="logo.svg"]
+		filter: invert(100%)
+		height: 1em
+		display: inline
+		vertical-align: -0.12rem
+	#links > a
+		padding: 0 0.1em
+
+blockquote
+	padding-left: 1em
+	border-left: 4px solid
+	font-style: italic
+
+
+// fancy quotes...
+q
+	> ::before
+		content: "“" // opening double quote
+
+	> ::after
+		content: "”" // closing double quote
+
+time
+	display: inline-block !important
+
+.inline
+	display: inline-flex
+
+h1 + .tags, h1 + .type, h1 + .type + .tags
+	vertical-align: ms(3) * 0.2em
+
+h1 + *
+	margin-left: 0.5ch
+
+h3 + .tags, h3 + .type, h3 + .type + .tags
+	vertical-align: 0.1em
+
+.tags
+	display: inline-block !important
+
+.tag
+	padding: 0.1em 0.25ch
+	+ .tag
+		margin-left: 0.3ch
+
+.type
+	padding: 0.1em 0.5ch
+	margin-right: 0.3ch
+	position: relative
+	font-weight: 500
+	&::before // inner border thing. thanks podperson @ stackoverflow! https://stackoverflow.com/a/14962056/
+		content: ""
+		position: absolute
+		left: 0px
+		right: 0px
+		top: 0px
+		bottom: 0px
+		border: 4px solid
+
+
+p.subheader  // below headers
+	margin: 0.25em 0
+	line-height: ms(1)
+	+ div
+		margin-top: ms(2) * 1em
+	+ time, p
+		margin-top: 1em
+
+.emphasis-highlight
+	color: black
+	text-decoration: none
+	background: var(--highlight)
+
+.smoltext
+	font-size: ms(-1) * 1em
+
+a[rel="license"]
+	font-family: 'Font Awesome 5 EDITED'
+	text-decoration: none
+	font-size: large
+
+.flow > * + *
+	margin-top: var(--flow-space, 1em)

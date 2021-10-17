@@ -1,0 +1,44 @@
+:root
+	--wip: rgba(48, 215, 242, 0.5)
+	--wip-lo: rgba(48, 215, 242, 0.35)
+
+	--on_hold: rgba(242, 212, 48, 0.5)
+	--on_hold-lo: rgba(242, 212, 48, 0.4)
+
+	--complete: rgba(77, 255, 129, 0.4)
+	--complete-lo: rgba(77, 255, 129, 0.2)
+
+	--scrapped: rgba(244, 67, 54, 0.5)
+	--scrapped-lo: rgba(244, 67, 54, 0.2)
+
+.wip > * > *
+	> .tags > .tag
+		background: var(--wip)
+	> .type
+		background: var(--wip-lo)
+		&::before
+			border-color: var(--wip)
+
+.on_hold > * > *
+	.tags > .tag
+		background: var(--on_hold)
+	> .type
+		background: var(--on_hold-lo)
+		&::before
+			border-color: var(--on_hold)
+
+.complete > * > *
+	.tags > .tag
+		background: var(--complete)
+	> .type
+		background: var(--complete-lo)
+		&::before
+			border-color: var(--complete)
+
+.scrapped > * > *
+	.tags > .tag
+		background: var(--scrapped)
+	> .type
+		background: var(--scrapped-lo)
+		&::before
+			border-color: var(--scrapped)
