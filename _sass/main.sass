@@ -116,8 +116,10 @@ time
 	display: inline-flex
 
 h1 + .tags, h1 + .type, h1 + .type + .tags
+	vertical-align: ms(3) * 0.2em
+
+h1 + *
 	margin-left: 0.5ch
-	vertical-align: ms(3) * 0.25em
 
 h3 + .tags, h3 + .type, h3 + .type + .tags
 	vertical-align: 0.1em
@@ -132,8 +134,10 @@ h3 + .tags, h3 + .type, h3 + .type + .tags
 
 .type
 	padding: 0.1em 0.5ch
+	margin-right: 0.3ch
 	position: relative
-	&::before
+	font-weight: 500
+	&::before // inner border thing. thanks podperson @ stackoverflow! https://stackoverflow.com/a/14962056/
 		content: ""
 		position: absolute
 		left: 0px
@@ -141,8 +145,6 @@ h3 + .tags, h3 + .type, h3 + .type + .tags
 		top: 0px
 		bottom: 0px
 		border: 4px solid
-	+ .tags
-		margin-left: 0.3ch
 
 
 p.subheader  // below headers

@@ -28,9 +28,7 @@ used in listings. requires a multitude of variables.
 	{{date_string_suffix}}
 {% endcapture %}
 
-{% if page.tags %}
-	{% assign sorted_tags = page.tags | sort %}
-{% endif %}
+{% assign sorted_tags = page.tags | sort %}
 
 
 <div class="{{page.status}} {{include.type}}" style="background-image:url({{page.image}})">
@@ -45,7 +43,7 @@ used in listings. requires a multitude of variables.
 			{% if page.type %}
 			<span class="type">{{page.type}}</span>
 			{% endif %}
-			{% if sorted_tags %}
+			{% if page.tags.size > 0 %}
 			<div class="tags">
 				{% for tag in sorted_tags %}
 				<span class="tag">{{tag}}</span>

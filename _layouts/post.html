@@ -45,7 +45,7 @@
 					{% if page.type %}
 						<span class="type">{{page.type}}</span>
 					{% endif %}
-					{% if tags %}
+					{% if tags.size > 0 %}
 						<div class="tags">
 							{% for tag in tags %}
 							<span class="tag">{{tag}}</span>
