@@ -2,19 +2,19 @@
 used in listings. requires a multitude of variables.
 {% endcomment %}
 
-{% if include.endDate %}
-	{% assign date = include.endDate %}
+{% if page.endDate %}
+	{% assign date = page.endDate %}
 {% else %}
-	{% assign date = include.date %}
+	{% assign date = page.date %}
 {% endif %}
 
-{% if include.status == "complete" %}
+{% if page.status == "complete" %}
 	{% assign date_string_prefix = "completed" %}
 	{% assign date_string_suffix = ":D" %}
-{% elsif include.status == "scrapped" %}
+{% elsif page.status == "scrapped" %}
 	{% assign date_string_prefix = "scrapped" %}
 	{% assign date_string_suffix = ":(" %}
-{% elsif include.status %}
+{% elsif page.status %}
 	{% assign date_string_prefix = "started" %}
 {% endif %}
 
@@ -24,21 +24,21 @@ used in listings. requires a multitude of variables.
 	{{date_string_suffix}}
 {% endcapture %}
 
-{% if include.tags %}
-	{% assign sorted_tags = include.tags | sort %}
+{% if page.tags %}
+	{% assign sorted_tags = page.tags | sort %}
 {% endif %}
 
 
-<div class="{{include.status}} {{include.type}}" style="background-image:url({{include.image}})">
+<div class="{{page.status}} {{include.type}}" style="background-image:url({{page.image}})">
 	<div class="inner-content">
-		<time class="smoltext" datetime="{{include.date | date: "%Y-%m-%d"}}">
+		<time class="smoltext" datetime="{{page.date | date: "%Y-%m-%d"}}">
 			{{date_string}}
 		</time>
 		<span class="inline">
 			<h3>
-				<a href="{{include.url}}">{{include.title}}</a>
+				<a href="{{page.url}}">{{page.title}}</a>
 			</h3>
-			{% if include.type %}
+			{% if page.type %}
 			<span class="type">{{page.type}}</span>
 			{% endif %}
 			{% if sorted_tags %}
@@ -50,6 +50,6 @@ used in listings. requires a multitude of variables.
 			{% endif %}
 		</span>
 
-		<p class="subheader">{{ include.description }}</p>
+		<p class="subheader">{{ page.description }}</p>
 	</div>
 </div>
