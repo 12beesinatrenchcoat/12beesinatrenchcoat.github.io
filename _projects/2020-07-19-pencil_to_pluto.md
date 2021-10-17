@@ -1,9 +1,10 @@
 ---
 title: "Pencil to Pluto"
 description: "an incremental game about drawing a line to pluto... with pencils..."
+type: code
 tags:	
   - game
-  - code
+  - nodejs
 startDate: 2020-07-19
 endDate: 2020-07-26
 status: "scrapped" # status can be: "complete", "wip", "on_hold", or "scrapped"

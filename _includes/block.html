@@ -38,6 +38,9 @@ used in listings. requires a multitude of variables.
 			<h3>
 				<a href="{{include.url}}">{{include.title}}</a>
 			</h3>
+			{% if include.type %}
+			<span class="type">{{page.type}}</span>
+			{% endif %}
 			{% if sorted_tags %}
 			<div class="tags">
 				{% for tag in sorted_tags %}

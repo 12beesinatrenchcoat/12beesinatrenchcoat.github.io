@@ -109,21 +109,38 @@ q
 time
 	display: inline-block !important
 
-.inline > *
-	display: inline
+.inline
+	display: inline-flex
 
-h1 + .tags
+h1 + .tags, h1 + .type, h1 + .type + .tags
 	margin-left: 0.5ch
 	vertical-align: ms(3) * 0.25em
 
-h3 + .tags
+h3 + .tags, h3 + .type, h3 + .type + .tags
 	vertical-align: 0.1em
 
 .tags
-	> .tag
-		padding: 0.1em 0.25ch
-		+ .tag
-			margin-left: 0.5ch
+	display: inline-block !important
+
+.tag
+	padding: 0.1em 0.25ch
+	+ .tag
+		margin-left: 0.3ch
+
+.type
+	padding: 0.1em 0.5ch
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		left: 0px
+		right: 0px
+		top: 0px
+		bottom: 0px
+		border: 4px solid
+	+ .tags
+		margin-left: 0.3ch
+
 
 p.subheader  // below headers
 	margin: 0.25em 0

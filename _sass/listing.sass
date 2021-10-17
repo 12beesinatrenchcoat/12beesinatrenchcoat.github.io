@@ -27,16 +27,17 @@ $translucent-black: rgba(0, 0, 0, 0.6)
 	width: 100%
 	max-height: inherit
 	color: white
+	display: flex
+	flex-direction: column
 
 	> *
 		display: block
 		max-width: 90%
 
-	> .tag
-		display: inline-block
-
 	> span
 		margin-top: 1em
 
-		> h3::before
-			display: none
+		> h3
+			margin: 0 0.3ch 0 0
+			&::before
+				display: none

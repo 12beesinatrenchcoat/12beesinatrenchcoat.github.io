@@ -11,18 +11,34 @@
 	--scrapped: rgba(244, 67, 54, 0.5)
 	--scrapped-lo: rgba(244, 67, 54, 0.2)
 
-.wip 
-	* > .tags > .tag
+.wip > * > *
+	> .tags > .tag
 		background: var(--wip)
+	> .type
+		background: var(--wip-lo)
+		&::before
+			border-color: var(--wip)
 
-.on_hold 
-	* > .tags > .tag
+.on_hold > * > *
+	.tags > .tag
 		background: var(--on_hold)
+	> .type
+		background: var(--on_hold-lo)
+		&::before
+			border-color: var(--on_hold)
 
-.complete 
-	* > .tags > .tag
+.complete > * > *
+	.tags > .tag
 		background: var(--complete)
+	> .type
+		background: var(--complete-lo)
+		&::before
+			border-color: var(--complete)
 
-.scrapped
-	* > .tags > .tag
+.scrapped > * > *
+	.tags > .tag
 		background: var(--scrapped)
+	> .type
+		background: var(--scrapped-lo)
+		&::before
+			border-color: var(--scrapped)

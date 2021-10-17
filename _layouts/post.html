@@ -42,6 +42,9 @@
 				<span class="smoltext">{{content | number_of_words}} words</span>
 				<span class="inline">
 					<h1 id="title">{{ page.title }}</h1>
+					{% if page.type %}
+						<span class="type">{{page.type}}</span>
+					{% endif %}
 					{% if tags %}
 						<div class="tags">
 							{% for tag in tags %}
