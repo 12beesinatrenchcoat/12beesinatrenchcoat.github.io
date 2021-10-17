@@ -1,13 +1,15 @@
-# this is a readme
+# this is where blog posts go!
 
-The name of a file in this folder should match: `YYYY-MM-DD-projectname.md` (where `YYYY-MM-DD` is the date of the post.) See [Posts (in Jekyll Docs)](https://jekyllrb.com/docs/posts/).
+in case you forgot the format…
 
-The YAML front matter for the files should be something like:
-
-```yaml
-title: # the title
-description: # description
-image: # header image. please refer to image relative to site root.
+file names go like:
+```
+YYYY-MM-DD-name.md
 ```
 
-Similar to the projects, huh?
+and front matter is like:
+```yaml
+title: "the title of the post, project, or what not"
+description: "give a short description of the post."
+image: "a url to the banner image of the post!"
+```

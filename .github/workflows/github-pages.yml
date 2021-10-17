@@ -6,7 +6,7 @@ name: Build and deploy Jekyll site to GitHub Pages
 on:
   push:
     branches:
-      - master
+      - content # you may want to change this to "master".
   workflow_dispatch:
 
 jobs:

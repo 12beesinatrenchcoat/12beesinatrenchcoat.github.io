@@ -1,9 +1,8 @@
 # the below are settings you *really should* change.
-site_name: "andy does things"
+site_name: # the name of your site. 
 author:
-  name: "andy chan"
-  twitter: "12bz_trenchcoat"
-url: "https://12beesinatrenchcoat.github.io"
+  name: "your name here!" # your name.
+url: "" # the root link of your site goes here.
 locale: "en_US" # see ogp.me
 timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
