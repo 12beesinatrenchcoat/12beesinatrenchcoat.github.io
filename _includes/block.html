@@ -2,6 +2,10 @@
 used in listings. requires a multitude of variables.
 {% endcomment %}
 
+{% if post %}
+	{% assign page = post %}
+{% endif %}
+
 {% if page.endDate %}
 	{% assign date = page.endDate %}
 {% else %}
