@@ -1,12 +1,5 @@
 :root{
 	--background: #CBD4D3;
 	--highlight: #30d7f2cc;
-}
-
-html {
-	scrollbar-color: #28bbd3 transparent;
-}
-
-html::-webkit-scrollbar-thumb{
-	background: #28bbd3;
+	--scrollbar: #28bbd3;
 }
