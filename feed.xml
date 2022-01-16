@@ -1,86 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://12beesinatrenchcoat.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://12beesinatrenchcoat.github.io/" rel="alternate" type="text/html" /><updated>2021-10-18T17:23:20-04:00</updated><id>https://12beesinatrenchcoat.github.io/feed.xml</id><author><name>andy chan</name></author><entry><title type="html">a postmortem of an incomplete incremental game</title><link href="https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem.html" rel="alternate" type="text/html" title="a postmortem of an incomplete incremental game" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem.html">&lt;p&gt;&lt;strong&gt;Pencil to Pluto&lt;/strong&gt; was an incremental game developed for the &lt;a href=&quot;https://itch.io/jam/my-first-game-jam-summer-2020&quot;&gt;Summer 2020 edition of My First Game Jam&lt;/a&gt;, and made using &lt;a href=&quot;https://godotengine.org&quot;&gt;Godot Engine&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://12beesinatrenchcoat.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://12beesinatrenchcoat.github.io/" rel="alternate" type="text/html" /><updated>2022-01-16T01:53:02-05:00</updated><id>https://12beesinatrenchcoat.github.io/feed.xml</id><author><name>andy chan</name></author><entry><title type="html">a postmortem of an incomplete incremental game</title><link href="https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem.html" rel="alternate" type="text/html" title="a postmortem of an incomplete incremental game" /><published>2020-07-26T00:00:00-04:00</published><updated>2020-07-26T00:00:00-04:00</updated><id>https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/blog/2020/07/26/pencil_to_pluto_postmortem.html"><![CDATA[<p><strong>Pencil to Pluto</strong> was an incremental game developed for the <a href="https://itch.io/jam/my-first-game-jam-summer-2020">Summer 2020 edition of My First Game Jam</a>, and made using <a href="https://godotengine.org">Godot Engine</a>.</p>
 
-&lt;p&gt;The basic idea of the game is this:&lt;/p&gt;
+<p>The basic idea of the game is this:</p>
 
-&lt;p&gt;You are… a protagonist. Or unnamed character. You wake up in your house one day, and find and endless sheet of paper ascending into the sky. You pick up a pencil, and then decide to draw a line from the ground all the way to Pluto.&lt;/p&gt;
+<p>You are… a protagonist. Or unnamed character. You wake up in your house one day, and find and endless sheet of paper ascending into the sky. You pick up a pencil, and then decide to draw a line from the ground all the way to Pluto.</p>
 
-&lt;p&gt;Except that was never programmed.&lt;/p&gt;
+<p>Except that was never programmed.</p>
 
-&lt;p&gt;The game is very shallow - you can draw a line up, you can click a button to fill up a bar to get money, spend that money on more pencils and expensive upgrades, and at some point, there’s a research system - and I’m not going to lie, it’s boring. There isn’t even an ending - not enough upgrades, and it’s just… bad.&lt;/p&gt;
+<p>The game is very shallow - you can draw a line up, you can click a button to fill up a bar to get money, spend that money on more pencils and expensive upgrades, and at some point, there’s a research system - and I’m not going to lie, it’s boring. There isn’t even an ending - not enough upgrades, and it’s just… bad.</p>
 
-&lt;p&gt;Yet, I’m still very proud of it - it’s the most I’ve done in a very long time. So… let’s criticize it.&lt;/p&gt;
+<p>Yet, I’m still very proud of it - it’s the most I’ve done in a very long time. So… let’s criticize it.</p>
 
-&lt;h1 id=&quot;what-went-alright&quot;&gt;What went alright&lt;/h1&gt;
+<h1 id="what-went-alright">What went alright</h1>
 
-&lt;p&gt;…I can’t think of anything off the top of my head, hold on…&lt;/p&gt;
+<p>…I can’t think of anything off the top of my head, hold on…</p>
 
-&lt;p&gt;&lt;strong&gt;Perseverance.&lt;/strong&gt; I thought up features, and I implemented them. If I didn’t know how to do something, I would read up on documentation, and figure it out. I came back day after day to work on this thing. I &lt;em&gt;liked&lt;/em&gt; working on it- and you know what, that should be its own point, hold on:
-&lt;strong&gt;I liked working on it.&lt;/strong&gt; Actually, now as I write this… I realize that there isn’t much to expand on this. I liked working on the project, and so I’d work a lot on it.&lt;/p&gt;
+<p><strong>Perseverance.</strong> I thought up features, and I implemented them. If I didn’t know how to do something, I would read up on documentation, and figure it out. I came back day after day to work on this thing. I <em>liked</em> working on it- and you know what, that should be its own point, hold on:
+<strong>I liked working on it.</strong> Actually, now as I write this… I realize that there isn’t much to expand on this. I liked working on the project, and so I’d work a lot on it.</p>
 
-&lt;h1 id=&quot;what-went-poorly&quot;&gt;What went poorly&lt;/h1&gt;
+<h1 id="what-went-poorly">What went poorly</h1>
 
-&lt;p&gt;A lot of things, really. But I feel like the most important, as with all my other projects - &lt;em&gt;a lack of planning.&lt;/em&gt; There was no real end goal - there were a lot of ideas and and a lot of tasks, but little priority. Features were being added without any consideration of the deadline, or what really needed to be added to make the game playable. There was no &lt;strong&gt;Minimum Viable Product&lt;/strong&gt; (or however that term is supposed to be used).&lt;/p&gt;
+<p>A lot of things, really. But I feel like the most important, as with all my other projects - <em>a lack of planning.</em> There was no real end goal - there were a lot of ideas and and a lot of tasks, but little priority. Features were being added without any consideration of the deadline, or what really needed to be added to make the game playable. There was no <strong>Minimum Viable Product</strong> (or however that term is supposed to be used).</p>
 
-&lt;p&gt;If I had more time, if I started work on this earlier, I would have probably planned more out, what features could keep the game interesting as the player progresses - what more could be added?&lt;/p&gt;
+<p>If I had more time, if I started work on this earlier, I would have probably planned more out, what features could keep the game interesting as the player progresses - what more could be added?</p>
 
-&lt;p&gt;But as it is right now, the game has very little. There’s a button to get money, a bar that gives you science, and a lot of upgrades that feel like a chore to get the money for. There’s still no end, there’s no proper beginning, and overall, the entire thing is a mess. It’s bad - really bad.&lt;/p&gt;
+<p>But as it is right now, the game has very little. There’s a button to get money, a bar that gives you science, and a lot of upgrades that feel like a chore to get the money for. There’s still no end, there’s no proper beginning, and overall, the entire thing is a mess. It’s bad - really bad.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/penciltopluto-scr1.png&quot; alt=&quot;the research tab of pencil to pluto&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/penciltopluto-scr1.png" alt="the research tab of pencil to pluto" /></p>
 
-&lt;p&gt;And yet I’m proud of it.&lt;/p&gt;
+<p>And yet I’m proud of it.</p>
 
-&lt;h2 id=&quot;inquisitive-header&quot;&gt;Inquisitive header?&lt;/h2&gt;
+<h2 id="inquisitive-header">Inquisitive header?</h2>
 
-&lt;p&gt;This game jam let me get my feet wet in the world of game development - I learned a lot from this. I learned a bit on how the Godot Engine worked, and as I kept working on it, I felt like my code and my work was slowly getting better (although, that might have been because I started with the most complicated element first, creating the spaghetti monster first, and leaving everything else to be simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt;s and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;else&lt;/code&gt; statements.)&lt;/p&gt;
+<p>This game jam let me get my feet wet in the world of game development - I learned a lot from this. I learned a bit on how the Godot Engine worked, and as I kept working on it, I felt like my code and my work was slowly getting better (although, that might have been because I started with the most complicated element first, creating the spaghetti monster first, and leaving everything else to be simple <code class="language-plaintext highlighter-rouge">if</code>s and <code class="language-plaintext highlighter-rouge">else</code> statements.)</p>
 
-&lt;p&gt;This was fun. A lot of fun. And I plan on getting better for the Winter edition of the jam.&lt;/p&gt;
+<p>This was fun. A lot of fun. And I plan on getting better for the Winter edition of the jam.</p>
 
-&lt;p&gt;I’ll be back.&lt;/p&gt;
+<p>I’ll be back.</p>
 
-&lt;h1 id=&quot;so-summarize-this-entire-post-in-one-sentence&quot;&gt;So… summarize this entire post in one sentence?&lt;/h1&gt;
+<h1 id="so-summarize-this-entire-post-in-one-sentence">So… summarize this entire post in one sentence?</h1>
 
-&lt;p&gt;The game I made for a game jam was bad due to a lack of planning - but I still had fun making it.&lt;/p&gt;
+<p>The game I made for a game jam was bad due to a lack of planning - but I still had fun making it.</p>
 
-&lt;p&gt;…wow, I really didn’t say anything of substance, did I…?&lt;/p&gt;
+<p>…wow, I really didn’t say anything of substance, did I…?</p>
 
-&lt;p&gt;o/&lt;/p&gt;</content><author><name>andy chan</name></author><category term="blog" /><summary type="html">Pencil to Pluto was an incremental game developed for the Summer 2020 edition of My First Game Jam, and made using Godot Engine.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr2.png" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">the actual post</title><link href="https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post.html" rel="alternate" type="text/html" title="the actual post" /><published>2020-02-22T00:00:00-05:00</published><updated>2020-02-22T00:00:00-05:00</updated><id>https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post.html">&lt;p class=&quot;emphasis-highlight&quot;&gt;&lt;strong&gt;A note: this is very outdated!&lt;/strong&gt; “Website v4” has been gone for a while now. If you want to see what it was like, you can find a release &lt;a href=&quot;https://github.com/AndyThePie/AndyThePie.github.io/releases/tag/v4&quot;&gt;here&lt;/a&gt;. If you want to see my [initial] thoughts on the current website, please see my post on &lt;a href=&quot;/projects/2020-12-15-website_v5.html&quot;&gt;website v5&lt;/a&gt;.&lt;/p&gt;
+<p>o/</p>]]></content><author><name>andy chan</name></author><category term="blog" /><summary type="html"><![CDATA[examining what pencil to pluto is - and what went wrong... kind of.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr2.png" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/penciltopluto-scr2.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">the actual post</title><link href="https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post.html" rel="alternate" type="text/html" title="the actual post" /><published>2020-02-22T00:00:00-05:00</published><updated>2020-02-22T00:00:00-05:00</updated><id>https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post</id><content type="html" xml:base="https://12beesinatrenchcoat.github.io/blog/2020/02/22/the_actual_post.html"><![CDATA[<p class="emphasis-highlight"><strong>A note: this is very outdated!</strong> “Website v4” has been gone for a while now. If you want to see what it was like, you can find a release <a href="https://github.com/AndyThePie/AndyThePie.github.io/releases/tag/v4">here</a>. If you want to see my [initial] thoughts on the current website, please see my post on <a href="/projects/2020-12-15-website_v5.html">website v5</a>.</p>
 
-&lt;p&gt;Welcome to the fourth iteration of my website, website v4! There’s a bunch of new things here, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/projects/&lt;/code&gt; section, a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/blog/&lt;/code&gt; section, with posts now written in Markdown, and compiled using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gray-matter&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;showdown&lt;/code&gt;. I’m surprised it’s actually working.&lt;/p&gt;
+<p>Welcome to the fourth iteration of my website, website v4! There’s a bunch of new things here, a <code class="language-plaintext highlighter-rouge">/projects/</code> section, a <code class="language-plaintext highlighter-rouge">/blog/</code> section, with posts now written in Markdown, and compiled using <code class="language-plaintext highlighter-rouge">gray-matter</code> and <code class="language-plaintext highlighter-rouge">showdown</code>. I’m surprised it’s actually working.</p>
 
-&lt;p&gt;You can probably find the project page, where I’ll go more in detail about the behind the scenes of it all &lt;a href=&quot;/projects/2020-02-20-website_v4&quot;&gt;around here somewhere&lt;/a&gt;. Here, I’ll talk about why I rewrote my site, and some things I learned. Please note that I am a relatively new “developer” with an extraordinary lack of experience. Cool? Cool.&lt;/p&gt;
+<p>You can probably find the project page, where I’ll go more in detail about the behind the scenes of it all <a href="/projects/2020-02-20-website_v4">around here somewhere</a>. Here, I’ll talk about why I rewrote my site, and some things I learned. Please note that I am a relatively new “developer” with an extraordinary lack of experience. Cool? Cool.</p>
 
-&lt;h1 id=&quot;1-you-need-to-know-the-basics-of-a-language-to-write-in-it&quot;&gt;1. You need to know the basics of a language to write in it&lt;/h1&gt;
+<h1 id="1-you-need-to-know-the-basics-of-a-language-to-write-in-it">1. You need to know the basics of a language to write in it</h1>
 
-&lt;p&gt;I tried to write the site compiler in C# originally. The issue with that is that I don’t know C#. So there’s a nice little pro tip.&lt;/p&gt;
+<p>I tried to write the site compiler in C# originally. The issue with that is that I don’t know C#. So there’s a nice little pro tip.</p>
 
-&lt;h1 id=&quot;2-divs-are-really-neat&quot;&gt;2. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt;s are really neat.&lt;/h1&gt;
+<h1 id="2-divs-are-really-neat">2. <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>s are really neat.</h1>
 
-&lt;p&gt;I think I began to use them a lot more, especially with the progress bars and all the sort. They’re very helpful, especially with the mess that is “me writing CSS” and also inheritance, or something like that.&lt;/p&gt;
+<p>I think I began to use them a lot more, especially with the progress bars and all the sort. They’re very helpful, especially with the mess that is “me writing CSS” and also inheritance, or something like that.</p>
 
-&lt;p&gt;I’m done with the list, I’m just going to write down some of my other thoughts.&lt;/p&gt;
+<p>I’m done with the list, I’m just going to write down some of my other thoughts.</p>
 
-&lt;p&gt;I really… didn’t know what I was doing half this time. I wrote some stuff, I looked at reference, and the entire process (and result, but more on that later,) was a giant disorganized mess.&lt;/p&gt;
+<p>I really… didn’t know what I was doing half this time. I wrote some stuff, I looked at reference, and the entire process (and result, but more on that later,) was a giant disorganized mess.</p>
 
-&lt;p&gt;I suppose I should thank some sites, but more specifically: the people who contribute to the &lt;a href=&quot;https://developer.mozilla.org/en-US/&quot;&gt;MDN Web Docs&lt;/a&gt; and &lt;a href=&quot;https://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt; - for wannabe developers like myself, your contributions make for great reference material. Thanks!&lt;/p&gt;
+<p>I suppose I should thank some sites, but more specifically: the people who contribute to the <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a> and <a href="https://stackoverflow.com/">Stack Overflow</a> - for wannabe developers like myself, your contributions make for great reference material. Thanks!</p>
 
-&lt;p&gt;But more on the result - it’s a mess. I dread looking at the “code” again - it’s an amalgamation of multi-line HTML strings, many repeated things that could probably be simplified, stored in variables, or consolidated into functions - but I didn’t do that. Which may have been why this took so long. Maybe when I finish writing this, and go to compile it, there’s going to be another issue somewhere, and it’s going to take me another few hours to solve it. That’ll be… great.&lt;/p&gt;
+<p>But more on the result - it’s a mess. I dread looking at the “code” again - it’s an amalgamation of multi-line HTML strings, many repeated things that could probably be simplified, stored in variables, or consolidated into functions - but I didn’t do that. Which may have been why this took so long. Maybe when I finish writing this, and go to compile it, there’s going to be another issue somewhere, and it’s going to take me another few hours to solve it. That’ll be… great.</p>
 
-&lt;p&gt;I did feel like I learned quite an amount from this, though. I’ll probably have to look back through some fundamentals, but I’ll probably go off to write something bigger after this. I might build a better Discord bot this time! Those are always fun to write.&lt;/p&gt;
+<p>I did feel like I learned quite an amount from this, though. I’ll probably have to look back through some fundamentals, but I’ll probably go off to write something bigger after this. I might build a better Discord bot this time! Those are always fun to write.</p>
 
-&lt;p&gt;And just to test some more elements of the compiler/markdownjs, here’s a list of things I should learn:&lt;/p&gt;
+<p>And just to test some more elements of the compiler/markdownjs, here’s a list of things I should learn:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;How to debug code (especially node.js)&lt;/li&gt;
-  &lt;li&gt;Writing unit tests (and tests in general)&lt;/li&gt;
-  &lt;li&gt;Actually organizing and planning code&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>How to debug code (especially node.js)</li>
+  <li>Writing unit tests (and tests in general)</li>
+  <li>Actually organizing and planning code</li>
+</ul>
 
-&lt;p&gt;That’s all.&lt;/p&gt;
+<p>That’s all.</p>
 
-&lt;p&gt;I’m done here.&lt;/p&gt;
+<p>I’m done here.</p>
 
-&lt;p&gt;If you’re reading this, I’m amazed. Thanks. I hope you got a chuckle out of this.&lt;/p&gt;
+<p>If you’re reading this, I’m amazed. Thanks. I hope you got a chuckle out of this.</p>
 
-&lt;p&gt;See ya next time?&lt;/p&gt;
+<p>See ya next time?</p>
 
-&lt;p&gt;(Oh, and follow me on &lt;a href=&quot;https;//twitter.com/AndzCLiv3&quot;&gt;Twitter&lt;/a&gt; and look at other of my crimes against humanity on my &lt;a href=&quot;https://github.com/andythepie&quot;&gt;GitHub&lt;/a&gt; profile.)&lt;/p&gt;</content><author><name>andy chan</name></author><category term="blog" /><summary type="html">A note: this is very outdated! “Website v4” has been gone for a while now. If you want to see what it was like, you can find a release here. If you want to see my [initial] thoughts on the current website, please see my post on website v5.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>(Oh, and follow me on <a href="https;//twitter.com/AndzCLiv3">Twitter</a> and look at other of my crimes against humanity on my <a href="https://github.com/andythepie">GitHub</a> profile.)</p>]]></content><author><name>andy chan</name></author><category term="blog" /><summary type="html"><![CDATA[this is the second post, and it has content in it]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" /><media:content medium="image" url="https://12beesinatrenchcoat.github.io/assets/images/websitev4-header.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
