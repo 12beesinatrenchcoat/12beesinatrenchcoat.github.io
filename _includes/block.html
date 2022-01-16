@@ -40,16 +40,16 @@ used in listings. requires a multitude of variables.
 			<h3>
 				<a href="{{page.url}}">{{page.title}}</a>
 			</h3>
-			{% if page.type %}
-			<span class="type">{{page.type}}</span>
-			{% endif %}
-			{% if page.tags.size > 0 %}
 			<div class="tags">
-				{% for tag in sorted_tags %}
+				{% if page.type %}
+				<span class="type">{{page.type}}</span>
+				{% endif %}
+				{% if page.tags.size > 0 %}
+					{% for tag in sorted_tags %}
 				<span class="tag">{{tag}}</span>
-				{% endfor %}
+					{% endfor %}
+				{% endif %}
 			</div>
-			{% endif %}
 		</span>
 
 		<p class="subheader">{{ page.description }}</p>
