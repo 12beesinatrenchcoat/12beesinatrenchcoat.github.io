@@ -40,34 +40,34 @@
 		<div {% if page.status %}class="{{page.status}}"{% endif %}>
 			<div class="header-inner">
 				<span class="smoltext">{{content | number_of_words}} words</span>
+				<h1 id="title">{{ page.title }}</h1>
 				<span class="inline">
-					<h1 id="title">{{ page.title }}</h1>
-					{% if page.type %}
-						<span class="type">{{page.type}}</span>
-					{% endif %}
-					{% if tags.size > 0 %}
-						<div class="tags">
+					<span class="tags">
+						{% if page.type %}
+							<span class="type">{{page.type}}</span>
+						{% endif %}
+						{% if tags.size > 0 %}
 							{% for tag in tags %}
 							<span class="tag">{{tag}}</span>
 							{% endfor %}
-						</div>
-					{% endif %}
+						{% endif %}
+					</span>
+					<p class="subheader">
+						{{page.description}}
+					</p>
 				</span>
-				<p class="subheader">
-					{{page.description}}
-				</p>
-				<span class="inline"> 
-					{% if page.status %}
-						<span class="{{page.status}} status">{{page.status}}</span>
-					{% endif %}
-					<time datetime="{{page.date | date: "%Y-%m-%d"}}">
-						{{ date_string }}
+				<span> 
+				{% if page.status %}
+					<span class="{{page.status}} status">{{page.status}}</span>
+				{% endif %}
+				<time datetime="{{page.date | date: "%Y-%m-%d"}}">
+					{{ date_string }}
+				</time>
+				{% if page.endDate %}
+					/ <time datetime="{{page.endDate | date: "%Y-%m-%d"}}">
+						{{ end_date_string }}
 					</time>
-					{% if page.endDate %}
-						/ <time datetime="{{page.endDate | date: "%Y-%m-%d"}}">
-							{{ end_date_string }}
-						</time>
-					{% endif %}
+				{% endif %}
 				</span>
 			</div>
 		</div>

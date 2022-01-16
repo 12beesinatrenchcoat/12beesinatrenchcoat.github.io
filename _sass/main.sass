@@ -114,6 +114,11 @@ time
 
 .inline
 	display: inline-flex
+	flex-direction: row
+	align-content: center
+	flex-wrap: wrap
+	> * 
+		margin: 0 (ms(-4) * 1em) 0 0 !important
 
 h1 + .tags, h1 + .type, h1 + .type + .tags
 	vertical-align: ms(3) * 0.2em
@@ -130,11 +135,11 @@ h3 + .tags, h3 + .type, h3 + .type + .tags
 .tag
 	padding: 0.1em 0.25ch
 	+ .tag
-		margin-left: 0.3ch
+		margin-left: ms(-4) * 1em
 
 .type
 	padding: 0.1em 0.5ch
-	margin-right: 0.3ch
+	margin-right: (ms(-4) * 1em)
 	position: relative
 	font-weight: 500
 	&::before // inner border thing. thanks podperson @ stackoverflow! https://stackoverflow.com/a/14962056/
