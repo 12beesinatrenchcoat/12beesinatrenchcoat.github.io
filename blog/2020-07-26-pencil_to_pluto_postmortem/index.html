@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+	<!-- style -->
+	<link rel="stylesheet" href="/style/index.css">
+	<style>
+		
+		:root {
+			--accent-desat: var(--yellow-dst);
+			--accent-75: var(--yellow-trn-75);
+			--accent-50: var(--yellow-trn-50);
+			--accent-25: var(--yellow-trn-25);
+		}
+		
+	</style>
+	<!-- other meta stuff -->
+	
+<meta name="theme-color" content="#ffdc5340">
+
+	<title>a postmortem of an incomplete incremental game</title>
+</head>
+<body>
+	
+<nav>
+	<span id="nav-links">
+		
+		<a href="/"
+		
+		>
+			home
+		</a>
+		
+		<a href="/projects"
+		
+		>
+			projects
+		</a>
+		
+		<a href="/blog"
+		 class="highlight" 
+		>
+			blog
+		</a>
+		
+	</span>
+	<span>
+		<span id="mynameis">
+			my name is <a href="/about" ">andy chan</a>
+		</span> 
+		<img src="/assets/images/logo.svg">
+	<span>
+</nav>
+	
+	<main tabindex="-1" id="main-content">
+		
+<header class="" style="--img: url(/assets/images/penciltopluto-scr2.png)">
+	<span class="top-info">
+	
+	
+	<span class="dates">
+		<time>Jul 26, 2020</time>
+			
+	</span>
+	
+	</span>
+
+	<div>
+		<h1><span>a postmortem of an incomplete incremental game</span></h1>
+		<p>examining what pencil to pluto is - and what went wrong... kind of.</p>
+
+		
+	</div>
+</header>
+		<div class="two-column">
+			<article class="flow">
+				<p><strong>Pencil to Pluto</strong> was an incremental game developed for the <a href="https://itch.io/jam/my-first-game-jam-summer-2020">Summer 2020 edition of My First Game Jam</a>, and made using <a href="https://godotengine.org">Godot Engine</a>.</p>
+<p>The basic idea of the game is this:</p>
+<p>You are... a protagonist. Or unnamed character. You wake up in your house one day, and find and endless sheet of paper ascending into the sky. You pick up a pencil, and then decide to draw a line from the ground all the way to Pluto.</p>
+<p>Except that was never programmed.</p>
+<p>The game is very shallow - you can draw a line up, you can click a button to fill up a bar to get money, spend that money on more pencils and expensive upgrades, and at some point, there's a research system - and I'm not going to lie, it's boring. There isn't even an ending - not enough upgrades, and it's just... bad.</p>
+<p>Yet, I'm still very proud of it - it's the most I've done in a very long time. So... let's criticize it.</p>
+<h1 id="what-went-alright" tabindex="-1">What went alright</h1>
+<p>...I can't think of anything off the top of my head, hold on...</p>
+<p><strong>Perseverance.</strong> I thought up features, and I implemented them. If I didn't know how to do something, I would read up on documentation, and figure it out. I came back day after day to work on this thing. I <em>liked</em> working on it- and you know what, that should be its own point, hold on:<br>
+<strong>I liked working on it.</strong> Actually, now as I write this... I realize that there isn't much to expand on this. I liked working on the project, and so I'd work a lot on it.</p>
+<h1 id="what-went-poorly" tabindex="-1">What went poorly</h1>
+<p>A lot of things, really. But I feel like the most important, as with all my other projects - <em>a lack of planning.</em> There was no real end goal - there were a lot of ideas and and a lot of tasks, but little priority. Features were being added without any consideration of the deadline, or what really needed to be added to make the game playable. There was no <strong>Minimum Viable Product</strong> (or however that term is supposed to be used).</p>
+<p>If I had more time, if I started work on this earlier, I would have probably planned more out, what features could keep the game interesting as the player progresses - what more could be added?</p>
+<p>But as it is right now, the game has very little. There's a button to get money, a bar that gives you science, and a lot of upgrades that feel like a chore to get the money for. There's still no end, there's no proper beginning, and overall, the entire thing is a mess. It's bad - really bad.</p>
+<p><img src="/assets/images/penciltopluto-scr1.png" alt="the research tab of pencil to pluto"></p>
+<p>And yet I'm proud of it.</p>
+<h2 id="inquisitive-header%3F" tabindex="-1">Inquisitive header?</h2>
+<p>This game jam let me get my feet wet in the world of game development - I learned a lot from this. I learned a bit on how the Godot Engine worked, and as I kept working on it, I felt like my code and my work was slowly getting better (although, that might have been because I started with the most complicated element first, creating the spaghetti monster first, and leaving everything else to be simple <code>if</code>s and <code>else</code> statements.)</p>
+<p>This was fun. A lot of fun. And I plan on getting better for the Winter edition of the jam.</p>
+<p>I'll be back.</p>
+<h1 id="so...-summarize-this-entire-post-in-one-sentence%3F" tabindex="-1">So... summarize this entire post in one sentence?</h1>
+<p>The game I made for a game jam was bad due to a lack of planning - but I still had fun making it.</p>
+<p>...wow, I really didn't say anything of substance, did I...?</p>
+<p>o/</p>
+
+			</article>
+			<aside>
+				<nav class="toc" >
+        <ol><li><a href="#what-went-alright">What went alright</a></li><li><a href="#what-went-poorly">What went poorly</a><ol><li><a href="#inquisitive-header%3F">Inquisitive header?</a></li></ol></li><li><a href="#so...-summarize-this-entire-post-in-one-sentence%3F">So... summarize this entire post in one sentence?</a></li></ol>
+      </nav>
+			</aside>
+		</div>
+	</main>
+
+	<footer>
+	<a href="https://github.com/12beesinatrenchcoat/12beesinatrenchcoat.github.io/tree/gh-pages">last built jul 17, 2022</a>
+	<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+		<img src="/assets/icons/creative-commons-brands.svg">
+		<img src="/assets/icons/creative-commons-by-brands.svg">
+	</a>
+</footer>
+</body>
+</html>

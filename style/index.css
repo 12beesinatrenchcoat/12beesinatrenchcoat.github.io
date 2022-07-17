@@ -1,0 +1,557 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  background: var(--accent-25, var(--green-trn-25));
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  margin: 2% max(128px, 25vw - 196px);
+}
+@media (max-width: 1280px) {
+  body {
+    margin: clamp(0px, 4% - 1vw, 2%) max(1rem, 10vw - 2rem);
+  }
+}
+@media (max-width: 540px) {
+  body {
+    margin: 0 1rem;
+  }
+  body #mynameis, body #to-top {
+    display: none;
+  }
+}
+
+mark, .highlight {
+  background-color: var(--accent-75, var(--green-trn-75));
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4, h5, h6 {
+  font-size: var(--font-size-med);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+}
+
+p, article {
+  max-width: 72ch;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, var(--font-size-base, 1rem));
+}
+
+.grid {
+  display: grid;
+  gap: var(--font-size-base, 1rem);
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row;
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.two-column {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  min-width: 100%;
+  /* margin-top only when flex item is wrapped <3 https://stackoverflow.com/a/30891910 */
+  margin-top: calc(var(--flow-space, var(--font-size-base, 1rem)) * -1);
+  /* If not wide enough, just lay out in a single column */
+}
+.two-column > * {
+  margin-top: var(--flow-space, var(--font-size-base, 1rem));
+}
+.two-column > *:first-child {
+  margin-right: 2ch;
+}
+.two-column.right-priority > div:first-child {
+  min-width: 28ch;
+}
+.two-column.right-priority > div:last-child {
+  flex-basis: 80%;
+  flex-grow: 2;
+}
+.two-column.left-priority > div:first-child {
+  flex-grow: 2;
+  flex-basis: 80%;
+}
+.two-column.left-priority > div:last-child {
+  min-width: 28ch;
+}
+.two-column.equal-width > * {
+  flex-basis: 47.5%;
+}
+.two-column:not(.right-priority, .left-priority) > * {
+  max-width: 72ch;
+}
+@media (max-width: 96ch) {
+  .two-column {
+    display: block;
+    width: auto;
+    left: auto;
+    right: auto;
+    margin: auto;
+  }
+  .two-column > aside {
+    display: none;
+  }
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block-div > * {
+  display: block !important;
+  width: max-content;
+  max-width: 100%;
+  padding: 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+span.no-decoration {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 0.25ch;
+}
+
+pre, :not(pre) > code {
+  word-wrap: break-word;
+  background: var(--very-offwhite-trn-50);
+  overflow-x: scroll;
+}
+
+blockquote {
+  border-left: var(--not-white) 0.25ch solid;
+  padding-left: 1.25ch;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.larg {
+  font-size: var(--font-size-3xl);
+}
+
+::selection {
+  background: var(--accent-75);
+}
+
+/* Articles. As in, blog posts. */
+article {
+  max-width: 72ch;
+}
+
+/* The table of contents, other side elements */
+aside {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1em;
+  margin-left: 2ch;
+  height: max-content;
+  width: 100%;
+  max-width: 36ch !important;
+}
+aside > nav {
+  margin: revert;
+}
+
+li > ol {
+  list-style-type: lower-alpha;
+  margin-left: -1ch;
+}
+
+nav, footer {
+  background: var(--very-offwhite-trn-50);
+  margin: clamp(0.5em, 1vw, 1em) 0;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+nav > span > a, footer > span > a {
+  color: inherit;
+}
+nav > span > *, footer > span > * {
+  display: inline-block;
+}
+nav > span > img, footer > span > img {
+  width: 2rem;
+  height: 1rem;
+  vertical-align: -0.1em;
+}
+@media (max-width: 540px) {
+  nav #mynameis, nav #to-top, footer #mynameis, footer #to-top {
+    display: none;
+  }
+}
+
+a[rel=license] {
+  text-decoration: none;
+}
+a[rel=license] > * {
+  height: 1.5 rem;
+  width: 1.5rem;
+  display: inline;
+  vertical-align: bottom;
+}
+a[rel=license]::before {
+  display: none !important;
+}
+
+:root {
+  --font-size-sm: clamp(0.8rem, 0.08vw + 0.78rem, 0.85rem);
+  --font-size-base: clamp(1rem, 0.23vw + 0.94rem, 1.13rem);
+  --font-size-md: clamp(1.25rem, 0.45vw + 1.14rem, 1.5rem);
+  --font-size-lg: clamp(1.56rem, 0.78vw + 1.37rem, 1.99rem);
+  --font-size-xl: clamp(1.95rem, 1.26vw + 1.64rem, 2.65rem);
+  --font-size-xxl: clamp(2.44rem, 1.96vw + 1.95rem, 3.52rem);
+  --font-size-3xl: clamp(3.05rem, 2.96vw + 2.31rem, 4.68rem);
+}
+
+/* Don't know what else to call the file, but this refers to the blocks (in listings) and the headers (in articles / pages). */
+a.block, header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: var(--font-size-sm);
+  background-image: linear-gradient(var(--not-white-trn-50), var(--not-white-trn-50)), var(--img);
+  background-position: center;
+  background-size: cover;
+  /* The pseudoelement — overlays status patterns or colors. */
+  /* dealing with the text on the blocks */
+}
+a.block::before, header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4ch;
+  z-index: 0;
+  opacity: 80%;
+  background-position: center;
+  background-image: linear-gradient(var(--yellow), var(--yellow));
+}
+a.block:hover, header:hover {
+  background-image: var(--img);
+}
+a.block:hover > *, header:hover > * {
+  opacity: 50%;
+}
+a.block > *, header > * {
+  position: relative;
+  z-index: 1;
+  text-shadow: var(--not-white-trn-50) 0.25ch 0.25ch 1ch;
+}
+a.block > .top-info, a.block > div > p, header > .top-info, header > div > p {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+a.block > .top-info, header > .top-info {
+  font-size: var(--font-size-sm);
+}
+
+/* Includes the title and tags */
+.inline-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.inline-header > h1 span, .inline-header > h3 span {
+  flex-basis: 100%;
+  line-height: 1.33;
+}
+.inline-header > h1, .inline-header h2, .inline-header h3 {
+  margin-right: 0.5ch;
+}
+
+.tags {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+}
+.tags > * {
+  background: var();
+}
+.tags > * + * {
+  margin-left: 0.25ch;
+}
+
+/* full-width header stuff */
+header {
+  min-height: 12em;
+  width: calc(100vw - 4px);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 1em -50vw;
+  padding: var(--font-size-sm) max(128px, 25vw - 196px);
+}
+@media (max-width: 1280px) {
+  header {
+    padding: var(--font-size-sm) max(1rem, 10vw - 2rem);
+  }
+}
+@media (max-width: 540px) {
+  header {
+    padding: var(--font-size-sm) 1rem;
+  }
+  header #mynameis {
+    display: none;
+  }
+}
+
+/* block sizes, depending on status */
+.block {
+  min-height: 8em;
+}
+
+a.complete, a.scrapped {
+  min-height: 12em;
+}
+
+a.wip, a.on_hold {
+  min-height: 16em;
+}
+
+/* Defining all the patterns for project statuses. */
+.wip::before {
+  background-image: linear-gradient(var(--blue-trn-50), var(--blue-trn-50)), repeating-linear-gradient(45deg, transparent, transparent 2em, var(--blue) 2em, var(--blue) 4em) !important;
+}
+
+.on_hold::before {
+  background-image: linear-gradient(var(--yellow-trn-50), var(--yellow-trn-50)), repeating-linear-gradient(0deg, transparent, transparent 2em, var(--yellow) 2em, var(--yellow) 4em) !important;
+}
+
+.complete::before {
+  background-image: linear-gradient(var(--green-trn-50), var(--green-trn-50)), radial-gradient(transparent 0.75em, var(--green) 0.75em, var(--green) 1.5em, transparent 1.5em) !important;
+  background-size: 4em 4em;
+}
+
+.scrapped::before {
+  /* wow this is disgusting */
+  background-image: linear-gradient(var(--red-trn-50), var(--red-trn-50)), url("data:image/svg+xml; utf8, <svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><style>*{stroke:%23f1504a; stroke-width:24}</style><line x1='20' y1='20' x2='80' y2='80'/><line x1='80' y1='20' x2='20' y2='80'/></svg>") !important;
+  background-size: 4em 4em;
+}
+
+:root {
+  --red: #f1504a;
+  --yellow: #ffdc53;
+  --green: #66f060;
+  --blue: #8ccfff;
+  --purple: #a979ff;
+  --magenta: #ff35dd;
+  --red-trn-75: #f1504ac4;
+  --yellow-trn-75: #ffdc53c4;
+  --green-trn-75: #66f060c4;
+  --blue-trn-75: #8ccfffc4;
+  --purple-trn-75: #a979ffc4;
+  --magenta-trn-75: #ff35ddc4;
+  --red-trn-50: #f1504a80;
+  --yellow-trn-50: #ffdc5380;
+  --green-trn-50: #66f06080;
+  --blue-trn-50: #8ccfff80;
+  --purple-trn-50: #a979ff80;
+  --magenta-trn-50: #ff35dd80;
+  --red-trn-25: #f1504a40;
+  --yellow-trn-25: #ffdc5340;
+  --green-trn-25: #66f06040;
+  --blue-trn-25: #8ccfff40;
+  --purple-trn-25: #a979ff40;
+  --magenta-trn-25: #ff35dd40;
+  --red-dst: #D69997;
+  --yellow-dst: #DED19D;
+  --green-dst: #A5D9A3;
+  --blue-dst: #BDD7E9;
+  --purple-dst: #C6B4E6;
+  --magenta-dst: #D98CCC;
+  --white: white;
+  --white-trn-50: #ffffff80;
+  --very-offwhite: #9e9e9e;
+  --very-offwhite-trn-50: #9e9e9e80;
+  --not-white: #040404;
+  --not-white-trn-50: #04040480;
+}
+
+/* I have no idea why you would print any of this, but sure let's put something here anyways. */
+@media print {
+  nav, footer {
+    display: none;
+  }
+  header {
+    background: var(--img);
+    border: 2px solid var(--text-bg, var(--yellow-dst));
+  }
+}
+html {
+  scrollbar-color: var(--accent-50) transparent;
+  scrollbar-width: thin;
+}
+html::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--accent-25);
+}
+
+/* Icons before links. */
+a {
+  color: inherit;
+}
+
+a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"] {
+  display: inline-block;
+  /* Apple Music… no real icon… Expects span to have "Music" in it. */
+}
+a[href^="https://"]:not(.no-icon)::before, *[data-icon]::before, a[href^="mailto:"]::before {
+  display: inline-block;
+  margin-right: 0.25ch;
+  vertical-align: -0.1em;
+  height: 1em;
+  width: 1em;
+  content: url("/assets/icons/arrow-up-right-from-square-solid.svg");
+}
+a[href^="https://"]:not(.no-icon)[data-icon=apple-music]::before, *[data-icon][data-icon=apple-music]::before, a[href^="mailto:"][data-icon=apple-music]::before {
+  content: url("/assets/icons/apple-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="discord.gg"]::before, a[href^="https://"]:not(.no-icon)[data-icon=discord]::before, *[data-icon][href*="discord.gg"]::before, *[data-icon][data-icon=discord]::before, a[href^="mailto:"][href*="discord.gg"]::before, a[href^="mailto:"][data-icon=discord]::before {
+  content: url("/assets/icons/discord-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="github.com"]::before, *[data-icon][href*="github.com"]::before, a[href^="mailto:"][href*="github.com"]::before {
+  content: url("/assets/icons/github-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="itch.io"]::before, *[data-icon][href*="itch.io"]::before, a[href^="mailto:"][href*="itch.io"]::before {
+  content: url("/assets/icons/itch-io-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="last.fm"]::before, *[data-icon][href*="last.fm"]::before, a[href^="mailto:"][href*="last.fm"]::before {
+  content: url("/assets/icons/lastfm-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*=steam]::before, *[data-icon][href*=steam]::before, a[href^="mailto:"][href*=steam]::before {
+  content: url("/assets/icons/steam-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="twitter.com"]::before, *[data-icon][href*="twitter.com"]::before, a[href^="mailto:"][href*="twitter.com"]::before {
+  content: url("/assets/icons/twitter-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="youtube.com"]::before, *[data-icon][href*="youtube.com"]::before, a[href^="mailto:"][href*="youtube.com"]::before {
+  content: url("/assets/icons/youtube-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="mailto:"]::before, a[href^="mailto:"][href^="mailto:"]::before {
+  content: url("/assets/icons/envelope-solid.svg");
+}
+
+*[data-tooltip] {
+  position: relative;
+}
+*[data-tooltip]:hover::after {
+  position: absolute;
+  left: 0;
+  bottom: calc(125% - 0.6em);
+  font-size: var(--font-size-sm);
+  background: var(--accent-desat);
+  content: attr(data-tooltip);
+  pointer-events: none;
+  z-index: 3;
+  padding: 0.2ch;
+  width: max-content;
+  max-width: 40vw;
+}
+*[data-tooltip]:active::after {
+  background: linear-gradient(var(--accent-75), var(--accent-75)), linear-gradient(var(--accent-desat), var(--accent-desat));
+}
+
+/*# sourceMappingURL=index.css.map */

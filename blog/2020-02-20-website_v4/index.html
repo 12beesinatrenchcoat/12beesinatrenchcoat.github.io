@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
+	<!-- style -->
+	<link rel="stylesheet" href="/style/index.css">
+	<style>
+		
+		:root {
+			--accent-desat: var(--yellow-dst);
+			--accent-75: var(--yellow-trn-75);
+			--accent-50: var(--yellow-trn-50);
+			--accent-25: var(--yellow-trn-25);
+		}
+		
+	</style>
+	<!-- other meta stuff -->
+	
+<meta name="theme-color" content="#ffdc5340">
+
+	<title>website v4</title>
+</head>
+<body>
+	
+<nav>
+	<span id="nav-links">
+		
+		<a href="/"
+		
+		>
+			home
+		</a>
+		
+		<a href="/projects"
+		
+		>
+			projects
+		</a>
+		
+		<a href="/blog"
+		 class="highlight" 
+		>
+			blog
+		</a>
+		
+	</span>
+	<span>
+		<span id="mynameis">
+			my name is <a href="/about" ">andy chan</a>
+		</span> 
+		<img src="/assets/images/logo.svg">
+	<span>
+</nav>
+	
+	<main tabindex="-1" id="main-content">
+		
+<header class="" style="--img: url(/assets/images/websitev4-header.webp)">
+	<span class="top-info">
+	
+	
+	<span class="dates">
+		<time>Feb 20, 2020</time>
+			
+	</span>
+	
+	</span>
+
+	<div>
+		<h1><span>website v4</span></h1>
+		<p>the fourth iteration of my website because i am very not good at this</p>
+
+		
+		<span class="tags">
+			tags: 
+			
+			
+			<span class="tag">website</span>
+			
+			
+		</span>
+		
+	</div>
+</header>
+		<div class="two-column">
+			<article class="flow">
+				<p>In the span of three days, I wrote and actually finished the fourth iteration of my website, aptly titled... <code>website v4</code>. Even though this is <em>literally the first finished iteration of it</em>. Ignore the previous iterations from the past two years (and the fact that I lost an iteration due to a hard drive formatting).</p>
+<p><strong>Update [26 July 2020]:</strong> The status of this has been marked &quot;work in progress&quot; for the longest time. it's not. It's been done for a while now. Even though the compiler is disgusting to look at and I really need to rewrite it.</p>
+<p>So, into the technical stuff. What does this do, how does it work, and any other things.</p>
+<p><em>Just a fair warning: I am not very qualified to write about this stuff. And also this is very substanceless. Cool.</em></p>
+<h1 id="the-goal-of-it-all" tabindex="-1">The Goal Of It All</h1>
+<p>I wrote <code>website v4</code> with one main goal: to be able to write my posts and projects in Markdown (with YAML front matter serving as metadata). This was an ambitious goal, mainly because of the fact that I have nearly zero experience with JavaScript (what the &quot;compiler&quot; was written in) - or any other programming language, for that matter. The fact that this is still working is amazing.</p>
+<h1 id="how-it-all-works" tabindex="-1">How It All Works</h1>
+<p>The compiler is written in JavaScript with Node.js, and utilizes two main libraries:</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/gray-matter">gray-matter</a> - used for parsing the YAML into some usable information</li>
+<li><a href="https://www.npmjs.com/package/showdown">showdown</a> - actually turning the markdown into an html site.</li>
+</ul>
+<p>Now, how does it all work? (Or at least, how is it supposed to?)</p>
+<p>First, the script (<code>main.js</code>) is executed. It proceeds to read the contents of two preset directories, <code>/blog/md</code>, and <code>/projects/md</code>, where the markdown files are stored. After that, for each file in the directory, it:</p>
+<ol>
+<li>Reads the file, and saves the content into a variable.</li>
+<li>Uses <code>gray-matter</code> to parse the file, and save the result of that into a variable.</li>
+<li>Uses <code>showdown</code> to convert the markdown into HTML</li>
+<li>Appends some extra HTML to the result. This is where the YAML comes in handy - it plugs in variables in certain spots, such as the title, the date, progress (if the file is a project), etc.</li>
+<li>Saves the file to the parent directory (of the <code>/md</code> directory).</li>
+<li>Somewhere along the line, it would update <code>index.html</code> with a little entry so people can actually access it.</li>
+</ol>
+<p>And that's how it should work. It's actually a lot messier than that. (Don't read the source code, it's a nightmare.)</p>
+<p>And that's all! I hope. I'm not coming back to this. Ever.</p>
+<p>Until the inevitable re:re:rewrite,</p>
+<p>Andy Chan</p>
+<p>(Follow me on <a href="https://twitter.com/12bz_trenchcoat">Twitter</a> and look at more crimes against humanity on my <a href="https://github.com/andythepie">GitHub</a>.)</p>
+
+			</article>
+			<aside>
+				<nav class="toc" >
+        <ol><li><a href="#the-goal-of-it-all">The Goal Of It All</a></li><li><a href="#how-it-all-works">How It All Works</a></li></ol>
+      </nav>
+			</aside>
+		</div>
+	</main>
+
+	<footer>
+	<a href="https://github.com/12beesinatrenchcoat/12beesinatrenchcoat.github.io/tree/gh-pages">last built jul 17, 2022</a>
+	<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+		<img src="/assets/icons/creative-commons-brands.svg">
+		<img src="/assets/icons/creative-commons-by-brands.svg">
+	</a>
+</footer>
+</body>
+</html>
