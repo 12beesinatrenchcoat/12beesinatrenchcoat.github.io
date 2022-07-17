@@ -1,0 +1,39 @@
+{# the block, used for both projects and blog posts in listings. looks a lot like the header. #}
+{% if item.data.tags %}
+{% set type %}{% if "project" in item.data.tags %}project{% elif "post" in item.data.tags %}post{% endif %}{% endset %}
+{% endif %}
+
+<a class="block {{type}} {{item.data.status}}" style="--img: url({{item.data.image}})" href="{{item.url}}">
+	<!-- top info -->
+	<span class="top-info">
+		{% if item.data.status %}
+		<span class="status">{{item.data.status | projectStatus}}</span> | 
+		{% endif %}
+		{% if item.date %}
+		<span class="dates">
+			<time>{{item.date | formatDate}}</time>
+				{% if item.data.enddate %}
+				– <time>{{item.data.enddate | formatDate}}</time>
+				{% endif %}
+		</span>
+		{% endif %}
+	</span>
+
+	<!-- bottom row -->
+	<div>
+		<h3><span class>{{item.data.title}}</span></h3>
+		<p>{{item.data.description}}</p>
+
+		{% if item.data.tags.length > 0 %}
+		<span class="tags">
+			tags: 
+			{% for tag in item.data.tags %}
+			{% if tag !== "post" and tag !== "project"%}
+			<span class="tag">{{tag}}</span>
+			{% endif %}
+			{% endfor %}
+		</span>
+		{% endif %}
+	</div>
+
+</a>

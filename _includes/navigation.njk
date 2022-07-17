@@ -1,0 +1,32 @@
+{% set links = [
+		{
+			name: "home",
+			link: "/"
+		},
+		{
+			name: "projects",
+			link: "/projects"
+		},
+		{
+			name: "blog",
+			link: "/blog"
+		}
+	]
+%}
+<nav>
+	<span id="nav-links">
+		{% for link in links %}
+		<a href="{{link.link}}"
+		{% if link.name in page.url or link.link === "/" and page.url === "/" %} class="highlight" {% endif %}
+		>
+			{{link.name}}
+		</a>
+		{% endfor %}
+	</span>
+	<span>
+		<span id="mynameis">
+			my name is <a href="/about" {% if "about" in page.url or link.link === "/" and page.url === "/" %} class="highlight" {% endif %}">andy chan</a>
+		</span> 
+		<img src="/assets/images/logo.svg">
+	<span>
+</nav>

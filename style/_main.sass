@@ -1,0 +1,134 @@
+body
+	background: var(--accent-25, var(--green-trn-25))
+
+	font-family: "Open Sans", sans-serif
+	font-size: var(--font-size-base)
+	line-height: 1.5
+
+	margin: 2% max(128px, calc(25vw - 196px))
+
+	@media (max-width: 1280px)
+		margin: clamp(0px, calc(4% - 1vw), 2%) max(1rem, calc(10vw - 2rem))
+
+	@media (max-width: 540px)
+		margin: 0 1rem
+
+		#mynameis, #to-top
+			display: none
+
+mark, .highlight
+	background-color: var(--accent-75, var(--green-trn-75))
+
+h1
+	font-size: var(--font-size-xxl)
+
+h2
+	font-size: var(--font-size-xl)
+
+h3
+	font-size: var(--font-size-lg)
+
+h4, h5, h6
+	font-size: var(--font-size-med)
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.15
+
+p, article
+	max-width: 72ch
+
+.flow > * + *
+	margin-top: var(--flow-space, var(--font-size-base, 1rem))
+
+.grid
+	display: grid
+	gap: var(--font-size-base, 1rem)
+	grid-template-columns: 1fr 1fr
+	grid-auto-flow: row
+
+	@media (max-width: 800px)
+		grid-template-columns: 1fr
+
+.two-column
+	display: flex
+	justify-content: space-between
+	align-self: flex-start
+	min-width: 100%
+
+	/* margin-top only when flex item is wrapped <3 https://stackoverflow.com/a/30891910 */
+	margin-top: calc(var(--flow-space, var(--font-size-base, 1rem)) * -1)
+
+	> * 
+		margin-top: var(--flow-space, var(--font-size-base, 1rem))
+
+		&:first-child
+			margin-right: 2ch
+
+	&.right-priority
+		> div:first-child
+			min-width: 28ch
+
+		> div:last-child
+			flex-basis: 80%
+			flex-grow: 2
+
+	&.left-priority
+		> div:first-child
+			flex-grow: 2
+			flex-basis: 80%
+
+		> div:last-child
+			min-width: 28ch
+
+	&.equal-width > *
+			flex-basis: 47.5%
+
+	&:not(.right-priority, .left-priority)
+		> *
+			max-width: 72ch
+
+	/* If not wide enough, just lay out in a single column */
+	@media (max-width: 96ch)
+		display: block
+		width: auto
+		left: auto
+		right: auto
+		margin: auto
+
+		> aside
+			display: none
+
+.inline-block
+	display: inline-block
+
+.block-div > *
+	display: block !important
+	width: max-content
+	max-width: 100%
+	padding: 0
+
+a
+	text-decoration: underline
+
+span.no-decoration
+	text-decoration: none
+	display: inline-block
+	margin-right: 0.25ch
+
+pre, :not(pre) > code
+	word-wrap: break-word
+	background: var(--very-offwhite-trn-50)
+	overflow-x: scroll
+
+blockquote
+	border-left: var(--not-white) 0.25ch solid
+	padding-left: 1.25ch
+
+.semibold
+	font-weight: 600
+
+.larg
+	font-size: var(--font-size-3xl)
+
+::selection
+	background: var(--accent-75)

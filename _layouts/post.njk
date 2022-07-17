@@ -1,0 +1,23 @@
+---
+accent: yellow
+---
+
+{% extends "./base.njk" %}
+
+{% block meta %}
+<meta name="theme-color" content="#ffdc5340">
+{% endblock %}
+
+{% block content %}
+	<main tabindex="-1" id="main-content">
+		{% include "header.njk" %}
+		<div class="two-column">
+			<article class="flow">
+				{{content | safe}}
+			</article>
+			<aside>
+				{{content | toc | safe}}
+			</aside>
+		</div>
+	</main>
+{% endblock %}

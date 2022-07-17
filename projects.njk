@@ -1,0 +1,32 @@
+---
+accent: blue
+---
+<main class="flow">
+	<div>
+		<h1>projects</h1>
+		<p>Sometimes I make things. I'm proud of some of them.</p>
+	</div>
+	<div class="flow">
+		<div>
+			<h2>current projects</h2>
+			<div class="flow">
+			{% for item in collections.projects | sort(true, true, "date") %}
+				{% if item.data.status === "wip" or item.data.status === "on_hold"%}
+					{% include "block.njk" %}
+				{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+
+		<div>
+			<h2>previous projects</h2>
+			<div class="grid">
+			{% for item in collections.projects | sort(false, true, "enddate") | reverse %}
+				{% if item.data.status === "complete" or item.data.status === "scrapped" %}
+					{% include "block.njk" %}
+				{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</main>

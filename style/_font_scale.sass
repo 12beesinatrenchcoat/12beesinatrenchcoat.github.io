@@ -1,0 +1,44 @@
+// All of this is thanks to (basically copied from) Aleksandr Hovhannisyan. <3! https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp
+
+@use "sass:math"
+@use "sass:list"
+
+$default-min-bp: 400px // mobile breakpoint
+$default-max-bp: 1280px // desktop breakpoint
+$type-base-min: 16px
+$type-base-max: 18px
+$type-scale-min: 1.25
+$type-scale-max: 1.33
+//           smol   body   h4-6   h3    h2    h1    larg
+$type-steps: "sm", "base", "md", "lg", "xl", "xxl", "3xl"
+$type-base-index: list.index($type-steps, "base") // index of base step
+
+@function to-rems($px) 
+	$rems: math.div($px, 16px) * 1rem
+	@return $rems
+
+@function clamped($min-px, $max-px, $min-bp: $default-min-bp, $max-bp: $default-max-bp) 
+	$slope: math.div($max-px - $min-px, $max-bp - $min-bp)
+	$slope-vw: rnd($slope * 100, 2)
+	$intercept-rems: rnd(to-rems($min-px - $slope * $min-bp), 2)
+	$min-rems: rnd(to-rems($min-px), 2)
+	$max-rems: rnd(to-rems($max-px), 2)
+	@return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems})
+
+@function rnd($number, $places: 0) 
+	$n: 1
+	@if $places > 0 
+		@for $i from 1 through $places 
+			$n: $n * 10
+	
+	@return math.div(math.round($number * $n), $n)
+
+:root 
+	@for $i from 1 through length($type-steps) 
+		$step: list.nth($type-steps, $i)
+		$power: $i - $type-base-index
+		$min: $type-base-min * math.pow($type-scale-min, $power)
+		$max: $type-base-max * math.pow($type-scale-max, $power)
+		
+		$value: clamped($min, $max)
+		--font-size-#{$step}: #{$value}

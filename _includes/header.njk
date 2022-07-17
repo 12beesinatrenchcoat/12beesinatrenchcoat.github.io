@@ -1,0 +1,32 @@
+{# the header of a page. looks a lot like the block. #}
+<header class="{{status}}" style="--img: url({{image}})">
+	<span class="top-info">
+	{% if status %}
+	<span class="status">{{status | projectStatus}}</span> | 
+	{% endif %}
+	{% if page.date %}
+	<span class="dates">
+		<time>{{page.date | formatDate}}</time>
+			{% if enddate %}
+			– <time>{{enddate | formatDate}}</time>
+			{% endif %}
+	</span>
+	{% endif %}
+	</span>
+
+	<div>
+		<h1><span>{{title}}</span></h1>
+		<p>{{description}}</p>
+
+		{% if tags.length > 0 %}
+		<span class="tags">
+			tags: 
+			{% for tag in tags %}
+			{% if tag !== "post" and tag !== "project"%}
+			<span class="tag">{{tag}}</span>
+			{% endif %}
+			{% endfor %}
+		</span>
+		{% endif %}
+	</div>
+</header>

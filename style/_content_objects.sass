@@ -1,0 +1,101 @@
+/* Don't know what else to call the file, but this refers to the blocks (in listings) and the headers (in articles / pages). */
+a.block, header
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	position: relative
+
+	color: white
+	text-decoration: none
+
+	padding: var(--font-size-sm)
+
+	background-image: linear-gradient(var(--not-white-trn-50), var(--not-white-trn-50)), var(--img)
+	background-position: center
+	background-size: cover
+
+	/* The pseudoelement — overlays status patterns or colors. */
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+		width: 4ch
+		z-index: 0
+		opacity: 80%
+		background-position: center
+		background-image: linear-gradient(var(--yellow), var(--yellow))
+
+	&:hover
+		background-image: var(--img)
+
+		> *
+			opacity: 50%
+			
+
+	/* dealing with the text on the blocks */
+	> * 
+		position: relative
+		z-index: 1
+		text-shadow: var(--not-white-trn-50) 0.25ch 0.25ch 1ch
+
+	> .top-info, > div > p
+		width: -moz-fit-content
+		width: fit-content
+	
+	> .top-info
+		font-size: var(--font-size-sm)
+
+/* Includes the title and tags */
+.inline-header
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+	> h1 span, > h3 span
+		flex-basis: 100%
+		line-height: 1.33
+	
+	> h1, h2, h3
+		margin-right: 0.5ch
+
+.tags
+	display: inline-block
+	font-size: var(--font-size-sm)
+
+	> *
+		background: var()
+
+	> * + *
+		margin-left: 0.25ch
+
+/* full-width header stuff */
+header
+	min-height: 12em
+	width: calc(100vw - 4px)
+	position: relative
+	left: 50%
+	right: 50%
+	margin: 1em -50vw
+
+	padding: var(--font-size-sm) max(128px, calc(25vw - 196px))
+
+	@media (max-width: 1280px)
+		padding: var(--font-size-sm) max(1rem, calc(10vw - 2rem))
+
+	@media (max-width: 540px)
+		padding: var(--font-size-sm) 1rem
+
+		#mynameis
+			display: none
+
+/* block sizes, depending on status */
+.block
+	min-height: 8em
+
+a.complete, a.scrapped
+	min-height: 12em
+
+a.wip, a.on_hold
+	min-height: 16em

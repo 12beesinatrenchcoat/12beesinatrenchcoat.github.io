@@ -1,0 +1,25 @@
+{
+  "name": "12beesinatrenchcoat.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass ./style/index.sass ./_site/style/index.css",
+    "sass:watch": "npx sass ./style/index.sass ./_site/style/index.css --watch",
+    "build": "npx concurrently \"npx @11ty/eleventy\" \"npm run sass\"",
+    "dev": "npx concurrently \"npx @11ty/eleventy --watch --serve\" \"npm run sass:watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "eleventy-plugin-toc": "^1.1.5",
+    "lodash": "^4.17.21",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.4",
+    "markdown-it-attrs": "^4.1.4",
+    "sass": "^1.52.1",
+    "concurrently": "^7.2.1"
+  }
+}

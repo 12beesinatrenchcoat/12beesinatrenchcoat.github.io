@@ -1,0 +1,39 @@
+/* Defining all the patterns for project statuses. */
+.wip::before {
+	background-image:
+		linear-gradient(var(--blue-trn-50), var(--blue-trn-50)),
+		repeating-linear-gradient(45deg, transparent, transparent 2em, var(--blue) 2em, var(--blue) 4em) !important;
+}
+
+.on_hold::before {
+	background-image: 
+		linear-gradient(var(--yellow-trn-50), var(--yellow-trn-50)), 
+		repeating-linear-gradient(0deg, 
+		transparent, 
+		transparent 2em, 
+		var(--yellow) 2em, 
+		var(--yellow) 4em
+	) !important;
+}
+
+.complete::before {
+	background-image:
+		linear-gradient(var(--green-trn-50), var(--green-trn-50)),
+		radial-gradient(
+			transparent 0.75em, 
+			var(--green) 0.75em, 
+			var(--green) 1.5em, 
+			transparent 1.5em
+		) !important;
+	
+	background-size: 4em 4em;
+}
+
+.scrapped::before {
+	/* wow this is disgusting */
+	background-image: 
+		linear-gradient(var(--red-trn-50), var(--red-trn-50)),
+		url("data:image/svg+xml; utf8, <svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><style>*{stroke:%23f1504a; stroke-width:24}</style><line x1='20' y1='20' x2='80' y2='80'/><line x1='80' y1='20' x2='20' y2='80'/></svg>") !important;
+
+		background-size: 4em 4em;
+}

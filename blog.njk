@@ -1,0 +1,21 @@
+---
+accent: yellow
+---
+<main class="flow">
+	<div>
+		<h1>blog</h1>
+		<p>Sometimes I write things. I like to pretend they're of value. Mostly ramblings, hopefully coherent sometimes.</p>
+	</div>
+
+	<div class="flow">
+	{% for year, yearPosts in collections.postsByYear %}
+		<div class="inline-header">
+			<h2>{{year}}</h2>
+			<span>{{yearPosts.length}} posts</span>
+		</div>
+		{% for item in yearPosts | reverse %}
+		{% include "block.njk" %}
+		{% endfor %}
+	{% endfor %}
+	</div>
+</main>

@@ -1,0 +1,41 @@
+<div class="two-column right-priority">
+	<div class="flow">
+		<h1>hello <span class="inline-block">there! o/</span></h1>
+		<p>My name is Andy Chan, human being and stuff maker. This is my website, where I put some of that stuff I make.</p>
+		<h2>links</h2>
+		<div class="block-div">
+			<p>You can find me in these places:</p>
+			<a href="https://github.com/12beesinatrenchcoat">12beesinatrenchcoat</a>
+			<a href="https://twitter.com/12bz_trenchcoat">@12bz_trenchcoat</a>
+			<a href="https://www.youtube.com/c/AndyChanPineapples">andy chan</a>
+		</div>
+		<div class="block-div">
+			<p>and you can contact me at these places:</p>
+			<a href="mailto:12beesinatrenchcoat@protonmail.com">12beesinatrenchcoat@protonmail.com</a>
+			<a href="javascript:void(0)" data-icon="discord" data-tooltip="click to copy" onclick="navigator.clipboard.writeText('12beesinatrenchcoat#7664')">@12beesinatrenchcoat#7664</a>
+		</div>
+		<p>You can find more about me in the <a href="/about">about</a> part of the website.</p>
+	</div>
+	<div class="flow">
+		<div>
+			<h2>current project</h2>
+			<p>I guess I'm working on something right now</p>
+			<div>
+				{% for item in collections.projects | reverse | limit(1) %}
+					{% if item.data.status === "wip" or item.data.status === "on_hold" %}
+						{% include "block.njk" %}
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+		<div>
+			<h2>latest blog posts</h2>
+			<p>Sometimes I write things.</p>
+			<div class="flow">
+				{% for item in collections.posts | reverse | limit(3) %}
+					{% include "block.njk" %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

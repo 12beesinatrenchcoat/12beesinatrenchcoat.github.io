@@ -1,0 +1,19 @@
+*[data-tooltip]
+	position: relative
+
+	&:hover::after
+		position: absolute
+		left: 0
+		bottom: calc(125% - 0.6em)
+		font-size: var(--font-size-sm)
+		background: var(--accent-desat)
+		content: attr(data-tooltip)
+		pointer-events: none
+		z-index: 3
+		padding: 0.2ch
+
+		width: max-content
+		max-width: 40vw
+
+	&:active::after
+		background: linear-gradient(var(--accent-75), var(--accent-75)), linear-gradient(var(--accent-desat), var(--accent-desat))

@@ -1,0 +1,35 @@
+/* Icons before links. */
+a
+	color: inherit
+
+a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
+	display: inline-block
+
+	&::before
+		display: inline-block
+		margin-right: 0.25ch
+		vertical-align: -0.1em
+		height: 1em
+		width: 1em
+		content: url("/assets/icons/arrow-up-right-from-square-solid.svg")
+
+	/* Apple Music… no real icon… Expects span to have "Music" in it. */
+	&[data-icon="apple-music"]::before
+		content: url("/assets/icons/apple-brands.svg")
+	&[href*="discord.gg"]::before, &[data-icon="discord"]::before
+		content: url("/assets/icons/discord-brands.svg")
+	&[href*="github.com"]::before
+		content: url("/assets/icons/github-brands.svg")
+	&[href*="itch.io"]::before
+		content: url("/assets/icons/itch-io-brands.svg")
+	&[href*="last.fm"]::before
+		content: url("/assets/icons/lastfm-brands.svg")
+	&[href*="steam"]::before
+		content: url("/assets/icons/steam-brands.svg")
+	&[href*="twitter.com"]::before
+		content: url("/assets/icons/twitter-brands.svg")
+	&[href*="youtube.com"]::before
+		content: url("/assets/icons/youtube-brands.svg")
+	&[href^="mailto:"]::before
+		content: url("/assets/icons/envelope-solid.svg")
+

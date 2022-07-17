@@ -1,0 +1,28 @@
+---
+accent: blue
+---
+
+{% extends "./base.njk" %}
+
+{% block meta %}
+<meta name="theme-color" content="#8ccfff80">
+{% endblock %}
+
+{% block content %}
+		<main tabindex="-1" id="main-content">
+			{% include "header.njk" %}
+			<div class="two-column left-priority">
+				<article class="flow">
+					{{content | safe}}
+				</article>
+				<div class="flow">
+					<h2>links</h2>
+					<div class="block-div">
+						{% for link in links %}
+						<a href="{{link.url}}">{{link.name}}</a>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</main>
+{% endblock %}
