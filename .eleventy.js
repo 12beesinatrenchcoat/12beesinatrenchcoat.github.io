@@ -3,6 +3,7 @@ const _ = require("lodash");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("assets")
+	eleventyConfig.addPassthroughCopy("CNAME")
 
 	eleventyConfig.addFilter("formatDate", date => formatDate(date))
 
