@@ -267,7 +267,6 @@ nav > span > *, footer > span > * {
   display: inline-block;
 }
 nav > span > img, footer > span > img {
-  width: 2rem;
   height: 1rem;
   vertical-align: -0.1em;
 }
