@@ -4,6 +4,8 @@ const _ = require("lodash");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("assets")
 	eleventyConfig.addPassthroughCopy("CNAME")
+	eleventyConfig.addPassthroughCopy("favicon.svg")
+	eleventyConfig.addPassthroughCopy("favicon.ico")
 
 	eleventyConfig.addFilter("formatDate", date => formatDate(date))
 
