@@ -267,8 +267,9 @@ nav > span > *, footer > span > * {
   display: inline-block;
 }
 nav > span > img, footer > span > img {
-  height: 1rem;
-  vertical-align: -0.1em;
+  height: 1.1rem;
+  min-width: 1.77595rem;
+  vertical-align: -0.2rem;
 }
 @media (max-width: 540px) {
   nav #mynameis, nav #to-top, footer #mynameis, footer #to-top {
@@ -340,6 +341,7 @@ a.block > *, header > * {
 a.block > .top-info, a.block > div > p, header > .top-info, header > div > p {
   width: -moz-fit-content;
   width: fit-content;
+  line-height: 1.15;
 }
 a.block > .top-info, header > .top-info {
   font-size: var(--font-size-sm);
