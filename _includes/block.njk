@@ -5,25 +5,21 @@
 
 <a class="block {{type}} {{item.data.status}}" style="--img: url({{item.data.image}})" href="{{item.url}}">
 	<!-- top info -->
-	<span class="top-info">
-		{% if item.data.status %}
-		<span class="status">{{item.data.status | projectStatus}}</span> | 
-		{% endif %}
-		{% if item.date %}
-		<span class="dates">
-			<time>{{item.date | formatDate}}</time>
-				{% if item.data.enddate %}
-				– <time>{{item.data.enddate | formatDate}}</time>
-				{% endif %}
+	<div class="top-info">
+		<span>
+			{% if item.data.status %}
+			<span class="status">{{item.data.status | projectStatus}}</span>
+			{% endif %}
+			{% if item.date %}
+			<span class="dates">
+				{% if item.data.status %}|{% endif %}
+				<time>{{item.date | formatDate}}</time>
+					{% if item.data.enddate %}
+					– <time>{{item.data.enddate | formatDate}}</time>
+					{% endif %}
+			</span>
+			{% endif %}
 		</span>
-		{% endif %}
-	</span>
-
-	<!-- bottom row -->
-	<div>
-		<h3><span class>{{item.data.title}}</span></h3>
-		<p>{{item.data.description}}</p>
-
 		{% if item.data.tags.length > 0 %}
 		<span class="tags">
 			tags: 
@@ -34,6 +30,12 @@
 			{% endfor %}
 		</span>
 		{% endif %}
+	</div>
+
+	<!-- bottom row -->
+	<div class="bottom-info">
+		<h3>{{item.data.title}}</h3>
+		<p>{{item.data.description}}</p>
 	</div>
 
 </a>

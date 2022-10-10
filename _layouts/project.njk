@@ -11,18 +11,18 @@ accent: blue
 {% block content %}
 		<main tabindex="-1" id="main-content">
 			{% include "header.njk" %}
-			<div class="two-column left-priority">
+			<div class="two-column">
 				<article class="flow">
 					{{content | safe}}
 				</article>
-				<div class="flow">
-					<h2>links</h2>
-					<div class="block-div">
+				<aside class="flow">
+					{{content | toc | safe}}
+					<div class="block-div links">
 						{% for link in links %}
 						<a href="{{link.url}}">{{link.name}}</a>
 						{% endfor %}
 					</div>
-				</div>
+				</aside>
 			</div>
 		</main>
 {% endblock %}

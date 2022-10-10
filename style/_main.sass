@@ -1,3 +1,5 @@
+@use "_values.sass"
+	
 body
 	background: var(--accent-25, var(--green-trn-25))
 
@@ -5,16 +7,23 @@ body
 	font-size: var(--font-size-base)
 	line-height: 1.5
 
-	margin: 2% max(128px, calc(25vw - 196px))
+	margin: 2% var(--global-side-margin)
 
 	@media (max-width: 1280px)
-		margin: clamp(0px, calc(4% - 1vw), 2%) max(1rem, calc(10vw - 2rem))
+		margin: clamp(0px, calc(4% - 1vw), 2%) var(--global-side-margin)
 
 	@media (max-width: 540px)
-		margin: 0 1rem
+		margin: 0 var(--global-side-margin)
 
 		#mynameis, #to-top
 			display: none
+
+		#about
+			display: inline-block
+
+/* This is normally linked with "andy chan" */
+#about
+	display: none
 
 mark, .highlight
 	background-color: var(--accent-75, var(--green-trn-75))
@@ -57,35 +66,13 @@ p, article
 
 	/* margin-top only when flex item is wrapped <3 https://stackoverflow.com/a/30891910 */
 	margin-top: calc(var(--flow-space, var(--font-size-base, 1rem)) * -1)
+	max-width: 72ch
 
 	> * 
 		margin-top: var(--flow-space, var(--font-size-base, 1rem))
 
 		&:first-child
 			margin-right: 2ch
-
-	&.right-priority
-		> div:first-child
-			min-width: 28ch
-
-		> div:last-child
-			flex-basis: 80%
-			flex-grow: 2
-
-	&.left-priority
-		> div:first-child
-			flex-grow: 2
-			flex-basis: 80%
-
-		> div:last-child
-			min-width: 28ch
-
-	&.equal-width > *
-			flex-basis: 47.5%
-
-	&:not(.right-priority, .left-priority)
-		> *
-			max-width: 72ch
 
 	/* If not wide enough, just lay out in a single column */
 	@media (max-width: 96ch)
@@ -96,10 +83,20 @@ p, article
 		margin: auto
 
 		> aside
-			display: none
+			margin-left: 0
+			> .toc
+				display: none
 
 .inline-block
 	display: inline-block
+
+.inline-header
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+
+	> h1, h2, h3
+		margin-right: var(--font-size-sm)
 
 .block-div > *
 	display: block !important
@@ -123,6 +120,10 @@ pre, :not(pre) > code
 blockquote
 	border-left: var(--not-white) 0.25ch solid
 	padding-left: 1.25ch
+
+li > ol
+	list-style-type: lower-alpha
+	margin-left: -1ch
 
 .semibold
 	font-weight: 600

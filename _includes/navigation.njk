@@ -10,13 +10,17 @@
 		{
 			name: "blog",
 			link: "/blog"
+		},
+		{
+			name: "about",
+			link: "/about"
 		}
 	]
 %}
 <nav>
 	<span id="nav-links">
 		{% for link in links %}
-		<a href="{{link.link}}"
+		<a href="{{link.link}}" id="{{link.name}}"
 		{% if link.name in page.url or link.link === "/" and page.url === "/" %} class="highlight" {% endif %}
 		>
 			{{link.name}}

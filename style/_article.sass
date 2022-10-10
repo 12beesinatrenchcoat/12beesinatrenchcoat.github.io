@@ -6,15 +6,35 @@ article
 aside
 	position: -webkit-sticky
 	position: sticky
+	display: flex
+	flex-direction: column
 	top: 1em
 	margin-left: 2ch
 	height: max-content
 	width: 100%
 	max-width: 36ch !important
+	background: var(--very-offwhite-trn-25)
+
+	> *
+		margin: var(--font-size-base) !important
+		padding: revert !important
+		&::before
+			font-weight: 600
+
+	> .links::before
+		content: "links"
 
 	> nav
-		margin: revert
+		background: revert
+		display: revert
 
-li > ol
-	list-style-type: lower-alpha
-	margin-left: -1ch
+		> ol
+			margin: 0
+			padding: 0
+			list-style: none
+
+			> li + *
+				margin-top: 0.25em
+
+		&::before
+			content: "contents"
