@@ -16,6 +16,8 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 	/* Apple Music… no real icon… Expects span to have "Music" in it. */
 	&[data-icon="apple-music"]::before
 		content: url("/assets/icons/apple-brands.svg")
+	&[href*="bandcamp.com"]::before
+		content: url("/assets/icons/bandcamp-brands.svg")
 	&[href*="discord.gg"]::before, &[data-icon="discord"]::before
 		content: url("/assets/icons/discord-brands.svg")
 	&[href*="github.com"]::before
