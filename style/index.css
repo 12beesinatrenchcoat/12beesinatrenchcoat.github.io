@@ -72,25 +72,48 @@ select {
     scroll-behavior: auto !important;
   }
 }
+/* Currently only contains global-side-margin (left+right margins) */
+:root {
+  --global-side-margin: max(128px, calc(30vw - 196px));
+}
+@media (max-width: 1280px) {
+  :root {
+    --global-side-margin: max(1rem, calc(10vw - 2rem));
+  }
+}
+@media (max-width: 540px) {
+  :root {
+    --global-side-margin: 1rem;
+  }
+}
+
 body {
   background: var(--accent-25, var(--green-trn-25));
   font-family: "Open Sans", sans-serif;
   font-size: var(--font-size-base);
   line-height: 1.5;
-  margin: 2% max(128px, 25vw - 196px);
+  margin: 2% var(--global-side-margin);
 }
 @media (max-width: 1280px) {
   body {
-    margin: clamp(0px, 4% - 1vw, 2%) max(1rem, 10vw - 2rem);
+    margin: clamp(0px, 4% - 1vw, 2%) var(--global-side-margin);
   }
 }
 @media (max-width: 540px) {
   body {
-    margin: 0 1rem;
+    margin: 0 var(--global-side-margin);
   }
   body #mynameis, body #to-top {
     display: none;
   }
+  body #about {
+    display: inline-block;
+  }
+}
+
+/* This is normally linked with "andy chan" */
+#about {
+  display: none;
 }
 
 mark, .highlight {
@@ -144,6 +167,7 @@ p, article {
   min-width: 100%;
   /* margin-top only when flex item is wrapped <3 https://stackoverflow.com/a/30891910 */
   margin-top: calc(var(--flow-space, var(--font-size-base, 1rem)) * -1);
+  max-width: 72ch;
   /* If not wide enough, just lay out in a single column */
 }
 .two-column > * {
@@ -151,26 +175,6 @@ p, article {
 }
 .two-column > *:first-child {
   margin-right: 2ch;
-}
-.two-column.right-priority > div:first-child {
-  min-width: 28ch;
-}
-.two-column.right-priority > div:last-child {
-  flex-basis: 80%;
-  flex-grow: 2;
-}
-.two-column.left-priority > div:first-child {
-  flex-grow: 2;
-  flex-basis: 80%;
-}
-.two-column.left-priority > div:last-child {
-  min-width: 28ch;
-}
-.two-column.equal-width > * {
-  flex-basis: 47.5%;
-}
-.two-column:not(.right-priority, .left-priority) > * {
-  max-width: 72ch;
 }
 @media (max-width: 96ch) {
   .two-column {
@@ -181,12 +185,24 @@ p, article {
     margin: auto;
   }
   .two-column > aside {
+    margin-left: 0;
+  }
+  .two-column > aside > .toc {
     display: none;
   }
 }
 
 .inline-block {
   display: inline-block;
+}
+
+.inline-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.inline-header > h1, .inline-header h2, .inline-header h3 {
+  margin-right: var(--font-size-sm);
 }
 
 .block-div > * {
@@ -217,6 +233,11 @@ blockquote {
   padding-left: 1.25ch;
 }
 
+li > ol {
+  list-style-type: lower-alpha;
+  margin-left: -1ch;
+}
+
 .semibold {
   font-weight: 600;
 }
@@ -238,19 +259,39 @@ article {
 aside {
   position: -webkit-sticky;
   position: sticky;
+  display: flex;
+  flex-direction: column;
   top: 1em;
   margin-left: 2ch;
   height: max-content;
   width: 100%;
   max-width: 36ch !important;
+  background: var(--very-offwhite-trn-25);
+}
+aside > * {
+  margin: var(--font-size-base) !important;
+  padding: revert !important;
+}
+aside > *::before {
+  font-weight: 600;
+}
+aside > .links::before {
+  content: "links";
 }
 aside > nav {
-  margin: revert;
+  background: revert;
+  display: revert;
 }
-
-li > ol {
-  list-style-type: lower-alpha;
-  margin-left: -1ch;
+aside > nav > ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+aside > nav > ol > li + * {
+  margin-top: 0.25em;
+}
+aside > nav::before {
+  content: "contents";
 }
 
 nav, footer {
@@ -309,7 +350,7 @@ a.block, header {
   color: white;
   text-decoration: none;
   padding: var(--font-size-sm);
-  background-image: linear-gradient(var(--not-white-trn-50), var(--not-white-trn-50)), var(--img);
+  background-image: linear-gradient(var(--not-white-trn-75), var(--not-white-trn-75)), var(--img);
   background-position: center;
   background-size: cover;
   /* The pseudoelement — overlays status patterns or colors. */
@@ -328,45 +369,31 @@ a.block::before, header::before {
   background-image: linear-gradient(var(--yellow), var(--yellow));
 }
 a.block:hover, header:hover {
-  background-image: var(--img);
-}
-a.block:hover > *, header:hover > * {
-  opacity: 50%;
+  background-image: linear-gradient(var(--not-white-trn-25), var(--not-white-trn-25)), var(--img);
+  backdrop-filter: blur(2px);
 }
 a.block > *, header > * {
   position: relative;
   z-index: 1;
   text-shadow: var(--not-white-trn-50) 0.25ch 0.25ch 1ch;
 }
-a.block > .top-info, a.block > div > p, header > .top-info, header > div > p {
+a.block > .top-info, header > .top-info {
   width: -moz-fit-content;
   width: fit-content;
-  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
 }
 a.block > .top-info, header > .top-info {
   font-size: var(--font-size-sm);
 }
-
-/* Includes the title and tags */
-.inline-header {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.inline-header > h1 span, .inline-header > h3 span {
-  flex-basis: 100%;
-  line-height: 1.33;
-}
-.inline-header > h1, .inline-header h2, .inline-header h3 {
-  margin-right: 0.5ch;
+a.block > .bottom-info > h3, header > .bottom-info > h3 {
+  line-height: 1;
+  margin-bottom: 0.1em;
 }
 
 .tags {
   display: inline-block;
   font-size: var(--font-size-sm);
-}
-.tags > * {
-  background: var();
 }
 .tags > * + * {
   margin-left: 0.25ch;
@@ -380,19 +407,16 @@ header {
   left: 50%;
   right: 50%;
   margin: 1em -50vw;
-  padding: var(--font-size-sm) max(128px, 25vw - 196px);
+  padding: var(--font-size-base) var(--global-side-margin);
 }
 @media (max-width: 1280px) {
   header {
-    padding: var(--font-size-sm) max(1rem, 10vw - 2rem);
+    padding: var(--font-size-sm) var(--global-side-margin);
   }
 }
 @media (max-width: 540px) {
   header {
-    padding: var(--font-size-sm) 1rem;
-  }
-  header #mynameis {
-    display: none;
+    padding: var(--font-size-sm) var(--global-side-margin);
   }
 }
 
@@ -463,9 +487,13 @@ a.wip, a.on_hold {
   --white: white;
   --white-trn-50: #ffffff80;
   --very-offwhite: #9e9e9e;
+  --very-offwhite-trn-75: #9e9e9ea4;
   --very-offwhite-trn-50: #9e9e9e80;
+  --very-offwhite-trn-25: #9e9e9040;
   --not-white: #040404;
+  --not-white-trn-75: #040404a4;
   --not-white-trn-50: #04040480;
+  --not-white-trn-25: #04040440;
 }
 
 /* I have no idea why you would print any of this, but sure let's put something here anyways. */

@@ -33,22 +33,28 @@
 <nav>
 	<span id="nav-links">
 		
-		<a href="/"
+		<a href="/" id="home"
 		
 		>
 			home
 		</a>
 		
-		<a href="/projects"
+		<a href="/projects" id="projects"
 		 class="highlight" 
 		>
 			projects
 		</a>
 		
-		<a href="/blog"
+		<a href="/blog" id="blog"
 		
 		>
 			blog
+		</a>
+		
+		<a href="/about" id="about"
+		
+		>
+			about
 		</a>
 		
 	</span>
@@ -64,23 +70,20 @@
 			
 <header class="complete" style="--img: url(/assets/images/yt-playlist-discord-webhook-header.webp)">
 	<span class="top-info">
-	
-	<span class="status">complete! :D</span> | 
-	
-	
-	<span class="dates">
-		<time>Mar 28, 2021</time>
+		<span>
 			
-			– <time>Jun 14, 2021</time>
+			<span class="status">complete! :D</span>
 			
-	</span>
-	
-	</span>
-
-	<div>
-		<h1><span>yt-playlist-discord-webhook</span></h1>
-		<p>posting playlist additions to discord</p>
-
+			
+			|
+			<span class="dates">
+				<time>Mar 28, 2021</time>
+					
+					– <time>Jun 14, 2021</time>
+					
+			</span>
+			
+		</span>
 		
 		<span class="tags">
 			tags: 
@@ -103,9 +106,14 @@
 			
 		</span>
 		
+	</span>
+
+	<div>
+		<h1><span>yt-playlist-discord-webhook</span></h1>
+		<p>posting playlist additions to discord</p>
 	</div>
 </header>
-			<div class="two-column left-priority">
+			<div class="two-column">
 				<article class="flow">
 					<p>I and some friends have this <em>collaborative playlist</em> — a playlist on YouTube that we all have permission to add videos to. I thought it would be fun to have a message sent in a Discord channel every time someone did that.</p>
 <p>I first looked to IFTTT, then Zapier, and somehow disastisfied with both (I don't remember why) and wanting an excuse to dabble in Python, this was created.</p>
@@ -113,14 +121,14 @@
 <p><img src="/assets/images/ytpldswh-screenshot.png" alt="A screenshot of Discord with 4 videos added to the collaborative playlist."></p>
 
 				</article>
-				<div class="flow">
-					<h2>links</h2>
-					<div class="block-div">
+				<aside class="flow">
+					
+					<div class="block-div links">
 						
 						<a href="https://github.com/12beesinatrenchcoat/yt-playlist-discord-webhook">GitHub</a>
 						
 					</div>
-				</div>
+				</aside>
 			</div>
 		</main>
 
