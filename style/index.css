@@ -510,6 +510,9 @@ a[href^="https://"]:not(.no-icon)::before, *[data-icon]::before, a[href^="mailto
 a[href^="https://"]:not(.no-icon)[data-icon=apple-music]::before, *[data-icon][data-icon=apple-music]::before, a[href^="mailto:"][data-icon=apple-music]::before {
   content: url("/assets/icons/apple-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*="bandcamp.com"]::before, *[data-icon][href*="bandcamp.com"]::before, a[href^="mailto:"][href*="bandcamp.com"]::before {
+  content: url("/assets/icons/bandcamp-brands.svg");
+}
 a[href^="https://"]:not(.no-icon)[href*="discord.gg"]::before, a[href^="https://"]:not(.no-icon)[data-icon=discord]::before, *[data-icon][href*="discord.gg"]::before, *[data-icon][data-icon=discord]::before, a[href^="mailto:"][href*="discord.gg"]::before, a[href^="mailto:"][data-icon=discord]::before {
   content: url("/assets/icons/discord-brands.svg");
 }
