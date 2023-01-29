@@ -23,8 +23,8 @@ module.exports = function(eleventyConfig) {
 			case "wip":
 				return "work in progress"
 			case "on_hold":
-				return "on hold…	"
-			case "scrapped": 
+				return "on hold…"
+			case "scrapped":
 				return "scrapped :("
 			case "complete":
 				return "complete! :D"
@@ -81,7 +81,7 @@ module.exports = function(eleventyConfig) {
 };
 
 /**
- * @arg {Date} date 
+ * @arg {Date} date
  * @returns {string}
  */
 function formatDate(date) {
@@ -90,8 +90,8 @@ function formatDate(date) {
 	date = new Date(date);
 	date = new Date(date.valueOf() + (date.getTimezoneOffset() * 60000));
 	return date.toLocaleDateString("en-us", {
-		 year:"numeric", 
-		 month:"short", 
+		 year:"numeric",
+		 month:"short",
 		 day:"numeric"
 	});
 }
