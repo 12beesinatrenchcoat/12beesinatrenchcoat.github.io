@@ -6,7 +6,7 @@
 		left: 0
 		bottom: calc(125% - 0.6em)
 		font-size: var(--font-size-sm)
-		background: var(--accent-desat)
+		background: var(--social-bg, var(--accent-25))
 		content: attr(data-tooltip)
 		pointer-events: none
 		z-index: 3
@@ -16,4 +16,4 @@
 		max-width: 40vw
 
 	&:active::after
-		background: linear-gradient(var(--accent-75), var(--accent-75)), linear-gradient(var(--accent-desat), var(--accent-desat))
+		filter: brightness(1.33)
