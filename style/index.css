@@ -525,45 +525,104 @@ a {
 
 a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"] {
   display: inline-block;
-  /* Apple Music… no real icon… Expects span to have "Music" in it. */
 }
 a[href^="https://"]:not(.no-icon)::before, *[data-icon]::before, a[href^="mailto:"]::before {
   display: inline-block;
-  margin-right: 0.25ch;
-  vertical-align: -0.1em;
-  height: 1em;
-  width: 1em;
+  margin: 0 0.33ch;
+  vertical-align: -0.15em;
+  max-height: 1.5em;
+  min-width: 1em;
   content: url("/assets/icons/arrow-up-right-from-square-solid.svg");
 }
-a[href^="https://"]:not(.no-icon)[data-icon=apple-music]::before, *[data-icon][data-icon=apple-music]::before, a[href^="mailto:"][data-icon=apple-music]::before {
-  content: url("/assets/icons/apple-brands.svg");
+a[href^="https://"]:not(.no-icon) > sub, *[data-icon] > sub, a[href^="mailto:"] > sub {
+  text-decoration: none;
+  margin: 0 0.33ch 0 -0.33ch;
+}
+a[href^="https://"]:not(.no-icon)[href*="music.apple.com"], *[data-icon][href*="music.apple.com"], a[href^="mailto:"][href*="music.apple.com"] {
+  --social-bg: #fa243c;
+}
+a[href^="https://"]:not(.no-icon)[href*="music.apple.com"]::before, *[data-icon][href*="music.apple.com"]::before, a[href^="mailto:"][href*="music.apple.com"]::before {
+  content: url("/assets/icons/apple-music.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="bandcamp.com"], *[data-icon][href*="bandcamp.com"], a[href^="mailto:"][href*="bandcamp.com"] {
+  --social-bg: #1da0c3;
 }
 a[href^="https://"]:not(.no-icon)[href*="bandcamp.com"]::before, *[data-icon][href*="bandcamp.com"]::before, a[href^="mailto:"][href*="bandcamp.com"]::before {
   content: url("/assets/icons/bandcamp-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*="discord.gg"], a[href^="https://"]:not(.no-icon)[data-icon=discord], *[data-icon][href*="discord.gg"], *[data-icon][data-icon=discord], a[href^="mailto:"][href*="discord.gg"], a[href^="mailto:"][data-icon=discord] {
+  --social-bg: #5865F2;
+}
 a[href^="https://"]:not(.no-icon)[href*="discord.gg"]::before, a[href^="https://"]:not(.no-icon)[data-icon=discord]::before, *[data-icon][href*="discord.gg"]::before, *[data-icon][data-icon=discord]::before, a[href^="mailto:"][href*="discord.gg"]::before, a[href^="mailto:"][data-icon=discord]::before {
   content: url("/assets/icons/discord-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="github.com"], *[data-icon][href*="github.com"], a[href^="mailto:"][href*="github.com"] {
+  --social-bg: white;
+  --social-fg: var(--not-white);
+  --filters: invert(0);
 }
 a[href^="https://"]:not(.no-icon)[href*="github.com"]::before, *[data-icon][href*="github.com"]::before, a[href^="mailto:"][href*="github.com"]::before {
   content: url("/assets/icons/github-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*="itch.io"], *[data-icon][href*="itch.io"], a[href^="mailto:"][href*="itch.io"] {
+  --social-bg: #fa5c5c;
+}
 a[href^="https://"]:not(.no-icon)[href*="itch.io"]::before, *[data-icon][href*="itch.io"]::before, a[href^="mailto:"][href*="itch.io"]::before {
   content: url("/assets/icons/itch-io-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="last.fm"], *[data-icon][href*="last.fm"], a[href^="mailto:"][href*="last.fm"] {
+  --social-bg: #ba0000;
 }
 a[href^="https://"]:not(.no-icon)[href*="last.fm"]::before, *[data-icon][href*="last.fm"]::before, a[href^="mailto:"][href*="last.fm"]::before {
   content: url("/assets/icons/lastfm-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*=osu], *[data-icon][href*=osu], a[href^="mailto:"][href*=osu] {
+  --social-bg: #ff66aa;
+}
+a[href^="https://"]:not(.no-icon)[href*=osu]::before, *[data-icon][href*=osu]::before, a[href^="mailto:"][href*=osu]::before {
+  content: url("/assets/icons/osu.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*=steam], *[data-icon][href*=steam], a[href^="mailto:"][href*=steam] {
+  --social-bg: black;
+}
 a[href^="https://"]:not(.no-icon)[href*=steam]::before, *[data-icon][href*=steam]::before, a[href^="mailto:"][href*=steam]::before {
   content: url("/assets/icons/steam-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="twitter.com"], *[data-icon][href*="twitter.com"], a[href^="mailto:"][href*="twitter.com"] {
+  --social-bg: #1d9bf0;
 }
 a[href^="https://"]:not(.no-icon)[href*="twitter.com"]::before, *[data-icon][href*="twitter.com"]::before, a[href^="mailto:"][href*="twitter.com"]::before {
   content: url("/assets/icons/twitter-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*="youtube.com"], *[data-icon][href*="youtube.com"], a[href^="mailto:"][href*="youtube.com"] {
+  --social-bg: #ff0000;
+  --social-fg: #212121;
+  --filters: invert(0.1);
+}
 a[href^="https://"]:not(.no-icon)[href*="youtube.com"]::before, *[data-icon][href*="youtube.com"]::before, a[href^="mailto:"][href*="youtube.com"]::before {
   content: url("/assets/icons/youtube-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href^="mailto:"], *[data-icon][href^="mailto:"], a[href^="mailto:"][href^="mailto:"] {
+  --social-fg: var(--not-white);
+  --filters: invert(0);
+}
 a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="mailto:"]::before, a[href^="mailto:"][href^="mailto:"]::before {
   content: url("/assets/icons/envelope-solid.svg");
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.socials > a {
+  padding: 0.5ch;
+  margin: 0.5ch;
+  background: var(--social-bg, var(--accent-25));
+  color: var(--social-fg, var(--white));
+}
+.socials > a::before {
+  filter: var(--filters, invert(1));
 }
 
 *[data-tooltip] {
@@ -574,7 +633,7 @@ a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="
   left: 0;
   bottom: calc(125% - 0.6em);
   font-size: var(--font-size-sm);
-  background: var(--accent-desat);
+  background: var(--social-bg, var(--accent-25));
   content: attr(data-tooltip);
   pointer-events: none;
   z-index: 3;
@@ -583,7 +642,7 @@ a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="
   max-width: 40vw;
 }
 *[data-tooltip]:active::after {
-  background: linear-gradient(var(--accent-75), var(--accent-75)), linear-gradient(var(--accent-desat), var(--accent-desat));
+  filter: brightness(1.33);
 }
 
 /*# sourceMappingURL=index.css.map */
