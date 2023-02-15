@@ -594,15 +594,22 @@ a[href^="https://"]:not(.no-icon)[href*="twitter.com"], *[data-icon][href*="twit
 a[href^="https://"]:not(.no-icon)[href*="twitter.com"]::before, *[data-icon][href*="twitter.com"]::before, a[href^="mailto:"][href*="twitter.com"]::before {
   content: url("/assets/icons/twitter-brands.svg");
 }
+a[href^="https://"]:not(.no-icon)[href*="urusai.social"], *[data-icon][href*="urusai.social"], a[href^="mailto:"][href*="urusai.social"] {
+  --social-bg: #aa0000;
+}
+a[href^="https://"]:not(.no-icon)[href*="urusai.social"]::before, *[data-icon][href*="urusai.social"]::before, a[href^="mailto:"][href*="urusai.social"]::before {
+  content: url("/assets/icons/mastodon-brands.svg");
+}
 a[href^="https://"]:not(.no-icon)[href*="youtube.com"], *[data-icon][href*="youtube.com"], a[href^="mailto:"][href*="youtube.com"] {
   --social-bg: #ff0000;
-  --social-fg: #212121;
-  --filters: invert(0.1);
+  --social-fg: white;
+  --filters: invert(1);
 }
 a[href^="https://"]:not(.no-icon)[href*="youtube.com"]::before, *[data-icon][href*="youtube.com"]::before, a[href^="mailto:"][href*="youtube.com"]::before {
   content: url("/assets/icons/youtube-brands.svg");
 }
 a[href^="https://"]:not(.no-icon)[href^="mailto:"], *[data-icon][href^="mailto:"], a[href^="mailto:"][href^="mailto:"] {
+  --social-bg: var(--green);
   --social-fg: var(--not-white);
   --filters: invert(0);
 }
@@ -614,10 +621,13 @@ a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
+}
+.socials > * {
+  padding: 0.5ch;
+  margin: 0.5ch 1ch 0.5ch 0;
 }
 .socials > a {
-  padding: 0.5ch;
-  margin: 0.5ch;
   background: var(--social-bg, var(--accent-25));
   color: var(--social-fg, var(--white));
 }
@@ -636,10 +646,11 @@ a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="
   background: var(--social-bg, var(--accent-25));
   content: attr(data-tooltip);
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
   padding: 0.2ch;
   width: max-content;
-  max-width: 40vw;
+  max-width: 36ch;
+  line-height: 1.15;
 }
 *[data-tooltip]:active::after {
   filter: brightness(1.33);
