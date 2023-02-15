@@ -55,13 +55,18 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 		--social-bg: #1d9bf0
 		&::before
 			content: url("/assets/icons/twitter-brands.svg")
+	&[href*="urusai.social"]
+		--social-bg: #aa0000
+		&::before
+			content: url("/assets/icons/mastodon-brands.svg")
 	&[href*="youtube.com"]
 		--social-bg: #ff0000
-		--social-fg: #212121
-		--filters: invert(0.1)
+		--social-fg: white
+		--filters: invert(1)
 		&::before
 			content: url("/assets/icons/youtube-brands.svg")
 	&[href^="mailto:"]
+		--social-bg: var(--green)
 		--social-fg: var(--not-white)
 		--filters: invert(0)
 		&::before
@@ -72,10 +77,13 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 	display: flex
 	flex-wrap: wrap
 	justify-content: flex-start
+	align-items: center
+
+	> *
+		padding: 0.5ch
+		margin: 0.5ch 1ch 0.5ch 0
 
 	> a
-		padding: 0.5ch
-		margin: 0.5ch
 		background: var(--social-bg, var(--accent-25))
 		color: var(--social-fg, var(--white))
 
