@@ -26,6 +26,15 @@
 	{% block meta %}
 	<meta name="theme-color" content="#66f06040">
 	{% endblock %}
+	<meta name="title" content="{{title}}"/>
+	<meta name="description" content="{{description}}"/>
+	<meta property="og:title" content="{{title}}"/>
+	<meta property="og:image" content="https://12beesinatrenchco.at{{image}}"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:url" content="https://12beesinatrenchco.at{{page.url}}"/>
+	<meta property="og:description" content="{{description}}"/>
+	<meta property="og:site_name" content="12beesinatrenchco.at"/>
+	<meta name="twitter:card" content="summary_large_image">
 	<title>{{ title }}</title>
 </head>
 <body>
