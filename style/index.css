@@ -33,7 +33,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-height: 95vh; /* Modified from 100vh */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -142,6 +142,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p, article {
   max-width: 72ch;
+}
+
+article {
+  min-height: 70vh;
 }
 
 .flow > * + * {
