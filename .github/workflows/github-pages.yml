@@ -28,8 +28,8 @@ jobs:
 
       - name: "building the site..."
         run: | 
-          npm ci
-          npm run build
+          pnpm i
+          pnpm run build
           
       - name: "deploy!"
         uses: peaceiris/actions-gh-pages@v3
