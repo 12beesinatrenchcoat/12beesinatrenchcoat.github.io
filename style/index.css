@@ -528,10 +528,10 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"] {
 }
 a[href^="https://"]:not(.no-icon)::before, *[data-icon]::before, a[href^="mailto:"]::before {
   display: inline-block;
-  margin: 0 0.33ch;
-  vertical-align: -0.15em;
-  max-height: 1.5em;
-  min-width: 1em;
+  margin: 0 0.333ch;
+  vertical-align: -0.2em;
+  max-height: 1em;
+  min-width: calc(1em + 0.2ch);
   content: url("/assets/icons/arrow-up-right-from-square-solid.svg");
 }
 a[href^="https://"]:not(.no-icon) > sub, *[data-icon] > sub, a[href^="mailto:"] > sub {
@@ -555,6 +555,7 @@ a[href^="https://"]:not(.no-icon)[href*="discord.gg"], a[href^="https://"]:not(.
 }
 a[href^="https://"]:not(.no-icon)[href*="discord.gg"]::before, a[href^="https://"]:not(.no-icon)[data-icon=discord]::before, *[data-icon][href*="discord.gg"]::before, *[data-icon][data-icon=discord]::before, a[href^="mailto:"][href*="discord.gg"]::before, a[href^="mailto:"][data-icon=discord]::before {
   content: url("/assets/icons/discord-brands.svg");
+  vertical-align: -0.1em;
 }
 a[href^="https://"]:not(.no-icon)[href*="github.com"], *[data-icon][href*="github.com"], a[href^="mailto:"][href*="github.com"] {
   --social-bg: white;
@@ -569,6 +570,12 @@ a[href^="https://"]:not(.no-icon)[href*="itch.io"], *[data-icon][href*="itch.io"
 }
 a[href^="https://"]:not(.no-icon)[href*="itch.io"]::before, *[data-icon][href*="itch.io"]::before, a[href^="mailto:"][href*="itch.io"]::before {
   content: url("/assets/icons/itch-io-brands.svg");
+}
+a[href^="https://"]:not(.no-icon)[href*="kitsu.io"], *[data-icon][href*="kitsu.io"], a[href^="mailto:"][href*="kitsu.io"] {
+  --social-bg: #FD755C;
+}
+a[href^="https://"]:not(.no-icon)[href*="kitsu.io"]::before, *[data-icon][href*="kitsu.io"]::before, a[href^="mailto:"][href*="kitsu.io"]::before {
+  content: url("/assets/icons/kitsu.svg");
 }
 a[href^="https://"]:not(.no-icon)[href*="last.fm"], *[data-icon][href*="last.fm"], a[href^="mailto:"][href*="last.fm"] {
   --social-bg: #ba0000;
@@ -599,6 +606,7 @@ a[href^="https://"]:not(.no-icon)[href*="urusai.social"], *[data-icon][href*="ur
 }
 a[href^="https://"]:not(.no-icon)[href*="urusai.social"]::before, *[data-icon][href*="urusai.social"]::before, a[href^="mailto:"][href*="urusai.social"]::before {
   content: url("/assets/icons/mastodon-brands.svg");
+  vertical-align: -0.3em;
 }
 a[href^="https://"]:not(.no-icon)[href*="youtube.com"], *[data-icon][href*="youtube.com"], a[href^="mailto:"][href*="youtube.com"] {
   --social-bg: #ff0000;
@@ -630,6 +638,12 @@ a[href^="https://"]:not(.no-icon)[href^="mailto:"]::before, *[data-icon][href^="
 .socials > a {
   background: var(--social-bg, var(--accent-25));
   color: var(--social-fg, var(--white));
+  text-decoration: none;
+  transition: box-shadow 0.25s ease-out;
+  box-shadow: 0 0 0 0 var(--social-bg, white);
+}
+.socials > a:hover {
+  box-shadow: 0 0 0 0.25ch var(--social-bg, white);
 }
 .socials > a::before {
   filter: var(--filters, invert(1));
