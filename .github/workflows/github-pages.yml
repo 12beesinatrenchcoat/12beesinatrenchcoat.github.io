@@ -15,6 +15,11 @@ jobs:
     steps:
       - name: "checking out..."
         uses: actions/checkout@v3
+        
+      - name: "pnpm my beloved"
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
       
       - name: "setting up node..."
         uses: actions/setup-node@v3
