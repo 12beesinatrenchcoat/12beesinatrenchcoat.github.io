@@ -7,11 +7,12 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 
 	&::before
 		display: inline-block
-		margin: 0 0.33ch
-		vertical-align: -0.15em
-		max-height: 1.5em
-		min-width: 1em
+		margin: 0 0.333ch
+		vertical-align: -0.2em
+		max-height: 1em
+		min-width: calc(1em + 0.2ch)
 		content: url("/assets/icons/arrow-up-right-from-square-solid.svg")
+		
 
 	> sub
 		text-decoration: none
@@ -29,6 +30,7 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 		--social-bg: #5865F2
 		&::before
 			content: url("/assets/icons/discord-brands.svg")
+			vertical-align: -0.1em
 	&[href*="github.com"]
 		--social-bg: white
 		--social-fg: var(--not-white)
@@ -39,6 +41,10 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 		--social-bg: #fa5c5c
 		&::before
 			content: url("/assets/icons/itch-io-brands.svg")
+	&[href*="kitsu.io"]
+		--social-bg: #FD755C
+		&::before
+			content: url("/assets/icons/kitsu.svg")
 	&[href*="last.fm"]
 		--social-bg: #ba0000
 		&::before
@@ -59,6 +65,7 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 		--social-bg: #aa0000
 		&::before
 			content: url("/assets/icons/mastodon-brands.svg")
+			vertical-align: -0.3em
 	&[href*="youtube.com"]
 		--social-bg: #ff0000
 		--social-fg: white
@@ -86,6 +93,13 @@ a[href^="https://"]:not(.no-icon), *[data-icon], a[href^="mailto:"]
 	> a
 		background: var(--social-bg, var(--accent-25))
 		color: var(--social-fg, var(--white))
+		text-decoration: none
+
+		transition: box-shadow 0.25s ease-out
+		box-shadow: 0 0 0 0 var(--social-bg, white)
+
+		&:hover
+			box-shadow: 0 0 0 0.25ch var(--social-bg, white)
 
 		&::before
 			filter: var(--filters, invert(1))
