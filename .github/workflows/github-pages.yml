@@ -15,22 +15,22 @@ jobs:
     steps:
       - name: "checking out..."
         uses: actions/checkout@v3
-        
+
       - name: "pnpm my beloved"
         uses: pnpm/action-setup@v2
         with:
-          version: 7
-      
+          version: 8
+
       - name: "setting up node..."
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: "building the site..."
-        run: | 
+        run: |
           pnpm i
           pnpm run build
-          
+
       - name: "deploy!"
         uses: peaceiris/actions-gh-pages@v3
         with:
