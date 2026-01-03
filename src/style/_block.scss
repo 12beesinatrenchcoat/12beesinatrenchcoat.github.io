@@ -1,0 +1,46 @@
+// Component style for _includes/block.njk
+
+ul:has(.block) {
+	padding: 0;
+
+	> * + * {
+		margin-block-start: var(--md);
+	}
+}
+
+.block {
+	background: #66f060; // Placeholder background
+	background-position: center;
+	background-origin: border-box;
+	display: block;
+	text-decoration: none;
+	border-left: #66f060 solid 0;
+
+	transition: all 0.13s ease-out;
+}
+
+.block > div {
+	color: black;
+	display: flex;
+	flex-direction: column;
+	padding: var(--3xl) 0 0;
+
+	& > * {
+		background: #fbfbfbcc;
+		backdrop-filter: blur(12px);
+		padding: 0 var(--xs);
+	}
+
+	& > time {
+		width: min-content;
+		font-size: var(--sm);
+	}
+
+	& > :last-child {
+		padding: 0 var(--xs) var(--xs);
+	}
+}
+
+.block:hover {
+	border-left-width: var(--xs);
+}

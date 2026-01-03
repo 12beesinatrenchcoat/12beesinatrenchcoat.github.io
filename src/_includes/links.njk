@@ -1,0 +1,16 @@
+<div class="flex-row justify-between align-baseline">
+	<ul id="links">
+
+		{% for name, item in links %}
+
+		<li>
+			<a href="{{item.url}}" style="--icon-color:{{item.color}}">
+			{% include "../assets/icons/" + item.icon %}
+			</a>
+		</li>
+		{% endfor %}
+
+	</ul>
+
+	<a href="/about">more about me &gt</a>
+</div>

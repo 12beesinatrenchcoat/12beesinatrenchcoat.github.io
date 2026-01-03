@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+{% set image %}
+"/assets/headers/{{page.date | formatDate}}-{{page.fileSlug}}.webp"
+{% endset %}
+
+<header style="background-image: url({{image}})"> </header>
+<div>
+<time datetime="{{page.date | formatDate}}">
+	{{page.date | formatDate}}
+</time>
+<h1>{{title}}</h1>
+</div>
+{{content | safe}}

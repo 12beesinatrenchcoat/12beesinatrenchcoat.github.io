@@ -1,0 +1,27 @@
+// For figures, styled to look like polaroids.
+@use "sass:math";
+
+$rand: (math.random() * 5) - 2.5deg;
+
+figure:has(img) {
+	border: var(--xl) solid #fdfdfd;
+	border-bottom-width: var(--xs);
+	box-shadow: 3px 2px #0004;
+	transform: rotate($rand);
+	width: min-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figure > img {
+	max-height: 24em;
+	max-width: min(72ch, 75vw);
+	height: auto;
+	width: auto;
+}
+
+figcaption{
+	padding: var(--md) 0 var(--sm);
+	font-size: var(--sm);
+	background: #fdfdfd;
+}

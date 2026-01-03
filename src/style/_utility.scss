@@ -1,0 +1,54 @@
+// A bunch of utility classes.
+
+/* The font scale */
+:root {
+	--xs: 0.563rem;
+	--sm: 0.75rem;
+	--md: 1.00rem;
+	--lg: 1.333rem;
+	--xl: 1.777rem;
+	--2xl: 2.370rem;
+	--3xl: 3.160rem;
+	--4xl: 4.214rem;
+}
+
+/* Sizes! */
+@each $size in "sm", "md", "lg", "xl", "2xl", "3xl", "4xl" {
+	.font-#{$size} {
+		font-size: var(--#{$size});
+	}
+
+	.icon-#{$size} {
+		height: var(--#{$size});
+		width: auto;
+	}
+}
+
+@each $size in "xs", "sm", "md" {
+	.gap-#{$size} {
+		gap: var(--#{$size});
+	}
+}
+
+/* A bunch of flex */
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.align-baseline {
+	align-items: baseline;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}

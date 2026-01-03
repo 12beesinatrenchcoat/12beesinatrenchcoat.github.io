@@ -1,0 +1,24 @@
+// Component style for _includes/links.njk
+
+#links {
+	display: flex;
+	gap: var(--xs);
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#links>*>* {
+	opacity: 0.66;
+}
+
+#links>*>*:hover {
+	fill: var(--icon-color);
+	opacity: 1;
+}
+
+#links>*>*>svg {
+	height: var(--xl);
+	width: auto;
+}

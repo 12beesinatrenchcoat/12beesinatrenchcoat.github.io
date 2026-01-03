@@ -1,28 +1,17 @@
 {
   "name": "12beesinatrenchcoat.github.io",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "a personal website",
   "private": "true",
-  "main": "index.js",
-  "scripts": {
-    "sass": "npx sass ./style/index.sass ./_site/style/index.css",
-    "watch:sass": "npx sass ./style/index.sass ./_site/style/index.css --watch",
-    "watch:eleventy": "npx @11ty/eleventy --serve",
-    "build": "pnpm run sass & npx @11ty/eleventy",
-    "dev": "pnpm run \"/^watch:.*/\""
-  },
-  "author": "Andy Chan / 12beesinatrenchcoat <andy@12beesinatrenchco.at> (12beesinatrenchco.at)",
+  "type": "module",
+  "author": "Andy Chan <andy@12beesinatrenchco.at> (https://12beesinatrenchco.at)",
   "license": "MIT",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "eleventy-plugin-toc": "^1.1.5",
-    "lodash": "^4.17.21",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.7",
-    "markdown-it-attrs": "^4.1.6",
-    "sass": "^1.64.2"
+  "scripts": {
+    "dev": "pnpm eleventy --serve"
   },
-  "devDependencies": {
-    "@types/markdown-it": "^13.0.0"
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "markdown-it": "^14.1.0",
+    "sass": "^1.97.1"
   }
 }

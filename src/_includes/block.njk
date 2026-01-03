@@ -1,0 +1,19 @@
+{# Content block used in listings. #}
+{% set image %}
+"/assets/headers/{{item.date | formatDate}}-{{item.fileSlug}}.webp"
+{% endset %}
+
+<a
+	href="{{item.url}}"
+	class="block"
+	style="background-image: url({{image}})"
+>
+	<div>
+		<time datetime="{{item.date | formatDate}}">
+			{{item.date | formatDate}}
+		</time>
+		<span>
+			{{item.data.title}}
+		</span>
+	</div>
+</a>
