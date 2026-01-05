@@ -21,6 +21,11 @@
 	.icon-#{$size} {
 		height: var(--#{$size});
 		width: auto;
+
+		> svg {
+			height: var(--#{$size});
+			width: auto;
+		}
 	}
 }
 
