@@ -3,17 +3,50 @@
 "/assets/headers/{{item.date | formatDate}}-{{item.fileSlug}}.webp"
 {% endset %}
 
-<a
-	href="{{item.url}}"
-	class="block"
-	style="background-image: url({{image}})"
->
+<a href="{{item.url}}" class="block" style="background-image: url({{image}})">
 	<div>
-		<time datetime="{{item.date | formatDate}}">
-			{{item.date | formatDate}}
-		</time>
-		<span>
-			{{item.data.title}}
-		</span>
+		<!-- Top half, aligned right -->
+		<div class="block-top">
+			<!-- Tags, top right -->
+			<span class="block-tags">
+
+				{% for tag in item.data.tags | sort %}
+				<span class="block-tag">
+					#{{tag}}
+				</span>
+				{% endfor %}
+
+				{% if item.data.status %}
+				<span class="status {{item.data.status}}">
+					{{item.data.status}}
+				</span>
+				{% endif %}
+
+			</span>
+		</div>
+
+		<!-- Bottom half, aligned left -->
+		<div class="block-bottom">
+			<!-- Row 1, date -->
+			<span class="font-sm">
+				<time datetime="{{item.date | formatDate}}">
+					{{item.date | formatDate}}
+				</time>
+
+
+			</span>
+
+			<!-- Row 2, info, description -->
+			<span>
+				<strong>
+					{{item.data.title}}
+				</strong>
+				<span class="font-sm">
+					{{item.data.description}}
+				</span>
+			</span>
+
+		</div>
+
 	</div>
 </a>

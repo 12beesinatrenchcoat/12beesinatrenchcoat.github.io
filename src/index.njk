@@ -1,5 +1,5 @@
 ---
-title: Hello!
+title: hello!
 layout: base.njk
 ---
 
@@ -16,24 +16,28 @@ stuff maker, rhythm game addict, insomniac college student
 
 <hr>
 
-<span class="flex-row gap-xs justify-between align-baseline">
-<h2>projects</h2>
-<a href="/projects">more &gt</a>
-</span>
+<section>
+	<span class="flex-row gap-xs justify-between align-baseline">
+	<h2>projects</h2>
+	<a href="/projects">more &gt</a>
+	</span>
 
-<ul>
-{%- for item in collections.projects | limit(2) -%}
-{% include "block.njk" %}
-{%- endfor -%}
-</ul>
+	<ul>
+	{%- for item in collections.projects | limit(2) -%}
+	{% include "block.njk" %}
+	{%- endfor -%}
+	</ul>
+</section>
 
-<span class="flex-row gap-xs justify-between align-baseline">
-<h2>blog</h2>
-<a href="/blog">more &gt</a>
-</span>
+<section>
+	<span class="flex-row gap-xs justify-between align-baseline">
+	<h2>blog</h2>
+	<a href="/blog">more &gt</a>
+	</span>
 
-<ul>
-{%- for item in collections.blog | limit(2) -%}
-{% include "block.njk" %}
-{%- endfor -%}
-</ul>
+	<ul>
+	{%- for item in collections.blog | limit(2) -%}
+	{% include "block.njk" %}
+	{%- endfor -%}
+	</ul>
+</section>

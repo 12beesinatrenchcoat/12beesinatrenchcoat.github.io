@@ -55,6 +55,9 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("formatDate", date => {
+		if (!date) { return "???" }
+		if (typeof date !== "object") { return date }
+
 		return new Date(date).toISOString().slice(0,10);
 	})
 

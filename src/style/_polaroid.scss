@@ -7,6 +7,8 @@ figure:has(img) {
 	border: var(--xl) solid #fdfdfd;
 	border-bottom-width: var(--xs);
 	box-shadow: 3px 2px #0004;
+	color: black;
+
 	transform: rotate($rand);
 	width: min-content;
 	margin-left: auto;
@@ -21,7 +23,10 @@ figure > img {
 }
 
 figcaption{
-	padding: var(--md) 0 var(--sm);
+	position: relative;
+	margin: -1px; /* Fixes a tiny gap */
+	padding: var(--sm) 4px var(--xs);
 	font-size: var(--sm);
 	background: #fdfdfd;
+
 }

@@ -1,12 +1,11 @@
 ---
 title: "circle scrobbler"
 description: "a web-based solution to scrobbling osu! plays"
-tags:	
+tags:
   - code
-  - game
   - nodejs
 date: 2021-12-31
-enddate: 
+enddate:
 links:
   - name: App
     url: https://circle-scrobbler.vercel.app/

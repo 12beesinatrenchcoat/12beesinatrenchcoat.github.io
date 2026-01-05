@@ -2,16 +2,21 @@
 	"Email": {
 		"url": "mailto:andy@12beesinatrenchco.at",
 		"icon": "envelope-solid.svg",
-		"color": "#8ccfff"
+		"color": "var(--blue)"
 	},
 	"GitHub": {
 		"url": "https://github.com/12beesinatrenchcoat",
 		"icon": "github-brands.svg",
-		"color": "#501DAF"
+		"color": "var(--fg-2)"
 	},
 	"Discord": {
 		"url": "https://discord.com/users/231899170716385280",
 		"icon": "discord-brands.svg",
 		"color": "#5865F2"
+	},
+	"Bluesky": {
+		"url": "https://bsky.app/profile/glasseater.moe",
+		"icon": "bluesky-brands.svg",
+		"color": "rgb(15, 115, 255)"
 	}
 }

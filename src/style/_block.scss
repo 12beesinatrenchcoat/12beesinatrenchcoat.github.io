@@ -9,38 +9,68 @@ ul:has(.block) {
 }
 
 .block {
-	background: #66f060; // Placeholder background
+	background: var(--green); // Placeholder background
 	background-position: center;
 	background-origin: border-box;
 	display: block;
 	text-decoration: none;
-	border-left: #66f060 solid 0;
+	border-left: var(--green) solid 0;
 
 	transition: all 0.13s ease-out;
 }
 
 .block > div {
-	color: black;
+	color: var(--fg-2);
 	display: flex;
 	flex-direction: column;
-	padding: var(--3xl) 0 0;
+	justify-content: space-between;
+	min-height: 8em;
 
-	& > * {
-		background: #fbfbfbcc;
+	& > * > * {
+		background: var(--bg-2);
 		backdrop-filter: blur(12px);
 		padding: 0 var(--xs);
 	}
+}
 
-	& > time {
-		width: min-content;
-		font-size: var(--sm);
+.block-top {
+	width: max-content;
+	font-size: var(--sm);
+	align-self: end;
+
+	& > .block-tags {
+		display: flex;
+		gap: 1ch;
 	}
+}
 
-	& > :last-child {
-		padding: 0 var(--xs) var(--xs);
+.block-bottom {
+	display: flex;
+	flex-direction: column;
+
+	& > :first-child {
+		width: max-content;
+		font-size: var(--sm);
 	}
 }
 
 .block:hover {
 	border-left-width: var(--xs);
+}
+
+.status {
+	padding: 0 1ch;
+
+	&.complete {
+		background: var(--green);
+	}
+	&.on_hold {
+		background: var(--yellow);
+	}
+	&.scrapped {
+		background: var(--red);
+	}
+	&.wip {
+		background: var(--blue);
+	}
 }

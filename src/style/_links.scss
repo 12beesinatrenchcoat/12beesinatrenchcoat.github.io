@@ -3,22 +3,30 @@
 #links {
 	display: flex;
 	gap: var(--xs);
-	flex-grow: 1;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-#links>*>* {
-	opacity: 0.66;
+#links > li > a {
+	display: inline-block;
+	height: 100%;
+	width: max-content;
+
+	opacity: 0.5;
+	fill: var(--fg-2);
+	transition: all 133ms ease-out;
+
+	&:hover {
+		fill: var(--icon-color);
+		opacity: 1;
+
+		@media (prefers-color-scheme: dark) {
+			filter: brightness(1.1);
+		}
+	}
 }
 
-#links>*>*:hover {
-	fill: var(--icon-color);
-	opacity: 1;
-}
-
-#links>*>*>svg {
+#links > li > a > svg {
 	height: var(--xl);
-	width: auto;
 }

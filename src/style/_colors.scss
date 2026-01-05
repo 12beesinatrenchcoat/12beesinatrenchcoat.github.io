@@ -1,0 +1,34 @@
+/* Colors from Huetone, by Ardov. Wonderful tool! <3
+https://huetone.ardov.me/?palette=N4IgdghgtgpiBcICMAmARjGBnAlpALgE4xgDGAFqQPYB0E%2BABAG4AcIANCOQK7YIDaoSLAQhiAEw4hqAGyqEsAkAGIAZuICcEFnE7K0LAKwB2AGyGQAXQC%2B7IdDiIAnjBlyA7lNnzF8fitUAFnFTUKllFnEWJECUK1t7EUQAc2ISLyo5BSVlAGY0VW02PUDTFlJDCxs7cAdRCCduDKzff2VA4MxA8JRNJB14muFHEDQZXmafHNMYUiRC8NyWY0MNOGrEkYAHbkItmV1pTKm-FVIWDXFVUnDzQyRjVXjLTnwqMD5TmRxk8nwpcQQQgAa3iQA */
+
+:root {
+	@media (prefers-color-scheme: light) {
+		--red: #fd9a8e;
+		--yellow: #f4d666;
+		--green: #3bfa88;
+		--ayu: #44dee4;
+		--blue: #6ec1fa;
+		--purple: #c89dfc;
+
+		--bg-1: #fffc;
+		--bg-2: #eeec;
+		--fg-1: #000;
+		--fg-2: #111;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--red: #b85765;
+		--yellow: #8d8142;
+		--green: #468c55;
+		--ayu: #2d918e;
+		--blue: #38759e;
+		--purple: #65517f;
+
+		--bg-1: #111c;
+		--bg-2: #000c;
+		--fg-1: #fff;
+		--fg-2: #eee;
+	}
+
+	--magenta: #f0f;
+}

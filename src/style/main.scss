@@ -2,6 +2,8 @@
 permalink: "/style.css"
 ---
 
+@use "_background";
+@use "_colors";
 @use "_components";
 @use "_polaroid";
 @use "_reset";
@@ -10,10 +12,12 @@ permalink: "/style.css"
 @use "sass:math";
 
 body {
-	font-family: "Manrope", sans-serif;
-	background: url("/assets/site-images/background.jpeg") center/cover no-repeat fixed;
-	margin: 20vh var(--xl) var(--xl);
+	color: var(--fg-1);
+	fill: var(--fg-1);
 
+	font-family: "Manrope", sans-serif;
+
+	margin: 20vh 4vw var(--xl);
 	max-width: 64ch;
 
 	> * {
@@ -22,14 +26,14 @@ body {
 	}
 }
 
-@media (max-width: 112ch) {
+@media (max-width: 108ch) {
 	body {
-		margin: var(--md) auto 66vh;
+		margin: var(--md) auto;
 	}
 }
 
 main {
-	background: #fffc;
+	background: var(--bg-1);
 
 	> * + * {
 		margin-block-start: var(--md);
@@ -37,7 +41,7 @@ main {
 }
 
 nav, footer {
-	background: #eeec;
+	background: var(--bg-2);
 
 	* {
 		display: inline;

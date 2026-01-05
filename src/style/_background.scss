@@ -1,0 +1,23 @@
+/* Near the top, for performance (?) */
+
+body {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	/* Placeholder so people don't get flashbanged */
+	--placeholder-background: linear-gradient(#729bad,#64879a,#40637b,#30536b,#2f546d,#2f607f);
+}
+
+@media (max-width: 720px) {
+	body {
+		background-image: url("/assets/background-vert.webp"), var(--placeholder-background);
+	}
+}
+
+@media (min-width: 720.01px) {
+	body {
+		background-image: url("/assets/background.webp"), var(--placeholder-background);
+	}
+}
