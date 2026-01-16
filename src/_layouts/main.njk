@@ -1,17 +1,61 @@
 ---
 layout: base.njk
 ---
+{# For non-listing pages, usually. #}
+
 {% if image === undefined %}
 {% set image %}
 "/assets/headers/{{page.date | formatDate}}-{{page.fileSlug}}.webp"
 {% endset %}
 {% endif %}
 
+{% if status %}
+	{% set enddatestring %}
+	<time datetime={{enddate | formatDate}}>{{enddate | formatDate}}</time>
+	{% endset %}
+	{% if status === "on_hold" %}
+		{% set end = "on hold" %}
+	{% elseif status === "wip" %}
+		{% set end = "work in progress" %}
+	{% elseif status === "scrapped" %}
+		{% set end %}
+		scrapped {{enddatestring | safe}}
+		{% endset %}
+	{% elseif status === "complete" %}
+		{% set end %}
+		completed {{enddatestring | safe}}
+		{% endset %}
+	{% else%}
+		{% set end = "status unknown" %}
+	{% endif %}
+
+	{% set datestring %}
+	started <time datetime={{date | formatDate}}>{{date | formatDate}}</time>, {{end | safe}}
+	{% endset %}
+{% else %}
+	{% set datestring %}
+	posted <time datetime={{page.date | formatDate}}>{{page.date | formatDate}}</time>
+	{% endset %}
+{% endif %}
+
 <header style="background-image: url({{image}})"> </header>
+
 <div>
-<time datetime="{{page.date | formatDate}}">
-	{{page.date | formatDate}}
-</time>
-<h1>{{title}}</h1>
+	{{datestring | safe}}
+	<h1>{{title}}</h1>
+
 </div>
+
+{% if links %}
+<section class="callout">
+	<h2>Links</h2>
+
+	<span class="flex-row gap-sm">
+	{% for link in links %}
+	<a href="{{link.url}}">{{link.name}}</a>
+	{% endfor %}
+	</span>
+</section>
+{% endif %}
+
 {{content | safe}}

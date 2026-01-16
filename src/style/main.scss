@@ -73,3 +73,14 @@ h2 {
 h3 {
 	font-size: var(--lg);
 }
+
+.callout {
+	margin-left: calc(-1 * var(--md));
+	margin-right: calc(-1 * var(--md));
+
+	border: dashed var(--fg-2);
+	border-width: 2px 0;
+
+	padding: var(--sm) var(--md);
+	background: var(--bg-1);
+}
