@@ -19,6 +19,7 @@
 	}
 
 	.icon-#{$size} {
+		display: inline-block;
 		height: var(--#{$size});
 		width: auto;
 
@@ -56,4 +57,8 @@
 
 .justify-between {
 	justify-content: space-between;
+}
+
+.highlight {
+	background: var(--green);
 }
