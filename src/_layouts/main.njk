@@ -1,9 +1,11 @@
 ---
 layout: base.njk
 ---
+{% if image === undefined %}
 {% set image %}
 "/assets/headers/{{page.date | formatDate}}-{{page.fileSlug}}.webp"
 {% endset %}
+{% endif %}
 
 <header style="background-image: url({{image}})"> </header>
 <div>

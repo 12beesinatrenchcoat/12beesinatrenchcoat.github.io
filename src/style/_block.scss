@@ -10,6 +10,7 @@ ul:has(.block) {
 
 .block {
 	background: var(--green); // Placeholder background
+	background-size: cover;
 	background-position: center;
 	background-origin: border-box;
 	display: block;
