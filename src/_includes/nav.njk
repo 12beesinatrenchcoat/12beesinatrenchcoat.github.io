@@ -1,3 +1,31 @@
+{% set links = [
+	{
+		name: "projects",
+		link: "/projects"
+	},
+	{
+		name: "blog",
+		link: "/blog"
+	},
+		{
+		name: "about",
+		link: "/about"
+	}
+	]
+%}
+
 <nav>
-<a href="/">12beesinatrenchco.at</a>/
+	<a href="/">12beesinatrenchco.at</a> / [
+	<span class="nav-links">
+	{% for link in links %}
+		<a href="{{link.link}}" id="nav-{{link.name}}"
+		{% if link.name in page.url %} class="highlight" {% endif %}
+		>
+			{{link.name}}
+		</a>
+
+
+	{% endfor %}
+	</span>
+	]
 </nav>

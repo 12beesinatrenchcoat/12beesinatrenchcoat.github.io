@@ -5,3 +5,24 @@ nav {
 	z-index: 99;
 	top: 0;
 }
+
+.nav-links {
+	display: inline-flex;
+	gap: 0.05ch;
+
+	& > * {
+		padding: 0 0.25ch;
+	}
+}
+
+#nav-projects.highlight {
+	background: var(--blue);
+}
+
+#nav-blog.highlight {
+	background: var(--yellow);
+}
+
+#nav-about.highlight {
+	background: var(--green);
+}
