@@ -1,18 +1,29 @@
 // For figures, styled to look like polaroids.
-@use "sass:math";
-
-$rand: (math.random() * 5) - 2.5deg;
-
 figure:has(img) {
 	border: var(--xl) solid #fdfdfd;
 	border-bottom-width: var(--xs);
 	box-shadow: 3px 2px #0004;
 	color: black;
 
-	transform: rotate($rand);
 	width: min-content;
 	margin-left: auto;
 	margin-right: auto;
+
+	&:nth-child(4n) {
+		transform: rotate(2.5deg);
+	}
+
+	&:nth-child(4n + 1) {
+		transform: rotate(-1.8deg);
+	}
+
+	&:nth-child(4n + 2) {
+		transform: rotate(2.7deg);
+	}
+
+	&:nth-child(4n + 3) {
+		transform: rotate(-3.8deg);
+	}
 }
 
 figure > img {

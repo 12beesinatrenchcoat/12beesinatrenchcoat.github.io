@@ -6,18 +6,26 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 
-	/* Placeholder so people don't get flashbanged */
-	--placeholder-background: linear-gradient(#729bad,#64879a,#40637b,#30536b,#2f546d,#2f607f);
+	--placeholder: linear-gradient(
+		to bottom,
+		#84acba,
+		#749bac,
+		#4b728b,
+		#395f78,
+		#396785
+	);
 }
 
-@media (max-width: 720px) {
+// Portrait
+@media (max-aspect-ratio: 3/4) {
 	body {
-		background-image: url("/assets/background-vert.webp"), var(--placeholder-background);
+		background-image: url("/assets/background-vert.webp"), var(--placeholder);
 	}
 }
 
-@media (min-width: 720.01px) {
+// Landscape
+@media (min-aspect-ratio: 3.0001/4) {
 	body {
-		background-image: url("/assets/background.webp"), var(--placeholder-background);
+			background-image: url("/assets/background.webp"), var(--placeholder);
 	}
 }

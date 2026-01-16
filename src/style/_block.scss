@@ -14,9 +14,21 @@ ul:has(.block) {
 	background-origin: border-box;
 	display: block;
 	text-decoration: none;
-	border-left: var(--green) solid 0;
+	position: relative;
 
-	transition: all 0.13s ease-out;
+
+	&::after {
+		position: absolute;
+		left: 0; top: 0; bottom: 0;
+		width: 0;
+		content: "";
+		background: var(--green);
+		transition: all 133ms ease-out;
+	}
+
+	&:hover::after {
+		width: calc(var(--xs) - 2px);
+	}
 }
 
 .block > div {
