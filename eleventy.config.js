@@ -46,7 +46,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addCollection("projects", (collection) => {
 		return collection
 			.getFilteredByGlob("src/projects/*.md")
-			.sort((a, b) => (b.data.endDate || b.date) - (a.data.endDate || a.date));
+			.sort((a, b) => (b.data.enddate || b.date) - (a.data.enddate || a.date));
 	});
 
 	// Filters

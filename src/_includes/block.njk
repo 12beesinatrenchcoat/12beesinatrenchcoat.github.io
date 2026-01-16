@@ -7,6 +7,12 @@
 {% set image = item.data.image %}
 {% endif %}
 
+{% if item.data.enddate %}
+{% set date = item.data.enddate %}
+{% else %}
+{% set date = item.date %}
+{% endif %}
+
 <a href="{{item.url}}" class="block" style="background-image: url({{image}})">
 	<div>
 		<!-- Top half, aligned right -->
@@ -33,8 +39,8 @@
 		<div class="block-bottom">
 			<!-- Row 1, date -->
 			<span class="font-sm">
-				<time datetime="{{item.date | formatDate}}">
-					{{item.date | formatDate}}
+				<time datetime="{{date | formatDate}}">
+					{{date | formatDate}}
 				</time>
 
 
