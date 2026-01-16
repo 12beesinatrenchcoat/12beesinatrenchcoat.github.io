@@ -17,15 +17,19 @@ layout: base
 </section>
 
 <section>
-	<h2>really old posts</h2>
+	<details>
+		<summary>
+			really old posts
+		</summary>
 
-	<p>i've changed a lot as a person since i last saw these. i think they're awful, but they're also a sign of how far i've come, i guess? they're here for… “historical” sake, or something. i don't think they're worth reading, but…</p>
+		<p>i've changed a lot as a person since i last saw these. i think they're awful, but they're also a sign of how far i've come, i guess? they're here for… “historical” sake, or something. i don't think they're worth reading, but…</p>
 
-	<ul>
-		{%- for item in collections.blog -%}
-		{% if item.date < 1735750800000 %}
-		{% include "block.njk" %}
-		{% endif %}
-		{%- endfor -%}
-	</ul>
+		<ul>
+			{%- for item in collections.blog -%}
+			{% if item.date < 1735750800000 %}
+			{% include "block.njk" %}
+			{% endif %}
+			{%- endfor -%}
+		</ul>
+	</details>
 </section>
