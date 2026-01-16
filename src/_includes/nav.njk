@@ -26,6 +26,10 @@
 
 
 	{% endfor %}
+
+	{% if "404" in page.url %}
+		<span id="nav-404" class="highlight">404</span>
+	{% endif %}
 	</span>
 	]
 </nav>
