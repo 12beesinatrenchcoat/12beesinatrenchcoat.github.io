@@ -23,7 +23,7 @@ export default async function (eleventyConfig) {
 			}
 
 			let result = sass.compileString(inputContent, {
-				loadPaths: [parsed.dir || ".", this.config.dir.includes],
+				loadPaths: [parsed.dir || ".", "src/" + this.config.dir.includes],
 			});
 
 			// Map dependencies for incremental builds

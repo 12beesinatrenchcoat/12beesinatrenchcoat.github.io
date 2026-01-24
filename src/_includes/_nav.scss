@@ -4,15 +4,15 @@ nav {
 	position: sticky;
 	z-index: 99;
 	top: 0;
+
+	& > a, & > .nav-links > * {
+		padding: 0 0.25ch;
+	}
 }
 
 .nav-links {
 	display: inline-flex;
-	gap: 0.05ch;
-
-	& > * {
-		padding: 0 0.25ch;
-	}
+	gap: 0.25ch;
 }
 
 #nav-projects.highlight {
@@ -21,10 +21,6 @@ nav {
 
 #nav-blog.highlight {
 	background: var(--yellow);
-}
-
-#nav-about.highlight {
-	background: var(--green);
 }
 
 #nav-404.highlight {

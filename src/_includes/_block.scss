@@ -13,9 +13,14 @@ ul:has(.block) {
 	background-size: cover;
 	background-position: center;
 	background-origin: border-box;
-	display: block;
+
+	color: var(--fg-2);
 	text-decoration: none;
+
+	display: block;
 	position: relative;
+
+	transition: color 250ms ease-out;
 
 
 	&::after {
@@ -27,13 +32,16 @@ ul:has(.block) {
 		transition: all 133ms ease-out;
 	}
 
-	&:hover::after {
-		width: calc(var(--xs) - 2px);
+	&:hover {
+		color: var(--fg-1);
+
+		&::after {
+			width: calc(var(--xs) - 2px);
+		}
 	}
 }
 
 .block > div {
-	color: var(--fg-2);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
