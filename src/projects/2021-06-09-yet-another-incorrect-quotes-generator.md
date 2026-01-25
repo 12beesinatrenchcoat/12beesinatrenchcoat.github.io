@@ -7,13 +7,12 @@ tags:
 date: 2021-06-09
 enddate: 2022-02-25
 status: complete
-image: "/assets/images/yaiqg-header.webp"
 links:
   - name: Homepage
     url: https://12beesinatrenchcoat.github.io/incorrect-quotes-generator/
   - name: GitHub
     url: https://github.com/12beesinatrenchcoat/incorrect-quotes-generator
-  - name: ScatterPatter's (Inspiration)
+  - name: ScatterPatter's (Original Inspiration)
     url: https://incorrect-quotes-generator.neocities.org/
 ---
 

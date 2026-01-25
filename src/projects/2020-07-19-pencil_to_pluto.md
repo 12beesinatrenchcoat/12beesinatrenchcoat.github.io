@@ -10,10 +10,8 @@ enddate: 2020-07-26
 links:
   - name: GitHub
     url: https://github.com/12beesinatrenchcoat/paper-to-pluto-old
-  - name: Postmortem
-    url: /blog/2020-07-26-pencil_to_pluto_postmortem/
 status: "scrapped" # status can be: "complete", "wip", "on_hold", or "scrapped"
-image: "/assets/images/penciltopluto-scr1.png"
+image: "/assets/headers/2020-07-19-pencil_to_pluto.png"
 ---
 
 **Pencil to Pluto** is an incremental game developed by me, with some music by my friend, **AlexTheYes**.
