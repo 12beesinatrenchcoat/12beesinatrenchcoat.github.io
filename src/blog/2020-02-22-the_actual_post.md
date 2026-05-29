@@ -3,7 +3,9 @@ title:         "the actual post"
 description:   "this is the second post, and it has content in it"
 ---
 
-**A note: this is very outdated!** "Website v4" has been gone for a while now. If you want to see what it was like, you can find a release [here](https://github.com/AndyThePie/AndyThePie.github.io/releases/tag/v4). If you want to see my [initial] thoughts on the current website, please see my post on [website v5](/blog/2020-12-15-website_v5.html).
+{% include "old.njk" %}
+
+**A note: this is very outdated!** "Website v4" has been gone for a while now. If you want to see what it was like, you can find a release [here](https://github.com/AndyThePie/AndyThePie.github.io/releases/tag/v4). If you want to see my [initial] thoughts on the current website, please see my post on [website v5](/blog/2020-12-15-website_v5).
 {: .highlight}
 
 Welcome to the fourth iteration of my website, website v4! There's a bunch of new things here, a `/projects/` section, a `/blog/` section, with posts now written in Markdown, and compiled using `gray-matter` and `showdown`. I'm surprised it's actually working.

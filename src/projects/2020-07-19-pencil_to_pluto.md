@@ -1,6 +1,6 @@
 ---
 title: "Pencil to Pluto"
-description: "an incremental game about drawing a line to pluto… with pencils…!"
+description: "a game about drawing a line to pluto with pencils"
 tags:
   - code
   - game
@@ -13,6 +13,8 @@ links:
 status: "scrapped" # status can be: "complete", "wip", "on_hold", or "scrapped"
 image: "/assets/headers/2020-07-19-pencil_to_pluto.png"
 ---
+
+{% include "old.njk" %}
 
 **Pencil to Pluto** is an incremental game developed by me, with some music by my friend, **AlexTheYes**.
 

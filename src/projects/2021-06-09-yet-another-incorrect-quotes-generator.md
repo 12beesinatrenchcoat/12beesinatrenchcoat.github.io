@@ -12,7 +12,7 @@ links:
     url: https://12beesinatrenchcoat.github.io/incorrect-quotes-generator/
   - name: GitHub
     url: https://github.com/12beesinatrenchcoat/incorrect-quotes-generator
-  - name: ScatterPatter's (Original Inspiration)
+  - name: ScatterPatter's (Original)
     url: https://incorrect-quotes-generator.neocities.org/
 ---
 

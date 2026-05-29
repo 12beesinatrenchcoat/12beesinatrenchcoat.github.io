@@ -15,7 +15,15 @@
 %}
 
 <nav>
-	<a href="/">12beesinatrenchco.at</a> / [
+	<a href="/" id="nav-root"
+		{% if page.url === "/" %} class="highlight" {% endif %}
+	>
+		<span class="desktop-only">12beesinatrenchco.at</span>
+		<span class="mobile-only">home</span>
+	</a>
+
+	<span class="desktop-only">/ [</span>
+
 	<span class="nav-links">
 	{% for link in links %}
 		<a href="{{link.link}}" id="nav-{{link.name}}"
@@ -23,13 +31,12 @@
 		>
 			{{link.name}}
 		</a>
-
-
 	{% endfor %}
 
 	{% if "404" in page.url %}
 		<span id="nav-404" class="highlight">404</span>
 	{% endif %}
 	</span>
-	]
+
+	<span class="desktop-only">]</span>
 </nav>

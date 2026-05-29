@@ -1,0 +1,39 @@
+// Tags, as they appear in blocks and pages
+
+.status {
+	padding: 0 1ch;
+
+	&.complete {
+		background: var(--green);
+	}
+	&.on_hold {
+		background: var(--yellow);
+	}
+	&.scrapped {
+		background: var(--red);
+	}
+	&.wip {
+		background: var(--blue);
+	}
+}
+
+
+.block-tags, .page-tags {
+	display: inline-flex;
+	& > * {
+		display: inline-block;
+	}
+}
+
+.block-tags {
+	gap: 1ch;
+}
+
+.page-tags {
+	gap: 0.5ch;
+}
+
+.page-tags > * {
+	background: var(--bg-2);
+	padding: 0 0.5ch;
+}

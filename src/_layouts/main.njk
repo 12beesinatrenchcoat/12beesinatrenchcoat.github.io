@@ -38,13 +38,25 @@ layout: base.njk
 	{% endset %}
 {% endif %}
 
-<header style="background-image: url({{image}})"> </header>
+<header>
+	<div style="background-image: url({{image}})"></div>
+	<div>
+		<span>{{datestring | safe}}</span>
+		<h1>{{title}}</h1>
+		<p>{{description}}</p>
 
-<div>
-	{{datestring | safe}}
-	<h1>{{title}}</h1>
+		<span class="page-tags">
+			{% if status %}
+			<span class="status {{status}}">{{status.replace("_", " ")}}</span>
+			{% endif %}
 
-</div>
+			{% for tag in tags %}
+			<span>#{{tag}}</span>
+			{% endfor %}
+
+		</span>
+	</div>
+</header>
 
 {% if links %}
 <section class="callout">

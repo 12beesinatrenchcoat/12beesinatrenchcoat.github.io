@@ -21,14 +21,14 @@
 			<span class="block-tags">
 
 				{% for tag in item.data.tags | sort %}
-				<span class="block-tag">
+				<span class="tag">
 					#{{tag}}
 				</span>
 				{% endfor %}
 
 				{% if item.data.status %}
 				<span class="status {{item.data.status}}">
-					{{item.data.status}}
+					{{item.data.status.replace("_", " ")}}
 				</span>
 				{% endif %}
 
@@ -51,7 +51,8 @@
 				<strong>
 					{{item.data.title}}
 				</strong>
-				<span class="font-sm">
+				<br class="mobile-only">
+				<span class="font-sm inline-block">
 					{{item.data.description}}
 				</span>
 			</span>

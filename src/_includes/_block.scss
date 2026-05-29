@@ -58,11 +58,6 @@ ul:has(.block) {
 	width: max-content;
 	font-size: var(--sm);
 	align-self: end;
-
-	& > .block-tags {
-		display: flex;
-		gap: 1ch;
-	}
 }
 
 .block-bottom {
@@ -77,21 +72,4 @@ ul:has(.block) {
 
 .block:hover {
 	border-left-width: var(--xs);
-}
-
-.status {
-	padding: 0 1ch;
-
-	&.complete {
-		background: var(--green);
-	}
-	&.on_hold {
-		background: var(--yellow);
-	}
-	&.scrapped {
-		background: var(--red);
-	}
-	&.wip {
-		background: var(--blue);
-	}
 }

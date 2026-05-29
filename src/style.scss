@@ -3,6 +3,7 @@
 @use "_components";
 @use "_polaroid";
 @use "_reset";
+@use "_tags";
 @use "_utility";
 
 @use "sass:math";
@@ -30,13 +31,10 @@ body {
 
 main {
 	background: var(--bg-1);
-
-	> * + * {
-		margin-block-start: var(--md);
-	}
 }
 
-nav, footer {
+nav,
+footer {
 	background: var(--bg-2);
 
 	* {
@@ -45,21 +43,31 @@ nav, footer {
 }
 
 header {
-	margin: calc(-1 * var(--sm)) 0 0 calc(-1 * var(--md));
-	padding: math.pow(4/3, 8) * 1em 0 0 var(--md);
-	width: calc(100% + (2 * var(--md)));
-	background: center/cover;
-	mask-image: linear-gradient(#fff 75%, #fff0);
-	position: relative;
-	z-index: -1;
-}
+	> div:first-child {
+		margin: calc(-1 * var(--sm)) 0 0 calc(-1 * var(--md));
+		padding: math.pow(4/3, 8) * 1em 0 0 var(--md);
+		width: calc(100% + (2 * var(--md)));
+		background: center/cover;
+		mask-image: linear-gradient(#fff 66%, #fff0);
+		position: relative;
+		z-index: -1;
+	}
 
-header + * {
-	margin-top: -1em;
+	> div:last-child {
+		margin-top: -1.5em;
+		display: flex;
+		flex-direction: column;
+
+		> p {
+			margin-block-end: var(--xs);
+		}
+	}
 }
 
 h1 {
 	font-size: var(--2xl);
+	position: relative;
+	z-index: 10;
 }
 
 h2 {
@@ -71,9 +79,9 @@ h3 {
 }
 
 blockquote {
-	border-left: 0.25ch solid var(--fg-2);
-	padding-left: var(--sm);
-
+	border-left: 0.25ch solid v ar(--fg-2);
+	padding: var(--xs) var(--sm);
+	border-left: 2px solid var(--fg-2);
 	color: var(--fg-2);
 }
 
@@ -86,4 +94,14 @@ blockquote {
 
 	padding: var(--sm) var(--md);
 	background: var(--bg-1);
+}
+
+.callout.warning {
+	border-color: var(--yellow);
+	border-width: 4px 0;
+}
+
+.subtext {
+	font-size: var(--sm);
+	color: var(--fg-2);
 }

@@ -4,11 +4,11 @@
 	/* The font scale */
 	--xs: 0.563rem;
 	--sm: 0.75rem;
-	--md: 1.00rem;
+	--md: 1rem;
 	--lg: 1.333rem;
 	--xl: 1.777rem;
-	--2xl: 2.370rem;
-	--3xl: 3.160rem;
+	--2xl: 2.37rem;
+	--3xl: 3.16rem;
 	--4xl: 4.214rem;
 }
 
@@ -36,6 +36,14 @@
 	}
 }
 
+// Applied to both.
+main,
+.flow {
+	& > * + * {
+		margin-block-start: var(--md);
+	}
+}
+
 /* A bunch of flex */
 .flex-row {
 	display: flex;
@@ -57,6 +65,22 @@
 
 .justify-between {
 	justify-content: space-between;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+@media (min-width: 480px) {
+	.mobile-only {
+		display: none;
+	}
+}
+
+@media (max-width: 481px) {
+	.desktop-only {
+		display: none;
+	}
 }
 
 .highlight {

@@ -3,7 +3,32 @@ title: projects
 layout: base
 ---
 
-<h1>projects</h1>
-{%- for item in collections.projects -%}
-{% include "block.njk" %}
-{%- endfor -%}
+<div>
+	<h1>projects</h1>
+	<p>i actually do make stuff sometimes, i swear</p>
+</div>
+
+<section class="flow">
+	<h2>current</h2>
+
+	{%- for item in collections.projects -%}
+
+	{% if item.data.status == "wip" or item.data.status == "on_hold" %}
+	{% include "block.njk" %}
+	{% endif %}
+
+	{%- endfor -%}
+</section>
+
+<section class="flow">
+	<h2>completed</h2>
+
+	{%- for item in collections.projects -%}
+
+	{% if item.data.status == "complete" or item.data.status == "scrapped" %}
+	{% include "block.njk" %}
+	{% endif %}
+
+	{%- endfor -%}
+</section>
+
